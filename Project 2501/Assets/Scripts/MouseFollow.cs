@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class MouseFollow : MonoBehaviour
 {
-    public float speed;
-    public float rotationOffset;
+    public float speed = 8.0f;
+    public float distanceFromCamera = 5.0f;
 
-    private void Update()
+    void Update()
     {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 0;
-        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = distanceFromCamera;
 
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
+        Vector3 mouseScreenToWorld = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + rotationOffset));
+        Vector3 position = Vector3.Lerp(transform.position, mouseScreenToWorld, 1.0f - Mathf.Exp(-speed * Time.deltaTime));
 
-        Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        targetPos.z = 0;
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        transform.position = position;
     }
 }
