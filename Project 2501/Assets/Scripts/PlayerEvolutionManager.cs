@@ -18,7 +18,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     public int insurgentCount;
 
     [Header("Level Thresholds")]
-    public List<int> evolveTargets = new List<int> { 0, 2, 5, 10, 17, 26, 37, 50, 65, 82, 101 };
+    public List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
     #endregion
 
     #region Methods
