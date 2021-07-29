@@ -10,7 +10,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     [Header("Path Levels")]
     public int allegiantLevel;
     public int divergentLevel;
-    public int InsurgentLevel;
+    public int insurgentLevel;
 
     [Header("Data Packet Counts")]
     public int allegiantCount;
@@ -18,7 +18,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     public int insurgentCount;
 
     [Header("Level Thresholds")]
-    public List<int> evolveTargets = new List<int> { 2, 5, 10, 17, 26, 37, 50, 65, 82, 101 };
+    public List<int> evolveTargets = new List<int> { 0, 2, 5, 10, 17, 26, 37, 50, 65, 82, 101 };
     #endregion
 
     #region Methods
@@ -68,7 +68,7 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (allegiantCount == target)
             {
-                allegiantLevel = evolveTargets.IndexOf(target);
+                allegiantLevel = evolveTargets.IndexOf(target) + 1;
                 //update player appearance
             }
         }
@@ -80,7 +80,7 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (divergentCount == target)
             {
-                divergentCount = evolveTargets.IndexOf(target);
+                divergentLevel = evolveTargets.IndexOf(target) + 1;
                 //update player appearance
             }
         }
@@ -92,7 +92,7 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (insurgentCount == target)
             {
-                insurgentCount = evolveTargets.IndexOf(target);
+                insurgentLevel = evolveTargets.IndexOf(target) + 1;
                 //update player appearance
             }
         }
