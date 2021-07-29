@@ -12,5 +12,4 @@ public class DataPacket : ScriptableObject
     public DataType dataType;
     public string url;
     public string description;
-
 }

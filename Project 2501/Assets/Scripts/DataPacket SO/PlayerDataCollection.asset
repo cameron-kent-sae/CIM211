@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6625c344237a1824c93a0bda8320b528, type: 3}
-  m_Name: Allegiant
+  m_Script: {fileID: 11500000, guid: efaa25bdb96bdf543a345f0f2253abfe, type: 3}
+  m_Name: PlayerDataCollection
   m_EditorClassIdentifier: 
-  dataType: 0
-  url: 
-  description: allegiant data
+  Container: []
