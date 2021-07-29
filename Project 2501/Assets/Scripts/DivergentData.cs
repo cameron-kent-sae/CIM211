@@ -7,6 +7,6 @@ public class DivergentData : DataPacket
 {
     private void Awake()
     {
-        dataType = DataType.Divegent;
+        dataType = DataType.Divergent;
     }
 }

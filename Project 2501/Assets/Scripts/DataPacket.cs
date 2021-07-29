@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum DataType
 {
-    Allegiant, Divegent, Insurgent
+    Allegiant, Divergent, Insurgent
 }
 
 public class DataPacket : ScriptableObject
