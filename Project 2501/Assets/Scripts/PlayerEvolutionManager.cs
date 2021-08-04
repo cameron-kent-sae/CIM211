@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,12 @@ public class PlayerEvolutionManager : MonoBehaviour
 
     [Header("Level Thresholds")]
     public List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
+
+    [Header("Evolution Objects")]
+    public GameObject baseObject;
+    public GameObject[] allegiantObjects;
+    public GameObject[] divergentObjects;
+    public GameObject[] insurgentObjects;
     #endregion
 
     #region Methods
@@ -68,8 +75,9 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (allegiantCount == target)
             {
-                allegiantLevel = evolveTargets.IndexOf(target) + 1;
+                allegiantLevel = evolveTargets.IndexOf(target);
                 //update player appearance
+                ActivateAllegiantObject();
             }
         }
     }
@@ -80,7 +88,7 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (divergentCount == target)
             {
-                divergentLevel = evolveTargets.IndexOf(target) + 1;
+                divergentLevel = evolveTargets.IndexOf(target);
                 //update player appearance
             }
         }
@@ -92,10 +100,18 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (insurgentCount == target)
             {
-                insurgentLevel = evolveTargets.IndexOf(target) + 1;
+                insurgentLevel = evolveTargets.IndexOf(target);
                 //update player appearance
             }
         }
     }
+
+    private void ActivateAllegiantObject()
+    {
+        baseObject.SetActive(false);
+        allegiantObjects[allegiantLevel-1].SetActive(true);
+    }
+
+
     #endregion
 }
