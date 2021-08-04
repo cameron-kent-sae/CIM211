@@ -8,74 +8,62 @@ public class TrackGenerator : MonoBehaviour
 {
     #region Variables
     [Header("Track Section Prefabs")]
-    public GameObject firstSection;
     public GameObject[] trackSections;
 
-    public Transform startLocation;
-    public Transform nextLocation;
-
+    public CameraRunner cameraRunner;
+    public float sectionLength;
     public int maxSections;
-    public int currentSections;
 
+    private Transform spawnLocation;
+    private int currentSections;
+    private float cameraRunSpeed;
+    private float spawnTime;
+    private bool spawning;
     private List<GameObject> spawnedSections = new List<GameObject>();
     #endregion
 
     #region Methods
-
     private void Start()
     {
-        GenerateFirst();
+        cameraRunSpeed = cameraRunner.speed;
+        spawning = true;
+        spawnLocation = gameObject.transform;
+        StartCoroutine(GenerateTrack());
     }
 
-    private void Update()
+    private IEnumerator GenerateTrack()
     {
-        if (spawnedSections.Count == maxSections)
-        {
-            RemoveSection();
-        }    
-    }
-
-    private void GenerateFirst()
-    {
-        if (startLocation)
-        {
-            GameObject section = Instantiate(firstSection, startLocation.position, startLocation.rotation);
-            spawnedSections.Add(section);
-            nextLocation = section.GetComponentInChildren<Transform>().GetChild(1);
-            currentSections++;
-
-            GenerateSections();
-        }
-    }
-
-    private void GenerateSections()
-    {
-        if (currentSections < maxSections)
+        while (spawning)
         {
             int i = Random.Range(0, trackSections.Length);
-            //Transform loc = 
-            GameObject section = Instantiate(trackSections[i], nextLocation.position, nextLocation.rotation);
+            GameObject section = Instantiate(trackSections[i], spawnLocation.position, spawnLocation.rotation);
+            spawnLocation = section.GetComponentInChildren<Transform>().GetChild(1);
+            spawnedSections.Add(section);
+            currentSections++;
 
-            AddSection(section);
+            UpdateSpawnTime();
 
-            Invoke("GenerateSections", .1f);
+            if (currentSections == maxSections)
+            {
+                DestroySection();
+            }
+
+            yield return new WaitForSeconds(spawnTime);
         }
     }
 
-    public void AddSection(GameObject section)
+    private void UpdateSpawnTime()
     {
-        spawnedSections.Add(section);
-        currentSections++;
+        spawnTime = sectionLength / cameraRunSpeed;
     }
 
-    public void RemoveSection()
+    private void DestroySection()
     {
-        spawnedSections.Remove(spawnedSections[0]);
-        //Destroy(spawnedSections[0]);
+        var obj = spawnedSections[0];
+        spawnedSections.Remove(obj);
+        Destroy(obj);
 
         currentSections--;
-
-        GenerateSections();
     }
     #endregion
 }
