@@ -16,7 +16,7 @@ public class TrackGenerator : MonoBehaviour
 
     private Transform spawnLocation;
     private int currentSections;
-    private float cameraRunSpeed;
+    //private float cameraRunSpeed;
     private float spawnTime;
     private bool spawning;
     private List<GameObject> spawnedSections = new List<GameObject>();
@@ -25,7 +25,7 @@ public class TrackGenerator : MonoBehaviour
     #region Methods
     private void Start()
     {
-        cameraRunSpeed = cameraRunner.speed;
+        //cameraRunSpeed = cameraRunner.speed;
         spawning = true;
         spawnLocation = gameObject.transform;
         StartCoroutine(GenerateTrack());
@@ -54,7 +54,7 @@ public class TrackGenerator : MonoBehaviour
 
     private void UpdateSpawnTime()
     {
-        spawnTime = sectionLength / cameraRunSpeed;
+        spawnTime = (sectionLength / (cameraRunner.speed));
     }
 
     private void DestroySection()

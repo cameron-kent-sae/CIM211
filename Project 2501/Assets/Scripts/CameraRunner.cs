@@ -13,6 +13,7 @@ public class CameraRunner : MonoBehaviour
 
     private void Update()
     {
-        rbody.velocity = transform.forward * speed;
+        //rbody.velocity = transform.forward * speed;
+        transform.Translate(Vector3.forward * (speed * Time.deltaTime));
     }
 }
