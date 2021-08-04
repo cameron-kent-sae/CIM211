@@ -76,7 +76,6 @@ public class PlayerEvolutionManager : MonoBehaviour
             if (allegiantCount == target)
             {
                 allegiantLevel = evolveTargets.IndexOf(target);
-                //update player appearance
                 ActivateAllegiantObject();
             }
         }
@@ -89,7 +88,7 @@ public class PlayerEvolutionManager : MonoBehaviour
             if (divergentCount == target)
             {
                 divergentLevel = evolveTargets.IndexOf(target);
-                //update player appearance
+                ActivateDivergentObject();
             }
         }
     }
@@ -101,7 +100,7 @@ public class PlayerEvolutionManager : MonoBehaviour
             if (insurgentCount == target)
             {
                 insurgentLevel = evolveTargets.IndexOf(target);
-                //update player appearance
+                ActivateInsurgentObject();
             }
         }
     }
@@ -112,6 +111,17 @@ public class PlayerEvolutionManager : MonoBehaviour
         allegiantObjects[allegiantLevel-1].SetActive(true);
     }
 
+    private void ActivateDivergentObject()
+    {
+        baseObject.SetActive(false);
+        divergentObjects[divergentLevel - 1].SetActive(true);
+    }
+
+    private void ActivateInsurgentObject()
+    {
+        baseObject.SetActive(false);
+        insurgentObjects[insurgentLevel - 1].SetActive(true);
+    }
 
     #endregion
 }
