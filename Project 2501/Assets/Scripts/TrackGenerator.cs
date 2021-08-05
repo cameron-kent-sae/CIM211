@@ -13,13 +13,10 @@ public class TrackGenerator : MonoBehaviour
     public GameObject[] trackSections;
 
     public CameraRunner cameraRunner;
-    //public float sectionLength;
     public int maxSections;
 
     private Transform spawnLocation;
     private int currentSections;
-    //private float spawnTime;
-    //private bool spawning;
     private List<GameObject> spawnedSections = new List<GameObject>();
     #endregion
 
@@ -30,13 +27,6 @@ public class TrackGenerator : MonoBehaviour
 
         StartSpawning();
     }
-    /*
-    private void Start()
-    {
-        //spawning = true;
-        //spawnLocation = gameObject.transform;
-        //StartCoroutine(GenerateTrack());
-    }*/
 
     private void Update()
     {
@@ -71,32 +61,6 @@ public class TrackGenerator : MonoBehaviour
             currentSections++;
         }
     }
-    /*
-    private IEnumerator GenerateTrack()
-    {
-        while (spawning)
-        {
-            int i = Random.Range(0, trackSections.Length);
-            GameObject section = Instantiate(trackSections[i], spawnLocation.position, spawnLocation.rotation);
-            spawnLocation = section.GetComponentInChildren<Transform>().GetChild(1);
-            spawnedSections.Add(section);
-            currentSections++;
-
-            UpdateSpawnTime();
-
-            if (currentSections == maxSections)
-            {
-                DestroySection();
-            }
-
-            yield return new WaitForSeconds(spawnTime);
-        }
-    }*/
-    /*
-    private void UpdateSpawnTime()
-    {
-        spawnTime = (sectionLength / cameraRunner.speed);
-    }*/
 
     private void DestroySection()
     {

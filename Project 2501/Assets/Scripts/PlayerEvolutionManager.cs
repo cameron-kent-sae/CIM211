@@ -120,10 +120,12 @@ public class PlayerEvolutionManager : MonoBehaviour
     {
         baseObject.SetActive(false);
         allegiantTop.SetActive(true);
-        allegiantObjects[allegiantLevel-1].SetActive(true);
+        allegiantObjects[allegiantLevel - 1].SetActive(true);
 
         if (allegiantLevel == divergentLevel || allegiantLevel > divergentLevel) { divergentTop.SetActive(false); }
         if (allegiantLevel == insurgentLevel || allegiantLevel > insurgentLevel) { insurgentTop.SetActive(false); }
+
+        if (allegiantLevel < divergentLevel || allegiantLevel < insurgentLevel) { allegiantTop.SetActive(false); }
     }
 
     private void ActivateDivergentObject()
@@ -134,6 +136,8 @@ public class PlayerEvolutionManager : MonoBehaviour
         
         if (divergentLevel == allegiantLevel || divergentLevel > allegiantLevel) { allegiantTop.SetActive(false); }
         if (divergentLevel == insurgentLevel || divergentLevel > insurgentLevel) { insurgentTop.SetActive(false); }
+
+        if (divergentLevel < allegiantLevel || allegiantLevel < insurgentLevel) { divergentTop.SetActive(false); }
     }
 
     private void ActivateInsurgentObject()
@@ -144,6 +148,8 @@ public class PlayerEvolutionManager : MonoBehaviour
 
         if (insurgentLevel == allegiantLevel || insurgentLevel > allegiantLevel) { allegiantTop.SetActive(false); }
         if (insurgentLevel == divergentLevel || insurgentLevel > divergentLevel) { divergentTop.SetActive(false); }
+
+        if (insurgentLevel < allegiantLevel || insurgentLevel < divergentLevel) { insurgentTop.SetActive(false); }
     }
     #endregion
 }

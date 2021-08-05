@@ -16,16 +16,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        /* AXIS movement
+        // AXIS movement
         Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         moveVelocity = moveInput.normalized * speed;
-        */
+        transform.Translate(Vector3.forward * (speed * Time.deltaTime));
+
     }
 
     private void FixedUpdate()
     {
-        /* AXIS movement
+        // AXIS movement
         rbody.MovePosition(rbody.position + moveVelocity * Time.fixedDeltaTime); 
-        */
     }
 }
