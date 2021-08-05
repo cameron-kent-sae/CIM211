@@ -7,7 +7,7 @@ public class MouseFollow : MonoBehaviour
     public float speed = 8.0f;
     public float distanceFromCamera = 5.0f;
 
-    void Update()
+    private void Update()
     {
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = distanceFromCamera;

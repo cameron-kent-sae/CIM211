@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,9 +20,18 @@ public class PlayerEvolutionManager : MonoBehaviour
 
     [Header("Level Thresholds")]
     public List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
+
+    [Header("Evolution Objects")]
+    public GameObject baseObject;
+    public GameObject allegiantTop;
+    public GameObject divergentTop;
+    public GameObject insurgentTop;
+    public GameObject[] allegiantObjects;
+    public GameObject[] divergentObjects;
+    public GameObject[] insurgentObjects;
     #endregion
 
-    #region Methods
+    #region Built-in Methods
     private void Start()
     {
         allegiantCount = 0;
@@ -61,15 +71,19 @@ public class PlayerEvolutionManager : MonoBehaviour
             Debug.Log(data.data.description);
         }
     }
+    #endregion
 
+    #region Evolution Methods
     private void CheckAllegiantLevel()
     {
         foreach (int target in evolveTargets)
         {
             if (allegiantCount == target)
             {
-                allegiantLevel = evolveTargets.IndexOf(target) + 1;
-                //update player appearance
+                allegiantLevel = evolveTargets.IndexOf(target);
+                
+                ActivateAllegiantObject();
+                //run narrative context
             }
         }
     }
@@ -80,8 +94,10 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (divergentCount == target)
             {
-                divergentLevel = evolveTargets.IndexOf(target) + 1;
-                //update player appearance
+                divergentLevel = evolveTargets.IndexOf(target);
+                
+                ActivateDivergentObject();
+                //run narrative context
             }
         }
     }
@@ -92,10 +108,42 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             if (insurgentCount == target)
             {
-                insurgentLevel = evolveTargets.IndexOf(target) + 1;
-                //update player appearance
+                insurgentLevel = evolveTargets.IndexOf(target);
+                
+                ActivateInsurgentObject();
+                //run narrative context
             }
         }
+    }
+
+    private void ActivateAllegiantObject()
+    {
+        baseObject.SetActive(false);
+        allegiantTop.SetActive(true);
+        allegiantObjects[allegiantLevel-1].SetActive(true);
+
+        if (allegiantLevel == divergentLevel || allegiantLevel > divergentLevel) { divergentTop.SetActive(false); }
+        if (allegiantLevel == insurgentLevel || allegiantLevel > insurgentLevel) { insurgentTop.SetActive(false); }
+    }
+
+    private void ActivateDivergentObject()
+    {
+        baseObject.SetActive(false);
+        divergentTop.SetActive(true);
+        divergentObjects[divergentLevel - 1].SetActive(true);
+        
+        if (divergentLevel == allegiantLevel || divergentLevel > allegiantLevel) { allegiantTop.SetActive(false); }
+        if (divergentLevel == insurgentLevel || divergentLevel > insurgentLevel) { insurgentTop.SetActive(false); }
+    }
+
+    private void ActivateInsurgentObject()
+    {
+        baseObject.SetActive(false);
+        insurgentTop.SetActive(true);
+        insurgentObjects[insurgentLevel - 1].SetActive(true);
+
+        if (insurgentLevel == allegiantLevel || insurgentLevel > allegiantLevel) { allegiantTop.SetActive(false); }
+        if (insurgentLevel == divergentLevel || insurgentLevel > divergentLevel) { divergentTop.SetActive(false); }
     }
     #endregion
 }

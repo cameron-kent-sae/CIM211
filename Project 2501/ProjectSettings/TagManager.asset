@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shootable
   - DataObject
+  - TrackSection
   layers:
   - Default
   - TransparentFX
