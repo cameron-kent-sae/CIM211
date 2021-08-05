@@ -7,30 +7,71 @@ using Random = UnityEngine.Random;
 public class TrackGenerator : MonoBehaviour
 {
     #region Variables
+    private const float MAX_DIST = 200f;
+
     [Header("Track Section Prefabs")]
     public GameObject[] trackSections;
 
     public CameraRunner cameraRunner;
-    public float sectionLength;
+    //public float sectionLength;
     public int maxSections;
 
     private Transform spawnLocation;
     private int currentSections;
-    //private float cameraRunSpeed;
-    private float spawnTime;
-    private bool spawning;
+    //private float spawnTime;
+    //private bool spawning;
     private List<GameObject> spawnedSections = new List<GameObject>();
     #endregion
 
     #region Methods
+    private void Awake()
+    {
+        spawnLocation = gameObject.transform;
+
+        StartSpawning();
+    }
+    /*
     private void Start()
     {
-        //cameraRunSpeed = cameraRunner.speed;
-        spawning = true;
-        spawnLocation = gameObject.transform;
-        StartCoroutine(GenerateTrack());
+        //spawning = true;
+        //spawnLocation = gameObject.transform;
+        //StartCoroutine(GenerateTrack());
+    }*/
+
+    private void Update()
+    {
+        if (Vector3.Distance(cameraRunner.gameObject.transform.position, spawnLocation.transform.position) < MAX_DIST)
+        {
+            SpawnTrack();
+        }
+
+        if (currentSections == maxSections)
+        {
+            DestroySection();
+        }
     }
 
+    private void SpawnTrack()
+    {
+        int i = Random.Range(0, trackSections.Length);
+        GameObject section = Instantiate(trackSections[i], spawnLocation.position, spawnLocation.rotation);
+        spawnLocation = section.GetComponentInChildren<Transform>().GetChild(1);
+        spawnedSections.Add(section);
+        currentSections++;
+    }
+
+    private void StartSpawning()
+    {
+        while (currentSections < maxSections)
+        {
+            int i = Random.Range(0, trackSections.Length);
+            GameObject section = Instantiate(trackSections[i], spawnLocation.position, spawnLocation.rotation);
+            spawnLocation = section.GetComponentInChildren<Transform>().GetChild(1);
+            spawnedSections.Add(section);
+            currentSections++;
+        }
+    }
+    /*
     private IEnumerator GenerateTrack()
     {
         while (spawning)
@@ -50,12 +91,12 @@ public class TrackGenerator : MonoBehaviour
 
             yield return new WaitForSeconds(spawnTime);
         }
-    }
-
+    }*/
+    /*
     private void UpdateSpawnTime()
     {
-        spawnTime = (sectionLength / (cameraRunner.speed));
-    }
+        spawnTime = (sectionLength / cameraRunner.speed);
+    }*/
 
     private void DestroySection()
     {

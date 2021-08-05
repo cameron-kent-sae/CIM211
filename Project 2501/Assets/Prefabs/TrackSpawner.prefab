@@ -46,5 +46,4 @@ MonoBehaviour:
   trackSections:
   - {fileID: 3278428230886723435, guid: ddab931870396f84598fdd255950b947, type: 3}
   cameraRunner: {fileID: 0}
-  sectionLength: 20
-  maxSections: 10
+  maxSections: 20

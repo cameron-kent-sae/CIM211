@@ -11,7 +11,7 @@ public class CameraRunner : MonoBehaviour
         rbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //rbody.velocity = transform.forward * speed;
         transform.Translate(Vector3.forward * (speed * Time.deltaTime));
