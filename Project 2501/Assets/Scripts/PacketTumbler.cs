@@ -18,7 +18,7 @@ public class PacketTumbler : MonoBehaviour
             float xSpin = Random.Range(0, 360);
             float ySpin = Random.Range(0, 360);
             float zSpin = Random.Range(0, 360);
-            float spinTime = Random.Range(.3f, .9f);
+            float spinTime = Random.Range(1f, 1.5f);
 
             transform.LeanRotateX(xSpin, spinTime).setEaseInOutBounce();
             transform.LeanRotateY(xSpin, spinTime).setEaseInOutBounce();
