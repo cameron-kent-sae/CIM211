@@ -46,9 +46,9 @@ MonoBehaviour:
   allegientPackets: []
   divergentPackets: []
   insurgentPackets: []
-  minSpawnBound: -5
-  maxSpawnBound: 5
+  minSpawnBound: -4
+  maxSpawnBound: 4
   minSpawnDistance: 10
-  maxSpawnDistance: 20
+  maxSpawnDistance: 15
   spawnRate: 0.2
   runningCamera: {fileID: 0}

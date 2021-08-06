@@ -33,6 +33,7 @@ public class DataPacketSpawner : MonoBehaviour
     {
         minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
         //update spawn rate
+
     }
     #endregion
 

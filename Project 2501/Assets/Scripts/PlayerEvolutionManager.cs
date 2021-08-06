@@ -6,7 +6,11 @@ using UnityEngine;
 public class PlayerEvolutionManager : MonoBehaviour
 {
     #region Variables
+    [Header("Game Systems")]
     public DataInventory dataInventory;
+    public CameraRunner cameraRunner;
+    public NarrativeController narrativeController;
+    public DataPacketSpawner dataPacketSpawner;
 
     [Header("Path Levels")]
     public int allegiantLevel;
@@ -83,7 +87,8 @@ public class PlayerEvolutionManager : MonoBehaviour
                 allegiantLevel = evolveTargets.IndexOf(target);
                 
                 ActivateAllegiantObject();
-                //run narrative context
+
+                narrativeController.PrintNarration("allegiant", allegiantLevel);
             }
         }
     }
@@ -97,7 +102,8 @@ public class PlayerEvolutionManager : MonoBehaviour
                 divergentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateDivergentObject();
-                //run narrative context
+
+                narrativeController.PrintNarration("divergent", divergentLevel);
             }
         }
     }
@@ -111,7 +117,8 @@ public class PlayerEvolutionManager : MonoBehaviour
                 insurgentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateInsurgentObject();
-                //run narrative context
+
+                narrativeController.PrintNarration("insurgent", insurgentLevel);
             }
         }
     }

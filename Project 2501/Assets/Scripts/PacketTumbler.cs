@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,6 +6,7 @@ public class PacketTumbler : MonoBehaviour
 {
     private void Start()
     {
+        Time.timeScale = 1;
         StartCoroutine(BeginObjectRotate());
     }
 
@@ -21,9 +20,8 @@ public class PacketTumbler : MonoBehaviour
             float spinTime = Random.Range(1f, 1.5f);
 
             transform.LeanRotateX(xSpin, spinTime).setEaseInOutBounce();
-            transform.LeanRotateY(xSpin, spinTime).setEaseInOutBounce();
-            transform.LeanRotateZ(xSpin, spinTime).setEaseInOutBounce();
-            //transform.rotation = Quaternion.Euler(xSpin, ySpin, zSpin);
+            transform.LeanRotateY(ySpin, spinTime).setEaseInOutBounce();
+            transform.LeanRotateZ(zSpin, spinTime).setEaseInOutBounce();
 
             yield return new WaitForSeconds(spinTime);
         }

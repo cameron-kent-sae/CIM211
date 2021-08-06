@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseFollow : MonoBehaviour
 {
     public float speed = 8.0f;
-    public float distanceFromCamera = 5.0f;
+    public float distanceFromCamera = 10.0f;
 
     private void Update()
     {
