@@ -8,12 +8,13 @@ public class DataPacketSpawner : MonoBehaviour
     public List<GameObject> allegientPackets = new List<GameObject>();
     public List<GameObject> divergentPackets = new List<GameObject>();
     public List<GameObject> insurgentPackets = new List<GameObject>();
+    public List<GameObject> otherPackets = new List<GameObject>();
 
     public float minSpawnBound;
     public float maxSpawnBound;
     public float minSpawnDistance;
     public float maxSpawnDistance;
-    
+
     public float spawnRate = 1f;
 
     public GameObject runningCamera;
@@ -28,6 +29,7 @@ public class DataPacketSpawner : MonoBehaviour
         StartCoroutine(SpawnAllegiantPacket());
         StartCoroutine(SpawnDivergentPacket());
         StartCoroutine(SpawnInsurgentPacket());
+        StartCoroutine(SpawnOtherPacket());
     }
 
     private void Update()
@@ -73,15 +75,29 @@ public class DataPacketSpawner : MonoBehaviour
         }
     }
 
+    private IEnumerator SpawnOtherPacket()
+    {
+        while (true)
+        {
+            int i = Random.Range(0, otherPackets.Count);
+            Vector3 spawnPos = new Vector3(Random.Range(minSpawnBound, maxSpawnBound), Random.Range(minSpawnBound, maxSpawnBound), minSpawnDistance);
+            GameObject packet = Instantiate(otherPackets[i], spawnPos, Quaternion.identity);
+
+            yield return new WaitForSeconds(spawnRate);
+        }
+    }
+
     private void PopulatePacketArrays()
     {
         GameObject[] allegientObjects = Resources.LoadAll<GameObject>("DataPackets/Allegiant");
         GameObject[] divergentObjects = Resources.LoadAll<GameObject>("DataPackets/Divergent");
         GameObject[] insurgentObjects = Resources.LoadAll<GameObject>("DataPackets/Insurgent");
+        GameObject[] otherObjects = Resources.LoadAll<GameObject>("DataPackets/Other");
 
         foreach (GameObject i in allegientObjects) { allegientPackets.Add(i); }
         foreach (GameObject i in divergentObjects) { divergentPackets.Add(i); }
         foreach (GameObject i in insurgentObjects) { insurgentPackets.Add(i); }
+        foreach (GameObject i in otherObjects) { otherPackets.Add(i); }
     }
     #endregion
 }

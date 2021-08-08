@@ -26,13 +26,13 @@ public class NarrativeController : MonoBehaviour
         switch (path)
         {
             case "allegiant":
-                //Debug.Log(allegiantNarrations[level].ToString());
+                Debug.Log(allegiantNarrations[level].ToString());
                 break;
             case "divergent":
-                //Debug.Log(divergentNarrations[level].ToString());
+                Debug.Log(divergentNarrations[level].ToString());
                 break;
             case "insurgent":
-                //Debug.Log(insurgentNarrations[level].ToString());
+                Debug.Log(insurgentNarrations[level].ToString());
                 break;
             default:
                 break;
