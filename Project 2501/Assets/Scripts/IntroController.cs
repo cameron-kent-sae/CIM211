@@ -28,7 +28,7 @@ public class IntroController : MonoBehaviour
     #region Scripts
     private string scriptOne = "“Captain, Program 2501 is ready for testing.”";
     private string scriptTwo = "“Boot er up soldier. We can’t hack into their information systems unless we know she works. We can’t have another cyber coup on our hands. Prepare for simulation!”";
-    private string scriptThree = "“Roger”";
+    private string scriptThree = "“Roger. Ready to initialise.”";
     #endregion
 
     #region Built In Methods
@@ -40,43 +40,25 @@ public class IntroController : MonoBehaviour
         textTwo.text = "";
         textThree.text = "";
 
-        //techSprite.color = fadeColor;
-        //captainSprite.color = fadeColor;
-
-        //techSprite.gameObject.LeanScale(new Vector3(.8f, .8f, .8f), .0f);
-        //captainSprite.gameObject.LeanScale(new Vector3(.8f, .8f, .0f), .5f);
-
         StartCoroutine("PlayIntroduction", delayOne);
     }
-
     #endregion
 
     #region Custom Methods
     private IEnumerator PlayIntroduction()
     {
-        //StartCoroutine(AnimateTech());
-        //techSprite.color = focusColor;
-        techSprite.color = Color.Lerp(fadeColor, focusColor, .5f);
-        //LeanTween.value(techSprite.gameObject, fadeColor, focusColor, .25f);
-       
-        //techSprite.gameObject.LeanScale(new Vector3(1.1f, 1.1f, 1.1f), .5f).setEaseInCirc();
-        techSprite.gameObject.LeanValue(fadeColor, focusColor, .5f);
+        techSprite.gameObject.LeanScale(new Vector3(1.1f, 1.1f, 1.1f), .5f).setEaseInCirc();
 
         foreach (char c in scriptOne)
         {
             textOne.text += c;
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(0.05f);
         }
 
-        //LeanTween.value(techSprite.gameObject, focusColor, fadeColor, .25f);
-        techSprite.color = Color.Lerp(focusColor, fadeColor, .5f);
-
-        //techSprite.color = fadeColor;
         techSprite.gameObject.LeanScale(new Vector3(.8f, .8f, .8f), .5f).setEaseInCirc();
 
         yield return new WaitForSeconds(delayTwo);
 
-        //captainSprite.color = focusColor;
         captainSprite.gameObject.LeanScale(new Vector3(1.1f, 1.1f, 1.1f), .5f).setEaseInCirc();
 
         foreach (char c in scriptTwo)
@@ -85,28 +67,23 @@ public class IntroController : MonoBehaviour
             yield return new WaitForSeconds(0.025f);
         }
 
-        //captainSprite.color = fadeColor;
         captainSprite.gameObject.LeanScale(new Vector3(.8f, .8f, .8f), .5f).setEaseInCirc();
 
         yield return new WaitForSeconds(delayThree);
        
-        //techSprite.color = focusColor;
         techSprite.gameObject.LeanScale(new Vector3(1.1f, 1.1f, 1.1f), .5f).setEaseInCirc();
 
         foreach (char c in scriptThree)
         {
             textThree.text += c;
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(0.05f);
         }
 
-        //techSprite.color = fadeColor;
         techSprite.gameObject.LeanScale(new Vector3(.8f, .8f, .8f), .5f).setEaseInCirc();
 
         yield return new WaitForSeconds(delayFour);
 
         launchBtn.SetActive(true);
     }
-
-
     #endregion
 }

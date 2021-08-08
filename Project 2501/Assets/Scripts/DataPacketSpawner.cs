@@ -31,11 +31,6 @@ public class DataPacketSpawner : MonoBehaviour
         StartCoroutine(SpawnInsurgentPacket());
         StartCoroutine(SpawnOtherPacket());
     }
-
-    private void Update()
-    {
-        minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
-    }
     #endregion
 
     #region Custom Methods
@@ -44,6 +39,7 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, allegientPackets.Count);
+            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
             Vector3 spawnPos = new Vector3(Random.Range(minSpawnBound, maxSpawnBound), Random.Range(minSpawnBound, maxSpawnBound), minSpawnDistance);
             GameObject packet = Instantiate(allegientPackets[i], spawnPos, Quaternion.identity);
 
@@ -56,6 +52,7 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, divergentPackets.Count);
+            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
             Vector3 spawnPos = new Vector3(Random.Range(minSpawnBound, maxSpawnBound), Random.Range(minSpawnBound, maxSpawnBound), minSpawnDistance);
             GameObject packet = Instantiate(divergentPackets[i], spawnPos, Quaternion.identity);
 
@@ -68,6 +65,7 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, insurgentPackets.Count);
+            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
             Vector3 spawnPos = new Vector3(Random.Range(minSpawnBound, maxSpawnBound), Random.Range(minSpawnBound, maxSpawnBound), minSpawnDistance);
             GameObject packet = Instantiate(insurgentPackets[i], spawnPos, Quaternion.identity);
 
@@ -80,6 +78,7 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, otherPackets.Count);
+            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
             Vector3 spawnPos = new Vector3(Random.Range(minSpawnBound, maxSpawnBound), Random.Range(minSpawnBound, maxSpawnBound), minSpawnDistance);
             GameObject packet = Instantiate(otherPackets[i], spawnPos, Quaternion.identity);
 

@@ -17,7 +17,6 @@ public class NarrativeController : MonoBehaviour
     {
         InitialiseNarrations();
     }
-
     #endregion
 
     #region Custom Methods
