@@ -13,7 +13,8 @@ public class DataPacketSpawner : MonoBehaviour
     public float maxSpawnBound;
     public float minSpawnDistance;
     public float maxSpawnDistance;
-    public float spawnRate;
+    
+    public float spawnRate = 1f;
 
     public GameObject runningCamera;
 
@@ -32,8 +33,6 @@ public class DataPacketSpawner : MonoBehaviour
     private void Update()
     {
         minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
-        //update spawn rate
-
     }
     #endregion
 

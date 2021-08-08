@@ -48,7 +48,7 @@ MonoBehaviour:
   insurgentPackets: []
   minSpawnBound: -4
   maxSpawnBound: 4
-  minSpawnDistance: 10
-  maxSpawnDistance: 15
-  spawnRate: 0.2
+  minSpawnDistance: 6
+  maxSpawnDistance: 12
+  spawnRate: 1
   runningCamera: {fileID: 0}

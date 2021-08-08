@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -77,7 +75,55 @@ public class PlayerEvolutionManager : MonoBehaviour
     }
     #endregion
 
-    #region Evolution Methods
+    #region Custom Methods
+    private void UpdateSpeedAndRate(float i)
+    {
+        switch (i)
+        {
+            case 1:
+                cameraRunner.speed = 11;
+                dataPacketSpawner.spawnRate = 0.9f;
+                break;
+            case 2:
+                cameraRunner.speed = 12;
+                dataPacketSpawner.spawnRate = 0.8f;
+                break;
+            case 3:
+                cameraRunner.speed = 13;
+                dataPacketSpawner.spawnRate = 0.7f;
+                break;
+            case 4:
+                cameraRunner.speed = 14;
+                dataPacketSpawner.spawnRate = 0.6f;
+                break;
+            case 5:
+                cameraRunner.speed = 15;
+                dataPacketSpawner.spawnRate = 0.5f;
+                break;
+            case 6:
+                cameraRunner.speed = 16;
+                dataPacketSpawner.spawnRate = 0.4f;
+                break;
+            case 7:
+                cameraRunner.speed = 17;
+                dataPacketSpawner.spawnRate = 0.3f;
+                break;
+            case 8:
+                cameraRunner.speed = 18;
+                dataPacketSpawner.spawnRate = 0.2f;
+                break;
+            case 9:
+                cameraRunner.speed = 19;
+                dataPacketSpawner.spawnRate = 0.1f;
+                break;
+            case 10:
+                cameraRunner.speed = 20;
+                break;
+            default:
+                break;
+        }
+    }
+
     private void CheckAllegiantLevel()
     {
         foreach (int target in evolveTargets)
@@ -87,6 +133,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 allegiantLevel = evolveTargets.IndexOf(target);
                 
                 ActivateAllegiantObject();
+                UpdateSpeedAndRate(allegiantLevel);
 
                 narrativeController.PrintNarration("allegiant", allegiantLevel);
             }
@@ -102,6 +149,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 divergentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateDivergentObject();
+                UpdateSpeedAndRate(divergentLevel);
 
                 narrativeController.PrintNarration("divergent", divergentLevel);
             }
@@ -117,6 +165,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 insurgentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateInsurgentObject();
+                UpdateSpeedAndRate(insurgentLevel);
 
                 narrativeController.PrintNarration("insurgent", insurgentLevel);
             }
@@ -144,7 +193,7 @@ public class PlayerEvolutionManager : MonoBehaviour
         if (divergentLevel == allegiantLevel || divergentLevel > allegiantLevel) { allegiantTop.SetActive(false); }
         if (divergentLevel == insurgentLevel || divergentLevel > insurgentLevel) { insurgentTop.SetActive(false); }
 
-        if (divergentLevel < allegiantLevel || allegiantLevel < insurgentLevel) { divergentTop.SetActive(false); }
+        if (divergentLevel < allegiantLevel || divergentLevel < insurgentLevel) { divergentTop.SetActive(false); }
     }
 
     private void ActivateInsurgentObject()

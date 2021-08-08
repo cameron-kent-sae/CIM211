@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraRunner : MonoBehaviour
 {
-    public float speed;
+    public float speed = 10f;
 
     private void FixedUpdate()
     {
