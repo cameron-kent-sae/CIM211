@@ -10,18 +10,18 @@ public class PlayerEvolutionManager : MonoBehaviour
     public NarrativeController narrativeController;
     public DataPacketSpawner dataPacketSpawner;
 
-    [Header("Path Levels")]
-    public int allegiantLevel;
-    public int divergentLevel;
-    public int insurgentLevel;
+    //[Header("Path Levels")]
+    private int allegiantLevel;
+    private int divergentLevel;
+    private int insurgentLevel;
 
-    [Header("Data Packet Counts")]
-    public int allegiantCount;
-    public int divergentCount;
-    public int insurgentCount;
+    //[Header("Data Packet Counts")]
+    private int allegiantCount;
+    private int divergentCount;
+    private int insurgentCount;
 
-    [Header("Level Thresholds")]
-    public List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
+    //[Header("Level Thresholds")]
+    private List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
 
     [Header("Evolution Objects")]
     public GameObject baseObject;
