@@ -9,6 +9,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     public CameraRunner cameraRunner;
     public NarrativeController narrativeController;
     public DataPacketSpawner dataPacketSpawner;
+    public DataLogger dataLogger;
 
     //[Header("Path Levels")]
     private int allegiantLevel;
@@ -55,14 +56,20 @@ public class PlayerEvolutionManager : MonoBehaviour
             {
                 case DataType.Allegiant:
                     allegiantCount += 1;
+                    dataLogger.AddLog(data.data.url);
+                    dataLogger.AddLog(data.data.description);
                     CheckAllegiantLevel();
                     break;
                 case DataType.Divergent:
                     divergentCount += 1;
+                    dataLogger.AddLog(data.data.url);
+                    dataLogger.AddLog(data.data.description);
                     CheckDivergentLevel();
                     break;
                 case DataType.Insurgent:
                     insurgentCount += 1;
+                    dataLogger.AddLog(data.data.url);
+                    dataLogger.AddLog(data.data.description);
                     CheckInsurgentLevel();
                     break;
                 default:
@@ -134,8 +141,6 @@ public class PlayerEvolutionManager : MonoBehaviour
                 
                 ActivateAllegiantObject();
                 UpdateSpeedAndRate(allegiantLevel);
-
-                narrativeController.PrintNarration("allegiant", allegiantLevel);
             }
         }
     }
@@ -150,8 +155,6 @@ public class PlayerEvolutionManager : MonoBehaviour
                 
                 ActivateDivergentObject();
                 UpdateSpeedAndRate(divergentLevel);
-
-                narrativeController.PrintNarration("divergent", divergentLevel);
             }
         }
     }
@@ -166,8 +169,6 @@ public class PlayerEvolutionManager : MonoBehaviour
                 
                 ActivateInsurgentObject();
                 UpdateSpeedAndRate(insurgentLevel);
-
-                narrativeController.PrintNarration("insurgent", insurgentLevel);
             }
         }
     }

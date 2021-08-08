@@ -6,16 +6,13 @@ using UnityEngine;
 public class DataLogger : MonoBehaviour
 {
     #region Variables
-    public int maxLInes = 16;
     public TMP_Text textLog;
-
     public GameObject logPanel;
 
     private List<string> eventLog = new List<string>();
     private string guiText = "";
-
+    private int maxLInes = 19;
     private bool isExpanded;
-
     #endregion
 
     #region Built In Methods

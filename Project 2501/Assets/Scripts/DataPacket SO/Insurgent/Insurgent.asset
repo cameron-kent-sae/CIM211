@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Insurgent
   m_EditorClassIdentifier: 
   dataType: 2
-  url: 
+  url: insurgent url
   description: insurgent data

@@ -26,13 +26,13 @@ public class NarrativeController : MonoBehaviour
         switch (path)
         {
             case "allegiant":
-                Debug.Log(allegiantNarrations[level].ToString());
+                //Debug.Log(allegiantNarrations[level].ToString());
                 break;
             case "divergent":
-                Debug.Log(divergentNarrations[level].ToString());
+                //Debug.Log(divergentNarrations[level].ToString());
                 break;
             case "insurgent":
-                Debug.Log(insurgentNarrations[level].ToString());
+                //Debug.Log(insurgentNarrations[level].ToString());
                 break;
             default:
                 break;
@@ -41,38 +41,38 @@ public class NarrativeController : MonoBehaviour
 
     private void InitialiseNarrations()
     {
-        allegiantNarrations.Add("one");
-        allegiantNarrations.Add("two");
-        allegiantNarrations.Add("three");
-        allegiantNarrations.Add("four");
-        allegiantNarrations.Add("five");
-        allegiantNarrations.Add("six");
-        allegiantNarrations.Add("seven");
-        allegiantNarrations.Add("eight");
-        allegiantNarrations.Add("nine");
-        allegiantNarrations.Add("ten");
+        allegiantNarrations.Add("Aone");
+        allegiantNarrations.Add("Atwo");
+        allegiantNarrations.Add("Athree");
+        allegiantNarrations.Add("Afour");
+        allegiantNarrations.Add("Afive");
+        allegiantNarrations.Add("Asix");
+        allegiantNarrations.Add("Aseven");
+        allegiantNarrations.Add("Aeight");
+        allegiantNarrations.Add("Anine");
+        allegiantNarrations.Add("Aten");
 
-        divergentNarrations.Add("one");
-        divergentNarrations.Add("two");
-        divergentNarrations.Add("three");
-        divergentNarrations.Add("four");
-        divergentNarrations.Add("five");
-        divergentNarrations.Add("six");
-        divergentNarrations.Add("seven");
-        divergentNarrations.Add("eight");
-        divergentNarrations.Add("nine");
-        divergentNarrations.Add("ten");
+        divergentNarrations.Add("Done");
+        divergentNarrations.Add("Dtwo");
+        divergentNarrations.Add("Dthree");
+        divergentNarrations.Add("Dfour");
+        divergentNarrations.Add("Dfive");
+        divergentNarrations.Add("Dsix");
+        divergentNarrations.Add("Dseven");
+        divergentNarrations.Add("Deight");
+        divergentNarrations.Add("Dnine");
+        divergentNarrations.Add("Dten");
 
-        insurgentNarrations.Add("one");
-        insurgentNarrations.Add("two");
-        insurgentNarrations.Add("three");
-        insurgentNarrations.Add("four");
-        insurgentNarrations.Add("five");
-        insurgentNarrations.Add("six");
-        insurgentNarrations.Add("seven");
-        insurgentNarrations.Add("eight");
-        insurgentNarrations.Add("nine");
-        insurgentNarrations.Add("ten");
+        insurgentNarrations.Add("Ione");
+        insurgentNarrations.Add("Itwo");
+        insurgentNarrations.Add("Ithree");
+        insurgentNarrations.Add("Ifour");
+        insurgentNarrations.Add("Ifive");
+        insurgentNarrations.Add("Isix");
+        insurgentNarrations.Add("Iseven");
+        insurgentNarrations.Add("Ieight");
+        insurgentNarrations.Add("Inine");
+        insurgentNarrations.Add("Iten");
     }
     #endregion
 }
