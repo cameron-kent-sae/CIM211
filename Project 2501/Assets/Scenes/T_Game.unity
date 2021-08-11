@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f125f759be4f17644984e944aec69499, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03669729, g: 0.07924773, b: 0.042550422, a: 1}
+  m_IndirectSpecularColor: {r: 0.0070525813, g: 0.44804773, b: 0.589134, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 4334823390502479923, guid: 7cbc6a048bb2a3041afcfbb0a2a6e05a,
         type: 3}
       propertyPath: speed
-      value: 19
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4334823391146995963, guid: 7cbc6a048bb2a3041afcfbb0a2a6e05a,
         type: 3}
@@ -596,6 +596,12 @@ PrefabInstance:
       propertyPath: cameraRunner
       value: 
       objectReference: {fileID: 726069163}
+    - target: {fileID: 3385339344297791328, guid: 7c331de622fd2f54590719cfefefd053,
+        type: 3}
+      propertyPath: trackSections.Array.data[0]
+      value: 
+      objectReference: {fileID: 3278428230886723435, guid: ddab931870396f84598fdd255950b947,
+        type: 3}
     - target: {fileID: 3385339344297791329, guid: 7c331de622fd2f54590719cfefefd053,
         type: 3}
       propertyPath: m_Name
@@ -710,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
         type: 3}
       propertyPath: spawnRate
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
         type: 3}
@@ -729,13 +735,33 @@ PrefabInstance:
       objectReference: {fileID: 726069164}
     - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
         type: 3}
-      propertyPath: maxSpawnDistance
+      propertyPath: maxXSpawnBound
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
+        type: 3}
+      propertyPath: maxYSpawnBound
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
         type: 3}
+      propertyPath: minXSpawnBound
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
+        type: 3}
+      propertyPath: minYSpawnBound
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
+        type: 3}
+      propertyPath: maxSpawnDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
+        type: 3}
       propertyPath: minSpawnDistance
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24233fac3f1dc945b92141c5cea79d3, type: 3}
@@ -1380,8 +1406,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 739472491788757660, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 739472491788757660, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829805421928226212, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2829805421928226212, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}

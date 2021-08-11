@@ -10,6 +10,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     public NarrativeController narrativeController;
     public DataPacketSpawner dataPacketSpawner;
     public DataLogger dataLogger;
+    public MouseFollow mouseFollow;
 
     //[Header("Path Levels")]
     private int allegiantLevel;
@@ -40,6 +41,11 @@ public class PlayerEvolutionManager : MonoBehaviour
         allegiantCount = 0;
         divergentCount = 0;
         insurgentCount = 0;
+    }
+
+    private void Update()
+    {
+        mouseFollow.distanceFromCamera = 15;
     }
 
     private void OnApplicationQuit()
@@ -93,42 +99,51 @@ public class PlayerEvolutionManager : MonoBehaviour
         {
             case 1:
                 cameraRunner.speed = 20;
+                mouseFollow.speed = 20;
                 dataPacketSpawner.spawnRate = 0.9f;
                 break;
             case 2:
                 cameraRunner.speed = 30;
+                mouseFollow.speed = 30;
                 dataPacketSpawner.spawnRate = 0.8f;
                 break;
             case 3:
                 cameraRunner.speed = 40;
+                mouseFollow.speed = 40;
                 dataPacketSpawner.spawnRate = 0.7f;
                 break;
             case 4:
                 cameraRunner.speed = 50;
+                mouseFollow.speed = 50;
                 dataPacketSpawner.spawnRate = 0.6f;
                 break;
             case 5:
                 cameraRunner.speed = 60;
+                mouseFollow.speed = 60;
                 dataPacketSpawner.spawnRate = 0.5f;
                 break;
             case 6:
                 cameraRunner.speed = 70;
+                mouseFollow.speed = 70;
                 dataPacketSpawner.spawnRate = 0.4f;
                 break;
             case 7:
                 cameraRunner.speed = 80;
+                mouseFollow.speed = 80;
                 dataPacketSpawner.spawnRate = 0.3f;
                 break;
             case 8:
                 cameraRunner.speed = 90;
+                mouseFollow.speed = 90;
                 dataPacketSpawner.spawnRate = 0.2f;
                 break;
             case 9:
                 cameraRunner.speed = 100;
+                mouseFollow.speed = 100;
                 dataPacketSpawner.spawnRate = 0.1f;
                 break;
             case 10:
-                cameraRunner.speed = 20;
+                //
                 break;
             default:
                 break;
