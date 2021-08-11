@@ -40,8 +40,8 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, allegientPackets.Count);
-            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
-            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), minSpawnDistance);
+            float spawnZ = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
+            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), spawnZ);
             GameObject packet = Instantiate(allegientPackets[i], spawnPos, Quaternion.identity);
 
             yield return new WaitForSeconds(spawnRate);
@@ -53,8 +53,8 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, divergentPackets.Count);
-            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
-            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), minSpawnDistance);
+            float spawnZ = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
+            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), spawnZ);
             GameObject packet = Instantiate(divergentPackets[i], spawnPos, Quaternion.identity);
 
             yield return new WaitForSeconds(spawnRate);
@@ -66,8 +66,8 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, insurgentPackets.Count);
-            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
-            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), minSpawnDistance);
+            float spawnZ = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
+            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), spawnZ);
             GameObject packet = Instantiate(insurgentPackets[i], spawnPos, Quaternion.identity);
 
             yield return new WaitForSeconds(spawnRate);
@@ -79,8 +79,8 @@ public class DataPacketSpawner : MonoBehaviour
         while (true)
         {
             int i = Random.Range(0, otherPackets.Count);
-            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
-            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), minSpawnDistance);
+            float spawnZ = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
+            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), spawnZ);
             GameObject packet = Instantiate(otherPackets[i], spawnPos, Quaternion.identity);
 
             yield return new WaitForSeconds(spawnRate);

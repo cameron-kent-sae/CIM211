@@ -858,12 +858,12 @@ PrefabInstance:
     - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
         type: 3}
       propertyPath: maxSpawnDistance
-      value: 15
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3554680578191592387, guid: f24233fac3f1dc945b92141c5cea79d3,
         type: 3}
       propertyPath: minSpawnDistance
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24233fac3f1dc945b92141c5cea79d3, type: 3}

@@ -22,14 +22,16 @@ public class CounterAISpawner : MonoBehaviour
 
     public IEnumerator SpawnCounterAI()
     {
+        Debug.Log("Ai Spawning");
+
         while (true)
         {
             int i = Random.Range(0, counterAIObject.Length);
-            minSpawnDistance = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
-            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), minSpawnDistance);
+            float spawnZ = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
+            Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), spawnZ);
             GameObject counterAI = Instantiate(counterAIObject[i], spawnPos, Quaternion.identity);
+           
+            yield return new WaitForSeconds(spawnRate);
         }
-
-        yield return new WaitForSeconds(spawnRate);
     }
 }
