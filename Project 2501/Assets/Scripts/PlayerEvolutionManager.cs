@@ -19,9 +19,9 @@ public class PlayerEvolutionManager : MonoBehaviour
     public int insurgentLevel;
 
     //[Header("Data Packet Counts")]
-    private int allegiantCount;
-    private int divergentCount;
-    private int insurgentCount;
+    public int allegiantCount;
+    public int divergentCount;
+    public int insurgentCount;
 
     //[Header("Level Thresholds")]
     private List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
@@ -94,7 +94,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    private void UpdateSpeedAndRate(float i)
+    private void UpdateGlobals(float i)
     {
         switch (i)
         {
@@ -112,6 +112,8 @@ public class PlayerEvolutionManager : MonoBehaviour
                 cameraRunner.speed = 40;
                 mouseFollow.speed = 40;
                 dataPacketSpawner.spawnRate = 0.7f;
+                counterAISpawner.spawnRate = 30f;
+                StartCoroutine(counterAISpawner.SpawnCounterAI());
                 break;
             case 4:
                 cameraRunner.speed = 50;
@@ -127,6 +129,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 cameraRunner.speed = 70;
                 mouseFollow.speed = 70;
                 dataPacketSpawner.spawnRate = 0.4f;
+                counterAISpawner.spawnRate = 20f;
                 break;
             case 7:
                 cameraRunner.speed = 80;
@@ -142,6 +145,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 cameraRunner.speed = 100;
                 mouseFollow.speed = 100;
                 dataPacketSpawner.spawnRate = 0.1f;
+                counterAISpawner.spawnRate = 10f;
                 break;
             case 10:
                 //
@@ -160,7 +164,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 allegiantLevel = evolveTargets.IndexOf(target);
                 
                 ActivateAllegiantObject();
-                UpdateSpeedAndRate(allegiantLevel);
+                UpdateGlobals(allegiantLevel);
             }
         }
     }
@@ -174,7 +178,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 divergentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateDivergentObject();
-                UpdateSpeedAndRate(divergentLevel);
+                UpdateGlobals(divergentLevel);
             }
         }
     }
@@ -188,7 +192,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 insurgentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateInsurgentObject();
-                UpdateSpeedAndRate(insurgentLevel);
+                UpdateGlobals(insurgentLevel);
             }
         }
     }

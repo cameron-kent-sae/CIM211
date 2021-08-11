@@ -22,11 +22,29 @@ public class CounterAIController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //take data
+            StealPackets();
         }
     }
+
     #endregion
 
     #region Custom Methods
+    private void StealPackets()
+    {
+        if (player.insurgentLevel > player.divergentLevel)
+        {
+            int i = Random.Range(player.insurgentLevel, player.insurgentLevel * 2);
+            player.insurgentCount = player.insurgentCount - i;
+            //animation
+        }
+        else if (player.divergentLevel > player.insurgentLevel)
+        {
+            int j = Random.Range(player.divergentLevel, player.divergentLevel * 2);
+            player.divergentCount = player.divergentCount - j;
+            //animation
+        }
+
+        Destroy(gameObject);
+    }
     #endregion
 }

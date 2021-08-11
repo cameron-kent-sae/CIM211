@@ -20,7 +20,6 @@ public class DataPacketSpawner : MonoBehaviour
     public float spawnRate = 1f;
 
     public GameObject runningCamera;
-
     #endregion
 
     #region Built-in Methods
