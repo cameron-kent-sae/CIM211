@@ -11,6 +11,12 @@ public class CounterAIController : MonoBehaviour
     #endregion
 
     #region Built In Methods
+    private void Start()
+    {
+        player = GameObject.Find("Player").GetComponent<PlayerEvolutionManager>();
+        dataInventory = player.dataInventory;
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {

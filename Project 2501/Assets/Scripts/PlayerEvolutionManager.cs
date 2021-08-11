@@ -11,11 +11,12 @@ public class PlayerEvolutionManager : MonoBehaviour
     public DataPacketSpawner dataPacketSpawner;
     public DataLogger dataLogger;
     public MouseFollow mouseFollow;
+    public CounterAISpawner counterAISpawner;
 
     //[Header("Path Levels")]
-    private int allegiantLevel;
-    private int divergentLevel;
-    private int insurgentLevel;
+    public int allegiantLevel;
+    public int divergentLevel;
+    public int insurgentLevel;
 
     //[Header("Data Packet Counts")]
     private int allegiantCount;
