@@ -9813,7 +9813,7 @@ Transform:
   m_GameObject: {fileID: 7640374649294383282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7640374649191928865}
   - {fileID: 7640374649319685704}
@@ -9847,6 +9847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   dataInventory: {fileID: 0}
+  cameraObject: {fileID: 0}
 --- !u!1 &7640374649319685707
 GameObject:
   m_ObjectHideFlags: 0

@@ -93,9 +93,11 @@ public class PlayerEvolutionManager : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    private void UpdateGlobals(float i)
+    private void UpdateGlobals()
     {
-        switch (i)
+        int topLevel = Mathf.Max(allegiantLevel, divergentLevel, insurgentLevel);
+
+        switch (topLevel)
         {
             case 1:
                 cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 20, 5);
@@ -163,7 +165,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 allegiantLevel = evolveTargets.IndexOf(target);
                 
                 ActivateAllegiantObject();
-                UpdateGlobals(allegiantLevel);
+                UpdateGlobals();
             }
         }
     }
@@ -177,7 +179,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 divergentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateDivergentObject();
-                UpdateGlobals(divergentLevel);
+                UpdateGlobals();
             }
         }
     }
@@ -191,7 +193,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 insurgentLevel = evolveTargets.IndexOf(target);
                 
                 ActivateInsurgentObject();
-                UpdateGlobals(insurgentLevel);
+                UpdateGlobals();
             }
         }
     }

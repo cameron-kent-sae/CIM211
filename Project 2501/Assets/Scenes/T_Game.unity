@@ -1642,6 +1642,16 @@ PrefabInstance:
       propertyPath: runningCamera
       value: 
       objectReference: {fileID: 726069164}
+    - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
+        type: 3}
+      propertyPath: maxSpawnDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
+        type: 3}
+      propertyPath: minSpawnDistance
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36105ac1d6c74e443aedbfe84d4dd10c, type: 3}
 --- !u!1001 &8224540849443136149

@@ -7,16 +7,24 @@ public class CounterAIController : MonoBehaviour
     #region Variables
     public PlayerEvolutionManager player;
     public DataInventory dataInventory;
-
+    public GameObject cameraObject;
     #endregion
 
     #region Built In Methods
     private void Start()
     {
+        cameraObject = GameObject.Find("RunningCamera");
         player = GameObject.Find("Player").GetComponent<PlayerEvolutionManager>();
         dataInventory = player.dataInventory;
     }
 
+    private void Update()
+    {
+        if (transform.position.z < (cameraObject.transform.position.z - 25))
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +33,6 @@ public class CounterAIController : MonoBehaviour
             StealPackets();
         }
     }
-
     #endregion
 
     #region Custom Methods
