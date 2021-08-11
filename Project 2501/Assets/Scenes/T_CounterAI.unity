@@ -468,11 +468,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CounterAI
       objectReference: {fileID: 0}
-    - target: {fileID: 7640374649294383282, guid: 01c27cc2d7600cb48a0305b2921baf85,
-        type: 3}
-      propertyPath: m_TagString
-      value: AI
-      objectReference: {fileID: 0}
     - target: {fileID: 7640374649294383283, guid: 01c27cc2d7600cb48a0305b2921baf85,
         type: 3}
       propertyPath: m_RootOrder
