@@ -45,7 +45,7 @@ public class PlayerEvolutionManager : MonoBehaviour
 
     private void Update()
     {
-        mouseFollow.distanceFromCamera = 15;
+        mouseFollow.distanceFromCamera = 10;
     }
 
     private void OnApplicationQuit()
