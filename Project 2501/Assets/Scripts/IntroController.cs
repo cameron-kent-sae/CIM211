@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IntroController : MonoBehaviour
@@ -25,7 +26,8 @@ public class IntroController : MonoBehaviour
     public float delaySix;
     public float delaySeven;
 
-    public GameObject launchBtn;
+    public string gameScene;
+    public Button launchBtn;
     #endregion
 
     #region Scripts
@@ -50,6 +52,8 @@ public class IntroController : MonoBehaviour
         textFive.text = "";
         textSix.text = "";
         textSeven.text = "";
+
+        launchBtn.onClick.AddListener(StartGame);
 
         StartCoroutine("PlayIntroduction", 3);
     }
@@ -86,7 +90,7 @@ public class IntroController : MonoBehaviour
         
         yield return new WaitForSeconds(delaySeven);
         
-        launchBtn.SetActive(true);
+        launchBtn.gameObject.SetActive(true);
     }
 
     private IEnumerator TypewriteText(TMP_Text text, string script, float delay)
@@ -96,6 +100,11 @@ public class IntroController : MonoBehaviour
             text.text += c;
             yield return new WaitForSeconds(delay);
         }
+    }
+
+    private void StartGame()
+    {
+        SceneManager.LoadScene(gameScene);
     }
     #endregion
 }

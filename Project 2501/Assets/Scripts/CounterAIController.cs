@@ -38,6 +38,7 @@ public class CounterAIController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Slow down time for seconds
         if (other.tag == "Player")
         {
             StealPackets();

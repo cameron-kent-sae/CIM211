@@ -11,7 +11,7 @@ public class DataLogger : MonoBehaviour
 
     private List<string> eventLog = new List<string>();
     private string guiText = "";
-    private int maxLInes = 19;
+    private int maxLInes = 28;
     private bool isExpanded;
     #endregion
 
