@@ -8,10 +8,13 @@ public class DataLogger : MonoBehaviour
     #region Variables
     public TMP_Text textLog;
     public GameObject logPanel;
+    public TMP_Text allCount;
+    public TMP_Text divCount;
+    public TMP_Text insCount;
 
     private List<string> eventLog = new List<string>();
     private string guiText = "";
-    private int maxLInes = 28;
+    private int maxLInes = 40;
     private bool isExpanded;
     #endregion
 

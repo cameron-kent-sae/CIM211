@@ -5,7 +5,7 @@ using UnityEngine;
 public class DataObject : MonoBehaviour
 {
     public DataPacket data;
-    public GameObject cameraObject;
+    private GameObject cameraObject;
 
     private void Start()
     {

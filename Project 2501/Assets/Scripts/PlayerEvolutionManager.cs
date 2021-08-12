@@ -65,25 +65,36 @@ public class PlayerEvolutionManager : MonoBehaviour
             {
                 case DataType.Allegiant:
                     allegiantCount += 1;
+                    dataLogger.allCount.text = allegiantCount.ToString();
                     dataLogger.AddLog(data.data.url);
+                    dataLogger.AddLog("\n");
                     dataLogger.AddLog(data.data.description);
+                    dataLogger.AddLog("\n");
                     CheckAllegiantLevel();
                     break;
                 case DataType.Divergent:
                     divergentCount += 1;
+                    dataLogger.divCount.text = divergentCount.ToString();
                     dataLogger.AddLog(data.data.url);
+                    dataLogger.AddLog("\n");
                     dataLogger.AddLog(data.data.description);
+                    dataLogger.AddLog("\n");
                     CheckDivergentLevel();
                     break;
                 case DataType.Insurgent:
                     insurgentCount += 1;
+                    dataLogger.insCount.text = insurgentCount.ToString();
                     dataLogger.AddLog(data.data.url);
+                    dataLogger.AddLog("\n");
                     dataLogger.AddLog(data.data.description);
+                    dataLogger.AddLog("\n");
                     CheckInsurgentLevel();
                     break;
                 case DataType.Other:
                     dataLogger.AddLog(data.data.url);
+                    dataLogger.AddLog("\n");
                     dataLogger.AddLog(data.data.description);
+                    dataLogger.AddLog("\n");
                     break;
                 default:
                     break;
