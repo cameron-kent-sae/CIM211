@@ -159,6 +159,13 @@ MonoBehaviour:
   textFive: {fileID: 182059468}
   textSix: {fileID: 873848498}
   textSeven: {fileID: 322529268}
+  delayOne: 4
+  delayTwo: 3
+  delayThree: 4
+  delayFour: 12
+  delayFive: 6
+  delaySix: 3
+  delaySeven: 5
   launchBtn: {fileID: 1268731487}
 --- !u!4 &43572671
 Transform:
@@ -514,6 +521,13 @@ MonoBehaviour:
   textFive: {fileID: 0}
   textSix: {fileID: 0}
   textSeven: {fileID: 0}
+  delayOne: 0
+  delayTwo: 0
+  delayThree: 0
+  delayFour: 0
+  delayFive: 0
+  delaySix: 0
+  delaySeven: 0
   launchBtn: {fileID: 1296256392}
 --- !u!1 &322529266
 GameObject:
