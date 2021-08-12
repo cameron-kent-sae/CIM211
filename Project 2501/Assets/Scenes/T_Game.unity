@@ -904,6 +904,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1178124427}
     m_Modifications:
+    - target: {fileID: 969700809046534639, guid: 817547acde603cb48b52ae162a984918,
+        type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 969700810377983693, guid: 817547acde603cb48b52ae162a984918,
         type: 3}
       propertyPath: m_AnchorMax.y
