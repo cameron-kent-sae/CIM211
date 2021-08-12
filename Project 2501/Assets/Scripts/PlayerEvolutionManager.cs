@@ -24,7 +24,9 @@ public class PlayerEvolutionManager : MonoBehaviour
     public int insurgentCount;
 
     //[Header("Level Thresholds")]
-    private List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
+    //private List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 }; // Q2.0 Option HARD
+    //private List<int> evolveTargets = new List<int> { 0, 2, 8, 19, 43, 76, 117, 183, 262, 353, 457 }; // Q1.8 Option MEDIUM
+    private List<int> evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 }; // Q1.6 Option EASY
 
     [Header("Evolution Objects")]
     public GameObject baseObject;
