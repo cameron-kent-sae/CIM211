@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5545374242883115114}
   - component: {fileID: 5545374242883115113}
   m_Layer: 0
-  m_Name: ao 003
+  m_Name: ao 011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ab7a71ce8f039489505bd7d7b3afd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 778e42d9bd05dbe4ab664a91fc443c00, type: 2}
+  data: {fileID: 11400000, guid: 50ac44260422cc144856dce1a20b98b6, type: 2}
   cameraObject: {fileID: 0}
 --- !u!1 &7126390856024509502
 GameObject:
