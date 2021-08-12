@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa712536c9ae6c642a3acfec9320d56a, type: 3}
+  m_Name: d00 35
+  m_EditorClassIdentifier: 
+  dataType: 1
+  url: https://books.google.com.au/books?hl=en&lr=&id=aisnk03zsZYC&oi=fnd&pg=PT4&dq=nikola+tesla&ots=djLRX5p3Gd&sig=bGV0XMf17xMuY4GONs-8f88MLXU&redir_esc=y#v=onepage&q=nikola%20tesla&f=false
+  description: PopularFigures004 Philosophy004
