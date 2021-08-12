@@ -49,12 +49,14 @@ public class PauseController : MonoBehaviour
     private void PauseGame()
     {
         Time.timeScale = 0;
+        Cursor.visible = true;
         pausePanel.SetActive(true);
     }
 
     private void ResumeGame()
     {
         Time.timeScale = 1;
+        Cursor.visible = false;
         pausePanel.SetActive(false);
     }
 
