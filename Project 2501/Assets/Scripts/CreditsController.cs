@@ -10,6 +10,9 @@ public class CreditsController : MonoBehaviour
 {
     #region Variables
     public PlayerEvolutionManager player;
+    public GameObject cameraRunner;
+    public float endBound;
+
     public GameObject[] allegiantObjects;
     public GameObject[] divergentObjects;
     public GameObject[] insurgentObjects;
@@ -25,6 +28,11 @@ public class CreditsController : MonoBehaviour
     private void Update()
     {
         if (Input.GetButtonDown("Cancel"))
+        {
+            SceneManager.LoadScene(menuScene);
+        }
+
+        if (cameraRunner.transform.position.z == endBound)
         {
             SceneManager.LoadScene(menuScene);
         }
