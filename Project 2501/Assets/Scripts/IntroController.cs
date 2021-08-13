@@ -26,7 +26,7 @@ public class IntroController : MonoBehaviour
     public float delaySix;
     public float delaySeven;
 
-    public string gameScene;
+    public string setupScene;
     public Button launchBtn;
     #endregion
 
@@ -104,7 +104,7 @@ public class IntroController : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene(gameScene);
+        SceneManager.LoadScene(setupScene);
     }
     #endregion
 }
