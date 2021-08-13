@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/P_Intro.unity
     guid: 106c91a1a25aa844980bd3aa1fcb3da9
   - enabled: 1
+    path: Assets/Scenes/P_Setup.unity
+    guid: 3bdbdbeee6041dc4185661191110ed71
+  - enabled: 1
     path: Assets/Scenes/T_Game.unity
     guid: 9b0125d2b485d934abdbf8ad1287ace7
+  - enabled: 1
+    path: Assets/Scenes/P_Outro.unity
+    guid: 76cad64f816f2804faa6ce9bd38ec809
   - enabled: 1
     path: Assets/Scenes/P_Credits.unity
     guid: b9920242fdb0a1b45bf8fc538602ad81

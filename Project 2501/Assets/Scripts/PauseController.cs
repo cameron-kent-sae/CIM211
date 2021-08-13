@@ -48,6 +48,7 @@ public class PauseController : MonoBehaviour
     #region Custom Methods
     private void PauseGame()
     {
+        isPaused = true;
         Time.timeScale = 0;
         Cursor.visible = true;
         pausePanel.SetActive(true);
@@ -55,6 +56,7 @@ public class PauseController : MonoBehaviour
 
     private void ResumeGame()
     {
+        isPaused = false;
         Time.timeScale = 1;
         Cursor.visible = false;
         pausePanel.SetActive(false);
