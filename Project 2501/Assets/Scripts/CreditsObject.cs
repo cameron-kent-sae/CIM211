@@ -30,7 +30,7 @@ public class CreditsObject : MonoBehaviour
     {
         effects.Play();
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.3f);
 
         Destroy(gameObject);
     }
