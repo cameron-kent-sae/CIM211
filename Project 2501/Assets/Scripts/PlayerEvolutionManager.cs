@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -109,6 +110,16 @@ public class PlayerEvolutionManager : MonoBehaviour
     #endregion
 
     #region Custom Methods
+    public IEnumerator SlowTime()
+    {
+        float currentSpeed = cameraRunner.speed;
+        cameraRunner.speed = 5;
+
+        yield return new WaitForSeconds(2);
+
+        cameraRunner.speed = currentSpeed;
+    }
+
     private void SetGameDifficulty()
     {
         string difficulty = PlayerPrefs.GetString("Difficulty");
