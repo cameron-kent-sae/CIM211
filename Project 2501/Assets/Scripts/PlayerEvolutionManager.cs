@@ -141,6 +141,15 @@ public class PlayerEvolutionManager : MonoBehaviour
         }
     }
 
+    private void SetRates(float speed, float dataRate, float aiRate)
+    {
+        cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, speed, 5);
+        mouseFollow.speed = speed;
+        dataPacketSpawner.spawnRate = dataRate;
+        counterAISpawner.spawnRate = aiRate;
+
+    }
+
     private void UpdateGlobals(string path)
     {
         int topLevel = Mathf.Max(allegiantLevel, divergentLevel, insurgentLevel);
@@ -148,65 +157,75 @@ public class PlayerEvolutionManager : MonoBehaviour
         switch (topLevel)
         {
             case 1:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 20, 5);
-                mouseFollow.speed = 20;
-                dataPacketSpawner.spawnRate = 0.9f;
+                SetRates(20, .9f, 30);
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 20, 5);
+                //mouseFollow.speed = 20;
+                //dataPacketSpawner.spawnRate = 0.9f;
                 break;
             case 2:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 30, 5);
-                mouseFollow.speed = 30;
-                dataPacketSpawner.spawnRate = 0.8f;
+                SetRates(30, .8f, 30);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 30, 5);
+                //mouseFollow.speed = 30;
+                //dataPacketSpawner.spawnRate = 0.8f;
                 break;
             case 3:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 40, 5);
-                mouseFollow.speed = 40;
-                dataPacketSpawner.spawnRate = 0.7f;
-                counterAISpawner.spawnRate = 30f;
+                SetRates(40, .7f, 30);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 40, 5);
+                //mouseFollow.speed = 40;
+                //dataPacketSpawner.spawnRate = 0.7f;
+                //counterAISpawner.spawnRate = 30f;
                 StartCoroutine(counterAISpawner.SpawnCounterAI());
                 break;
             case 4:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 50, 5);
-                mouseFollow.speed = 50;
-                dataPacketSpawner.spawnRate = 0.6f;
+                SetRates(50, .6f, 30);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 50, 5);
+                //mouseFollow.speed = 50;
+                //dataPacketSpawner.spawnRate = 0.6f;
                 break;
             case 5:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 60, 5);
-                mouseFollow.speed = 60;
-                dataPacketSpawner.spawnRate = 0.5f;
+                SetRates(60, .5f, 26);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 60, 5);
+                //mouseFollow.speed = 60;
+                //dataPacketSpawner.spawnRate = 0.5f;
                 break;
             case 6:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 70, 5);
-                mouseFollow.speed = 70;
-                dataPacketSpawner.spawnRate = 0.4f;
-                counterAISpawner.spawnRate = 20f;
+                SetRates(70, .4f, 22);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 70, 5);
+                //mouseFollow.speed = 70;
+                //dataPacketSpawner.spawnRate = 0.4f;
+                //counterAISpawner.spawnRate = 20f;
                 break;
             case 7:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 80, 5);
-                mouseFollow.speed = 80;
-                dataPacketSpawner.spawnRate = 0.3f;
+                SetRates(80, .3f, 18);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 80, 5);
+                //mouseFollow.speed = 80;
+                //dataPacketSpawner.spawnRate = 0.3f;
                 break;
             case 8:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 90, 5);
-                mouseFollow.speed = 90;
-                dataPacketSpawner.spawnRate = 0.2f;
+                SetRates(90, .2f, 14);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 90, 5);
+                //mouseFollow.speed = 90;
+                //dataPacketSpawner.spawnRate = 0.2f;
                 break;
             case 9:
-                cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 100, 5);
-                mouseFollow.speed = 100;
-                dataPacketSpawner.spawnRate = 0.1f;
+                SetRates(100, .1f, 10);
+
+                //cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, 100, 5);
+                //mouseFollow.speed = 100;
+                //dataPacketSpawner.spawnRate = 0.1f;
                 counterAISpawner.spawnRate = 10f;
                 break;
             case 10:
                 // WIN THE GAME
-                switch (path)
-                {
-                    case "Allegiant":
-                        PlayerPrefs.SetString("WinPath", path);
-                        WinGame();
-                        break;
-                    default:
-                        break;
-                }
+                PlayerPrefs.SetString("WinPath", path);
+                WinGame();
                 break;
             default:
                 break;
