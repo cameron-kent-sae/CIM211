@@ -9859,6 +9859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveRate: 1
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &7640374649319685707
 GameObject:
   m_ObjectHideFlags: 0

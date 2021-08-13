@@ -6,7 +6,7 @@ public class CounterAIController : MonoBehaviour
 {
     #region Variables
     private PlayerEvolutionManager player;
-    private CameraRunner cameraRunner;
+    private GameObject cameraRunner;
     private DataLogger dataLogger;
 
     private ParticleSystem divergentBurst;
@@ -18,7 +18,7 @@ public class CounterAIController : MonoBehaviour
     #region Built In Methods
     private void Start()
     {
-        cameraRunner = GameObject.Find("RunningCamera").GetComponent<CameraRunner>();
+        cameraRunner = GameObject.Find("RunningCamera");
         insurgentBurst = GameObject.Find("InsurgentDataBurst").GetComponent<ParticleSystem>();
         divergentBurst = GameObject.Find("DivergentDataBurst").GetComponent<ParticleSystem>();
 
@@ -30,7 +30,7 @@ public class CounterAIController : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.z < (cameraRunner.gameObject.transform.position.z - 25))
+        if (transform.position.z < (cameraRunner.transform.position.z - 25))
         {
             Destroy(gameObject);
         }

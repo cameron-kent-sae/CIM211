@@ -30,7 +30,8 @@ public class CounterAISpawner : MonoBehaviour
             float spawnZ = runningCamera.transform.position.z + (Random.Range(minSpawnDistance, maxSpawnDistance));
             Vector3 spawnPos = new Vector3(Random.Range(minXSpawnBound, maxXSpawnBound), Random.Range(minYSpawnBound, maxYSpawnBound), spawnZ);
             GameObject counterAI = Instantiate(counterAIObject[i], spawnPos, Quaternion.identity);
-
+            counterAI.GetComponent<CounterAIMover>().startPos = spawnPos;
+            counterAI.GetComponent<CounterAIMover>().StartCoroutine("StartMoving");
             Debug.Log("AI spawned");
 
             yield return new WaitForSeconds(spawnRate);
