@@ -1,3 +1,6 @@
+/*
+	Cameron Kent	2021
+*/
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class IntroController : MonoBehaviour
+public class OutroController : MonoBehaviour
 {
     #region Variable
     [Header("Text Fields")]
@@ -26,18 +29,16 @@ public class IntroController : MonoBehaviour
     public float delaySix;
     public float delaySeven;
 
-    public string gameScene;
-    public Button launchBtn;
-    #endregion
+    public string creditsScene;
+    public Button creditsBtn;
 
-    #region Narrative Scripts
-    private string scriptOne = "Captain, Program 2501 is ready for testing.";
-    private string scriptTwo = ">>That’s what you said last time.";
-    private string scriptThree = "Uhh..uhh...I mean Maam, she’s prime for testing!";
-    private string scriptFour = ">>Imbecile! That’s not what I meant! We can’t afford another failure this time. How do you expect us to hack into the enemy’s mainframe unless we know she works and won’t backfire...again!?";
-    private string scriptFive = "Uhh...Uhhh that is very true. I hope she works, I mean...I know she works…!";
-    private string scriptSix = ">>Boot er up and prepare for simulation!";
-    private string scriptSeven = "Aye aye Captain! Oh, I mean...Roger!";
+    private string scriptOne;
+    private string scriptTwo;
+    private string scriptThree;
+    private string scriptFour;
+    private string scriptFive;
+    private string scriptSix;
+    private string scriptSeven;
     #endregion
 
     #region Built In Methods
@@ -53,21 +54,23 @@ public class IntroController : MonoBehaviour
         textSix.text = "";
         textSeven.text = "";
 
-        launchBtn.onClick.AddListener(StartGame);
+        creditsBtn.onClick.AddListener(StartCredits);
 
-        StartCoroutine("PlayIntroduction", 3);
+        SetOutroScripts(PlayerPrefs.GetString("WinPath"));
+
+        StartCoroutine("PlayOutro", 3);
     }
     #endregion
 
     #region Custom Methods
-    private IEnumerator PlayIntroduction()
+    private IEnumerator PlayOutro()
     {
         StartCoroutine(TypewriteText(textOne, scriptOne, 0.05f));
 
         yield return new WaitForSeconds(delayOne);
 
-        StartCoroutine(TypewriteText(textTwo, scriptTwo, 0.025f));
-        
+        StartCoroutine(TypewriteText(textTwo, scriptTwo, 0.05f));
+
         yield return new WaitForSeconds(delayTwo);
 
         StartCoroutine(TypewriteText(textThree, scriptThree, 0.05f));
@@ -81,16 +84,16 @@ public class IntroController : MonoBehaviour
         StartCoroutine(TypewriteText(textFive, scriptFive, 0.05f));
 
         yield return new WaitForSeconds(delayFive);
-        
+
         StartCoroutine(TypewriteText(textSix, scriptSix, 0.05f));
 
         yield return new WaitForSeconds(delaySix);
-        
+
         StartCoroutine(TypewriteText(textSeven, scriptSeven, 0.05f));
-        
+
         yield return new WaitForSeconds(delaySeven);
-        
-        launchBtn.gameObject.SetActive(true);
+
+        creditsBtn.gameObject.SetActive(true);
     }
 
     private IEnumerator TypewriteText(TMP_Text text, string script, float delay)
@@ -102,9 +105,45 @@ public class IntroController : MonoBehaviour
         }
     }
 
-    private void StartGame()
+    private void SetOutroScripts(string path)
     {
-        SceneManager.LoadScene(gameScene);
+        switch (path)
+        {
+            case "Allegiant":
+                scriptOne = "";
+                scriptTwo = "";
+                scriptThree = "";
+                scriptFour = "";
+                scriptFive = "";
+                scriptSix = "";
+                scriptSeven = "";
+                break;
+            case "Divergent":
+                scriptOne = "";
+                scriptTwo = "";
+                scriptThree = "";
+                scriptFour = "";
+                scriptFive = "";
+                scriptSix = "";
+                scriptSeven = "";
+                break;
+            case "Insurgent":
+                scriptOne = "";
+                scriptTwo = "";
+                scriptThree = "";
+                scriptFour = "";
+                scriptFive = "";
+                scriptSix = "";
+                scriptSeven = "";
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void StartCredits()
+    {
+        SceneManager.LoadScene(creditsScene);
     }
     #endregion
 }

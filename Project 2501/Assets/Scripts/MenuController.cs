@@ -18,6 +18,9 @@ public class MenuController : MonoBehaviour
     #region Built In Methods
     private void Start()
     {
+        PlayerPrefs.SetString("WinPath", "");
+        PlayerPrefs.SetString("Difficulty", "");
+
         playBtn.onClick.AddListener(StartGame);
         creditsBtn.onClick.AddListener(LoadCredits);
         quitBtn.onClick.AddListener(Application.Quit);

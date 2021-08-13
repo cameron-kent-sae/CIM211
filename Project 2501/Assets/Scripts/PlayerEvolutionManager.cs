@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerEvolutionManager : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class PlayerEvolutionManager : MonoBehaviour
     public MouseFollow mouseFollow;
     public CounterAISpawner counterAISpawner;
 
+    public string outroScene;
+
     [Header("Path Levels")]
     public int allegiantLevel;
     public int divergentLevel;
@@ -24,9 +28,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     public int insurgentCount;
 
     //[Header("Level Thresholds")]
-    //private List<int> evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 }; // Q2.0 Option HARD
-    //private List<int> evolveTargets = new List<int> { 0, 2, 8, 19, 43, 76, 117, 183, 262, 353, 457 }; // Q1.8 Option MEDIUM
-    private List<int> evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 }; // Q1.6 Option EASY
+    private List<int> evolveTargets = new List<int> { };
 
     [Header("Evolution Objects")]
     public GameObject baseObject;
@@ -44,6 +46,7 @@ public class PlayerEvolutionManager : MonoBehaviour
         allegiantCount = 0;
         divergentCount = 0;
         insurgentCount = 0;
+        SetGameDifficulty();
     }
 
     private void Update()
@@ -53,7 +56,7 @@ public class PlayerEvolutionManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        dataInventory.Container.Clear();    
+        dataInventory.Container.Clear();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -106,7 +109,28 @@ public class PlayerEvolutionManager : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    private void UpdateGlobals()
+    private void SetGameDifficulty()
+    {
+        string difficulty = PlayerPrefs.GetString("Difficulty");
+
+        switch (difficulty)
+        {
+            case "Slow":
+                evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 }; // Q2.0 Option HARD
+                break;
+            case "Average":
+                evolveTargets = new List<int> { 0, 2, 8, 19, 43, 76, 117, 183, 262, 353, 457 }; // Q1.8 Option MEDIUM
+                break;
+            case "Fast":
+                evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 }; // Q1.6 Option EASY
+                break;
+            default:
+                evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 }; // Q1.6 Option EASY
+                break;
+        }
+    }
+
+    private void UpdateGlobals(string path)
     {
         int topLevel = Mathf.Max(allegiantLevel, divergentLevel, insurgentLevel);
 
@@ -163,10 +187,24 @@ public class PlayerEvolutionManager : MonoBehaviour
                 break;
             case 10:
                 // WIN THE GAME
+                switch (path)
+                {
+                    case "Allegiant":
+                        PlayerPrefs.SetString("WinPath", path);
+                        WinGame();
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;
         }
+    }
+
+    private void WinGame()
+    {
+        SceneManager.LoadScene(outroScene);
     }
 
     private void CheckAllegiantLevel()
@@ -176,9 +214,9 @@ public class PlayerEvolutionManager : MonoBehaviour
             if (allegiantCount == target)
             {
                 allegiantLevel = evolveTargets.IndexOf(target);
-                
+
                 ActivateAllegiantObject();
-                UpdateGlobals();
+                UpdateGlobals("Allegiant");
             }
         }
     }
@@ -190,9 +228,9 @@ public class PlayerEvolutionManager : MonoBehaviour
             if (divergentCount == target)
             {
                 divergentLevel = evolveTargets.IndexOf(target);
-                
+
                 ActivateDivergentObject();
-                UpdateGlobals();
+                UpdateGlobals("Divergent");
             }
         }
     }
@@ -204,9 +242,9 @@ public class PlayerEvolutionManager : MonoBehaviour
             if (insurgentCount == target)
             {
                 insurgentLevel = evolveTargets.IndexOf(target);
-                
+
                 ActivateInsurgentObject();
-                UpdateGlobals();
+                UpdateGlobals("Insurgent");
             }
         }
     }
@@ -228,7 +266,7 @@ public class PlayerEvolutionManager : MonoBehaviour
         baseObject.SetActive(false);
         divergentTop.SetActive(true);
         divergentObjects[divergentLevel - 1].SetActive(true);
-        
+
         if (divergentLevel == allegiantLevel || divergentLevel > allegiantLevel) { allegiantTop.SetActive(false); }
         if (divergentLevel == insurgentLevel || divergentLevel > insurgentLevel) { insurgentTop.SetActive(false); }
 
