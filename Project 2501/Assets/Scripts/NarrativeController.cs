@@ -20,18 +20,21 @@ public class NarrativeController : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    public void PrintNarration(string path, int level)
+    public void PlayNarration(string path, int level)
     {
         switch (path)
         {
             case "allegiant":
-                Debug.Log(allegiantNarrations[level].ToString());
+                //Play Narrative clip
+                Debug.Log(allegiantNarrations[level - 1].ToString());
                 break;
             case "divergent":
-                Debug.Log(divergentNarrations[level].ToString());
+                //Play Narrative clip
+                Debug.Log(divergentNarrations[level - 1].ToString());
                 break;
             case "insurgent":
-                Debug.Log(insurgentNarrations[level].ToString());
+                //Play Narrative clip
+                Debug.Log(insurgentNarrations[level - 1].ToString());
                 break;
             default:
                 break;

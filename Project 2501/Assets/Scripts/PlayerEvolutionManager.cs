@@ -217,6 +217,8 @@ public class PlayerEvolutionManager : MonoBehaviour
 
                 ActivateAllegiantObject();
                 UpdateGlobals("Allegiant");
+
+                narrativeController.PlayNarration("allegiant", allegiantLevel);
             }
         }
     }
@@ -231,6 +233,8 @@ public class PlayerEvolutionManager : MonoBehaviour
 
                 ActivateDivergentObject();
                 UpdateGlobals("Divergent");
+
+                narrativeController.PlayNarration("divergent", divergentLevel);
             }
         }
     }
@@ -245,6 +249,8 @@ public class PlayerEvolutionManager : MonoBehaviour
 
                 ActivateInsurgentObject();
                 UpdateGlobals("Insurgent");
+
+                narrativeController.PlayNarration("insurgent", insurgentLevel);
             }
         }
     }

@@ -24,7 +24,7 @@ public class CounterAIController : MonoBehaviour
 
         dataLogger = GameObject.Find("Console Panel").GetComponent<DataLogger>();
         player = GameObject.Find("Player").GetComponent<PlayerEvolutionManager>();
-        
+
         dataInventory = player.dataInventory;
     }
 
@@ -70,7 +70,7 @@ public class CounterAIController : MonoBehaviour
 
             dataLogger.AddLog("Counter Measures Encountered");
             dataLogger.AddLog("Data Corrupted");
-            
+
             StartCoroutine(AnimateBurst("Divergent"));
         }
 

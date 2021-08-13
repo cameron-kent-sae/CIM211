@@ -67,7 +67,7 @@ public class IntroController : MonoBehaviour
         yield return new WaitForSeconds(delayOne);
 
         StartCoroutine(TypewriteText(textTwo, scriptTwo, 0.025f));
-        
+
         yield return new WaitForSeconds(delayTwo);
 
         StartCoroutine(TypewriteText(textThree, scriptThree, 0.05f));
@@ -81,15 +81,15 @@ public class IntroController : MonoBehaviour
         StartCoroutine(TypewriteText(textFive, scriptFive, 0.05f));
 
         yield return new WaitForSeconds(delayFive);
-        
+
         StartCoroutine(TypewriteText(textSix, scriptSix, 0.05f));
 
         yield return new WaitForSeconds(delaySix);
-        
+
         StartCoroutine(TypewriteText(textSeven, scriptSeven, 0.05f));
-        
+
         yield return new WaitForSeconds(delaySeven);
-        
+
         launchBtn.gameObject.SetActive(true);
     }
 
