@@ -24,7 +24,7 @@ public class CounterAIMover : MonoBehaviour
     {
         while (true)
         {
-            Vector3 newPos = new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f), Random.Range(startPos.z - 1.5f, startPos.z + 1.5f));
+            Vector3 newPos = new Vector3(Random.Range(startPos.x - 1.5f, startPos.x + 1.5f), Random.Range(startPos.y - 1.5f, startPos.y + 1.5f), Random.Range(startPos.z - 1.5f, startPos.z + 1.5f));
             gameObject.LeanMove(newPos, moveRate).setEaseInOutBounce();
 
             yield return new WaitForSeconds(moveRate);

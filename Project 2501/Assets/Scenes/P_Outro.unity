@@ -166,7 +166,7 @@ MonoBehaviour:
   delayFive: 5
   delaySix: 5
   delaySeven: 5
-  creditsScene: 
+  creditsScene: P_Credits
   creditsBtn: {fileID: 1268731491}
 --- !u!4 &43572671
 Transform:
