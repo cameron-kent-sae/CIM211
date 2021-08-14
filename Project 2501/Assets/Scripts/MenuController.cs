@@ -13,11 +13,24 @@ public class MenuController : MonoBehaviour
 
     public string introScene;
     public string creditsScene;
+
+    public AudioClip ButtonHighlightedWAV;
+    public AudioClip ButtonPressedWAV;
+    public AudioClip MainMenuMusic;
+    private AudioSource audioSource;
     #endregion
 
     #region Built In Methods
     private void Start()
     {
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.loop = true;
+        audioSource.PlayOneShot(MainMenuMusic);
+
         PlayerPrefs.SetString("WinPath", "");
         PlayerPrefs.SetString("Difficulty", "");
 
@@ -37,5 +50,30 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(creditsScene);
     }
+
+    public void ButtonHighlighted()
+    {
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.PlayOneShot(ButtonHighlightedWAV);
+    }
+
+    public void ButtonPressed()
+    {
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.PlayOneShot(ButtonPressedWAV);
+    }
     #endregion
+
+
+
+
+
 }
