@@ -221,7 +221,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143196009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688993415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
@@ -1609,6 +1609,7 @@ MonoBehaviour:
   logPanel: {fileID: 2036508770}
   textPrefab: {fileID: 7439686147762755249, guid: 4c5e19892838ad54da6cd30b4f229002,
     type: 3}
+  headerText: {fileID: 0}
   allegiantBtn: {fileID: 688993420}
   divergentBtn: {fileID: 1331445271}
   insurgentBtn: {fileID: 1880527526}
@@ -1787,7 +1788,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331445266}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
@@ -2360,7 +2361,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880527521}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
@@ -2817,7 +2818,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073678482}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 

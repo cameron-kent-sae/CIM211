@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.007052538, g: 0.44804588, b: 0.5891317, a: 1}
+  m_IndirectSpecularColor: {r: 0.0070525813, g: 0.44804773, b: 0.589134, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -263,7 +263,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Three different game speeds are available.
 
-    The higher the version,
+    The higher the speed,
     the longer it will take you to grow and evolve.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ver_1.6.exe
+  m_text: Fast
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ver_1.8.exe
+  m_text: Average
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -2626,7 +2626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ver_2.0.exe
+  m_text: Slow
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
