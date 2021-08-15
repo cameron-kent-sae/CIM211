@@ -8,6 +8,8 @@ public class PauseController : MonoBehaviour
 {
     #region Variables
     public GameObject pausePanel;
+    public DataLogger dataLogger;
+    public NarrationLogger narrationLogger;
 
     public Button resumeBtn;
     public Button quitBtn;
@@ -27,19 +29,17 @@ public class PauseController : MonoBehaviour
 
     private void Update()
     {
-        if (isPaused)
+        if (Input.GetButtonDown("Cancel"))
         {
-            if (Input.GetButtonDown("Cancel"))
+            if (!isPaused)
+            {
+                narrationLogger.OpenLog();
+                dataLogger.OpenLog();
+                Invoke("PauseGame", .2f);
+            }
+            else if (isPaused)
             {
                 ResumeGame();
-            }
-        }
-
-        if (!isPaused)
-        {
-            if (Input.GetButtonDown("Cancel"))
-            {
-                PauseGame();
             }
         }
     }
@@ -60,6 +60,9 @@ public class PauseController : MonoBehaviour
         isPaused = false;
         Cursor.visible = false;
         pausePanel.SetActive(false);
+
+        narrationLogger.CloseLog();
+        dataLogger.CloseLog();
     }
 
     private void QuitGame()

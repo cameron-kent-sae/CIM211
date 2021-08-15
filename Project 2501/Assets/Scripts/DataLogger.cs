@@ -15,6 +15,9 @@ public class DataLogger : MonoBehaviour
     private List<string> eventLog = new List<string>();
     private string guiText = "";
     private int maxLInes = 40;
+
+    private float closedPos;
+    private float openedPos;
     private bool isExpanded;
     #endregion
 
@@ -23,6 +26,9 @@ public class DataLogger : MonoBehaviour
     {
         textLog.text = guiText;
         isExpanded = false;
+
+        closedPos = logPanel.transform.position.x;
+        openedPos = closedPos + 450;
     }
 
     private void Update()
@@ -31,22 +37,32 @@ public class DataLogger : MonoBehaviour
         {
             if (Input.GetButtonDown("Tab"))
             {
-                logPanel.LeanMoveX(-175f, .2f).setEaseOutBounce();
-                isExpanded = false;
+                CloseLog();
             }
         }
         else if (!isExpanded)
         {
             if (Input.GetButtonDown("Tab"))
             {
-                logPanel.LeanMoveX(270f, .2f).setEaseInBounce();
-                isExpanded = true;
+                OpenLog();
             }
         }
     }
     #endregion
 
     #region Custom Methods
+    public void OpenLog()
+    {
+        logPanel.LeanMoveX(openedPos, .2f).setEaseInBounce();
+        isExpanded = true;
+    }
+
+    public void CloseLog()
+    {
+        logPanel.LeanMoveX(closedPos, .2f).setEaseOutBounce();
+        isExpanded = false;
+    }
+
     public void AddLog(string newDataLog)
     {
         eventLog.Add(newDataLog);

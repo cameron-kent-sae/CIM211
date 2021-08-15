@@ -12,15 +12,18 @@ public class NarrationLogger : MonoBehaviour
     public TMP_Text textLog;
     public GameObject logPanel;
 
-    private float xPos;
-
+    private float closedPos;
+    private float openedPos;
     private bool isExpanded;
     #endregion
 
     #region Built In Methods
     private void Start()
     {
-        xPos = logPanel.transform.position.x;
+        isExpanded = false;
+
+        closedPos = logPanel.transform.position.x;
+        openedPos = closedPos - 450;
     }
 
     private void Update()
@@ -29,24 +32,30 @@ public class NarrationLogger : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump"))
             {
-                logPanel.LeanMoveX(1895, .2f).setEaseOutBounce();
-                //logPanel.LeanMoveX(1895, .2f).setEaseOutBounce();
-                isExpanded = false;
+                CloseLog();
             }
         }
         else if (!isExpanded)
         {
             if (Input.GetButtonDown("Jump"))
             {
-                logPanel.LeanMoveX(1445, .2f).setEaseInBounce();
-                //logPanel.LeanMoveX(1445, .2f).setEaseInBounce();
-                isExpanded = true;
+                OpenLog();
             }
         }
     }
     #endregion
 
     #region Custom Methods
+    public void OpenLog()
+    {
+        logPanel.LeanMoveX(openedPos, .2f).setEaseInBounce();
+        isExpanded = true;
+    }
 
+    public void CloseLog()
+    {
+        logPanel.LeanMoveX(closedPos, .2f).setEaseOutBounce();
+        isExpanded = false;
+    }
     #endregion
 }
