@@ -27,19 +27,15 @@ public class NarrativeController : MonoBehaviour
         {
             case "allegiant":
                 //Play Narrative clip
-                //narrationLogger add text
                 narrationLogger.AddLog(allegiantNarrations[level - 1].ToString());
-                //Debug.Log(allegiantNarrations[level - 1].ToString());
                 break;
             case "divergent":
                 //Play Narrative clip
                 narrationLogger.AddLog(divergentNarrations[level - 1].ToString());
-                //Debug.Log(divergentNarrations[level - 1].ToString());
                 break;
             case "insurgent":
                 //Play Narrative clip
                 narrationLogger.AddLog(insurgentNarrations[level - 1].ToString());
-                //Debug.Log(insurgentNarrations[level - 1].ToString());
                 break;
             default:
                 break;

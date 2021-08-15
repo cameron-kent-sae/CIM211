@@ -29,7 +29,7 @@ public class OutroController : MonoBehaviour
     public float delaySix;
     public float delaySeven;
 
-    public string creditsScene;
+    public string gameLogScene;
     public Button creditsBtn;
 
     private string scriptOne;
@@ -115,40 +115,47 @@ public class OutroController : MonoBehaviour
         switch (path)
         {
             case "Allegiant":
-                scriptOne = "";
-                scriptTwo = "";
-                scriptThree = "";
-                scriptFour = "";
-                scriptFive = "";
-                scriptSix = "";
-                scriptSeven = "";
+                scriptOne = "xxx";
+                scriptTwo = "xxx";
+                scriptThree = "xxx";
+                scriptFour = "xxx";
+                scriptFive = "xxx";
+                scriptSix = "xxx";
+                scriptSeven = "xxx";
                 break;
             case "Divergent":
-                scriptOne = "";
-                scriptTwo = "";
-                scriptThree = "";
-                scriptFour = "";
-                scriptFive = "";
-                scriptSix = "";
-                scriptSeven = "";
+                scriptOne = "xxx";
+                scriptTwo = "xxx";
+                scriptThree = "xxx";
+                scriptFour = "xxx";
+                scriptFive = "xxx";
+                scriptSix = "xxx";
+                scriptSeven = "xxx";
                 break;
             case "Insurgent":
-                scriptOne = "";
-                scriptTwo = "";
-                scriptThree = "";
-                scriptFour = "";
-                scriptFive = "";
-                scriptSix = "";
-                scriptSeven = "";
+                scriptOne = "xxx";
+                scriptTwo = "xxx";
+                scriptThree = "xxx";
+                scriptFour = "xxx";
+                scriptFive = "xxx";
+                scriptSix = "xxx";
+                scriptSeven = "xxx";
                 break;
             default:
+                scriptOne = "test";
+                scriptTwo = "test";
+                scriptThree = "test";
+                scriptFour = "test";
+                scriptFive = "test";
+                scriptSix = "test";
+                scriptSeven = "test";
                 break;
         }
     }
 
     private void StartCredits()
     {
-        SceneManager.LoadScene(creditsScene);
+        SceneManager.LoadScene(gameLogScene);
     }
     #endregion
 }

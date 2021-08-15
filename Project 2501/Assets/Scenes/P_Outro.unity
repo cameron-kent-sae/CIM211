@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.007052538, g: 0.44804588, b: 0.5891317, a: 1}
+  m_IndirectSpecularColor: {r: 0.0070525813, g: 0.44804773, b: 0.589134, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -166,7 +166,7 @@ MonoBehaviour:
   delayFive: 5
   delaySix: 5
   delaySeven: 5
-  creditsScene: P_Credits
+  gameLogScene: P_GameLog
   creditsBtn: {fileID: 1268731491}
 --- !u!4 &43572671
 Transform:
