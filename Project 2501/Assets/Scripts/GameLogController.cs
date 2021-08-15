@@ -1,6 +1,7 @@
 /*
 	Cameron Kent	2021
 */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -132,8 +133,57 @@ public class GameLogController : MonoBehaviour
 
     public void AddLog(string newDataLog)
     {
+        bool hasDuplicate = false;
+
+        if (eventLog.Count.Equals(0))
+        {
+            eventLog.Add(newDataLog);
+            PrintLogs();
+
+        } else
+        {
+            Debug.Log(eventLog.Count);
+            for (int i = 0; i < eventLog.Count; i++)
+            {
+                if (newDataLog.Equals(eventLog[i]))
+                {
+                    Debug.Log("hasDuplicate");
+                    hasDuplicate = true;
+                    break;
+                }
+                else
+                {
+                    Debug.Log("!hasDuplicate");
+                    hasDuplicate = false;
+                }
+            }
+
+            if (!hasDuplicate)
+            {
+                eventLog.Add(newDataLog);
+                PrintLogs();
+            }
+        }
+
+
+        //Working chunk with duplicates
+        /*
         eventLog.Add(newDataLog);
 
+        guiText = "";
+
+        foreach (string log in eventLog)
+        {
+            guiText += log;
+            guiText += "\n";
+            guiText += "\n";
+        }
+
+        logText.text = guiText; */
+    }
+
+    private void PrintLogs()
+    {
         guiText = "";
 
         foreach (string log in eventLog)
