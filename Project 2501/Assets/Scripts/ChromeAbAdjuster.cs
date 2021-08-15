@@ -28,7 +28,6 @@ public class ChromeAbAdjuster : MonoBehaviour
     public void UpdateChromaticAberration(float newValue)
     {
         Debug.Log("update ca called");
-        chromeAb.intensity.Override(chromeAb.intensity + .1f);
         chromeAb.intensity.Override(Mathf.Lerp(chromeAb.intensity, newValue, 5f));
     }
     #endregion

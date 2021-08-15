@@ -9,6 +9,7 @@ public class CounterAIMover : MonoBehaviour
 {
     #region Variables
     public float moveRate;
+    public float moveBound;
     public Vector3 startPos;
     #endregion
 
@@ -24,7 +25,7 @@ public class CounterAIMover : MonoBehaviour
     {
         while (true)
         {
-            Vector3 newPos = new Vector3(Random.Range(startPos.x - 1.5f, startPos.x + 1.5f), Random.Range(startPos.y - 1.5f, startPos.y + 1.5f), Random.Range(startPos.z - 1.5f, startPos.z + 1.5f));
+            Vector3 newPos = new Vector3(Random.Range(startPos.x - moveBound, startPos.x + moveBound), Random.Range(startPos.y - moveBound, startPos.y + moveBound), Random.Range(startPos.z - moveBound, startPos.z + moveBound));
             gameObject.LeanMove(newPos, moveRate).setEaseInOutBounce();
 
             yield return new WaitForSeconds(moveRate);

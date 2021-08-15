@@ -6,7 +6,6 @@ public class CounterAISpawner : MonoBehaviour
 {
     #region Variables
     public GameObject runningCamera;
-
     public GameObject[] counterAIObject;
 
     public float minXSpawnBound;
@@ -16,8 +15,6 @@ public class CounterAISpawner : MonoBehaviour
     public float minSpawnDistance;
     public float maxSpawnDistance;
     public float spawnRate;
-
-    //public bool canSpawn = false;
     #endregion
 
     public IEnumerator SpawnCounterAI()
