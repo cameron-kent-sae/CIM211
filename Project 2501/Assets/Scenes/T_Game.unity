@@ -507,6 +507,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 726069162}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &726069165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726069164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ecaa1052032d54cabddd0b604a0854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 44ff1565856b8ef4594e23b8e132b715, type: 2}
+  caValue: 0
 --- !u!1001 &743806148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1546,6 +1560,11 @@ PrefabInstance:
       objectReference: {fileID: 781888447}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
+      propertyPath: outroScene
+      value: P_Outro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
       propertyPath: mouseFollow
       value: 
       objectReference: {fileID: 940184902}
@@ -1554,6 +1573,11 @@ PrefabInstance:
       propertyPath: cameraRunner
       value: 
       objectReference: {fileID: 726069163}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
+      propertyPath: chromeAbAdjuster
+      value: 
+      objectReference: {fileID: 726069165}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
       propertyPath: counterAISpawner

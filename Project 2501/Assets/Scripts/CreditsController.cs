@@ -32,10 +32,11 @@ public class CreditsController : MonoBehaviour
             SceneManager.LoadScene(menuScene);
         }
 
-        if (cameraRunner.transform.position.z == endBound)
+        if (cameraRunner.transform.position.z >= endBound)
         {
             SceneManager.LoadScene(menuScene);
         }
+
     }
     #endregion
 
