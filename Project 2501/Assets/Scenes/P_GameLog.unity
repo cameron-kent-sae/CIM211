@@ -1899,7 +1899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818bcb1d9104a90418c68a74a3fd72aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataInventory: {fileID: 11400000, guid: 1a5ad5bd2bbf84a4c94e8ef5377947cb, type: 2}
+  dataInventory: {fileID: 11400000, guid: 8c9668037afc8d34c832da569829618c, type: 2}
   headerText: {fileID: 961724702}
   logText: {fileID: 1897449207}
   allegiantBtn: {fileID: 688993420}
