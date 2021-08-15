@@ -93,16 +93,8 @@ public class PlayerEvolutionManager : MonoBehaviour
             dataLogger.AddLog(data.data.description);
             dataLogger.AddLog("\n");
 
-            //for (int i = 0; i < dataInventory.Container.Count; i++)
-            //{
-            //   if (data == dataInventory.Container[i].data)
-            //    {
-            //        //??
-            //    }
-            //}
-
             dataInventory.AddItem(data.data);
-            dataInventory.CheckDuplicates(data);
+            //dataInventory.CheckDuplicates(data.data);
             
             Destroy(other.gameObject);
         }
@@ -117,16 +109,16 @@ public class PlayerEvolutionManager : MonoBehaviour
         switch (difficulty)
         {
             case "Slow":
-                evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 }; // Q2.0 Option HARD
+                evolveTargets = new List<int> { 0, 2, 10, 26, 65, 122, 197, 325, 485, 677, 901 };
                 break;
             case "Average":
-                evolveTargets = new List<int> { 0, 2, 8, 19, 43, 76, 117, 183, 262, 353, 457 }; // Q1.8 Option MEDIUM
+                evolveTargets = new List<int> { 0, 2, 8, 19, 43, 76, 117, 183, 262, 353, 457 };
                 break;
             case "Fast":
-                evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 }; // Q1.6 Option EASY
+                evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 };
                 break;
             default:
-                evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 }; // Q1.6 Option EASY
+                evolveTargets = new List<int> { 0, 2, 7, 14, 29, 47, 69, 103, 142, 185, 232 };
                 break;
         }
     }

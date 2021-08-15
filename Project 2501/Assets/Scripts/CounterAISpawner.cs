@@ -19,8 +19,6 @@ public class CounterAISpawner : MonoBehaviour
 
     public IEnumerator SpawnCounterAI()
     {
-        Debug.Log("Ai Spawning");
-
         while (true)
         {
             int i = Random.Range(0, counterAIObject.Length);
@@ -29,7 +27,6 @@ public class CounterAISpawner : MonoBehaviour
             GameObject counterAI = Instantiate(counterAIObject[i], spawnPos, Quaternion.identity);
             counterAI.GetComponent<CounterAIMover>().startPos = spawnPos;
             counterAI.GetComponent<CounterAIMover>().StartCoroutine("StartMoving");
-            Debug.Log("AI spawned");
 
             yield return new WaitForSeconds(spawnRate);
         }

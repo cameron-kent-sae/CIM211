@@ -39,7 +39,6 @@ public class CounterAIController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //player.StartCoroutine("SlowTime");
             if (!isSlowed)
             {
                 StartCoroutine(SlowPlayer());
@@ -52,7 +51,6 @@ public class CounterAIController : MonoBehaviour
     #region Custom Methods
     public IEnumerator SlowPlayer()
     {
-        Debug.Log("Slow Player Called");
         isSlowed = true;
 
         //float tempSpeed = 2f;

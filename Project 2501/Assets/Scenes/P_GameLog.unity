@@ -182,7 +182,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 364154020}
           m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
           m_MethodName: ButtonHighlighted
           m_Mode: 1
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keepGoing: 1
+  keepGoing: 0
 --- !u!114 &143196014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 364154020}
         m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1
@@ -417,7 +417,7 @@ RectTransform:
   - {fileID: 1846213473}
   - {fileID: 1149059092}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -749,6 +749,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319540505}
   m_CullTransparentMesh: 1
+--- !u!114 &364154020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1622278857, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1866371191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72810a1617e591147ba6cf5d450f8c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &364948504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1038,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 364154020}
           m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
           m_MethodName: ButtonHighlighted
           m_Mode: 1
@@ -1070,7 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keepGoing: 1
+  keepGoing: 0
 --- !u!114 &688993420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,7 +1128,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 364154020}
         m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1
@@ -1194,7 +1206,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &886553748
 GameObject:
@@ -1388,7 +1400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Allegiant Data
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -1466,6 +1478,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961724700}
   m_CullTransparentMesh: 1
+--- !u!1 &1040225346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1040225349}
+  - component: {fileID: 1040225348}
+  - component: {fileID: 1040225347}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1040225347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040225346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1040225348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040225346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1040225349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040225346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149059091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,11 +1683,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818bcb1d9104a90418c68a74a3fd72aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataInventory: {fileID: 11400000, guid: 8c9668037afc8d34c832da569829618c, type: 2}
+  dataInventory: {fileID: 11400000, guid: 1a5ad5bd2bbf84a4c94e8ef5377947cb, type: 2}
   logPanel: {fileID: 2036508770}
   textPrefab: {fileID: 7439686147762755249, guid: 4c5e19892838ad54da6cd30b4f229002,
     type: 3}
-  headerText: {fileID: 0}
+  headerText: {fileID: 961724702}
   allegiantBtn: {fileID: 688993420}
   divergentBtn: {fileID: 1331445271}
   insurgentBtn: {fileID: 1880527526}
@@ -1628,7 +1706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1242671784
 GameObject:
@@ -1658,7 +1736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1263042203
 GameObject:
@@ -1688,7 +1766,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1331445266
 GameObject:
@@ -1749,7 +1827,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 364154020}
           m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
           m_MethodName: ButtonHighlighted
           m_Mode: 1
@@ -1793,7 +1871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keepGoing: 1
+  keepGoing: 0
 --- !u!114 &1331445271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,7 +1917,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 364154020}
         m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1
@@ -1992,7 +2070,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1687075104
 GameObject:
@@ -2022,7 +2100,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716555035
 GameObject:
@@ -2263,6 +2341,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846213472}
   m_CullTransparentMesh: 1
+--- !u!1001 &1866371191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473033, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464946420501473035, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3f69edc5f22a114fa4cbe4c90cc50e4, type: 3}
 --- !u!1 &1880527521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,7 +2469,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 364154020}
           m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
           m_MethodName: ButtonHighlighted
           m_Mode: 1
@@ -2366,7 +2513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keepGoing: 1
+  keepGoing: 0
 --- !u!114 &1880527526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2412,7 +2559,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 364154020}
         m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1
@@ -2654,11 +2801,11 @@ MonoBehaviour:
     m_Top: 50
     m_Bottom: 50
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -2779,7 +2926,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 364154020}
           m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
           m_MethodName: ButtonHighlighted
           m_Mode: 1
@@ -2823,7 +2970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594f7318f6bfba84a8d0b9999c428930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keepGoing: 1
+  keepGoing: 0
 --- !u!114 &2073678487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2869,7 +3016,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 364154020}
         m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1

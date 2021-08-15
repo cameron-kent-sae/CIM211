@@ -13,36 +13,31 @@ public class DataInventory : ScriptableObject
         Container.Add(new DataSlot(_data));
     }
 
-    public void RemoveItem(DataSlot _data)
-    {
-    }
 
-    public void CheckDuplicates(DataObject data)
+    public void CheckDuplicates(DataPacket data)
     {
-        foreach (var item in Container)
+        Debug.Log(data);
+        //try toString comparisson
+
+        for (int i = 0; i < Container.Count; i++)
         {
-            if (data.data.url == item.data.url)
+            if (data == Container[i].data)
             {
-                Container.Remove(item);
+                Debug.Log(Container[i].data);
+
+                Container.Remove(Container[i]);
             }
-        }/*
-            for (int i = 0; i < Container.Count; i++)
-            {
-                if (data.data.url != Container[i].data.url)
-                {
-                    AddItem(data.data);
-                }
-            }*/
+        }
     }
-}
 
-[System.Serializable]
-public class DataSlot
-{
-    public DataPacket data;
-
-    public DataSlot(DataPacket _data)
+    [System.Serializable]
+    public class DataSlot
     {
-        data = _data;
+        public DataPacket data;
+
+        public DataSlot(DataPacket _data)
+        {
+            data = _data;
+        }
     }
 }

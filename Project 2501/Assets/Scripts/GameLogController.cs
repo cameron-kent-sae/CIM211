@@ -43,9 +43,9 @@ public class GameLogController : MonoBehaviour
         PopulateDataLists();
 
         allegiantBtn.onClick.AddListener(delegate { ShowData("Allegiant"); });
-        divergentBtn.onClick.AddListener(delegate { ShowData("Allegiant"); });
-        insurgentBtn.onClick.AddListener(delegate { ShowData("Allegiant"); });
-        otherBtn.onClick.AddListener(delegate { ShowData("Allegiant"); });
+        divergentBtn.onClick.AddListener(delegate { ShowData("Divergent"); });
+        insurgentBtn.onClick.AddListener(delegate { ShowData("Insurgent"); });
+        otherBtn.onClick.AddListener(delegate { ShowData("Other"); });
         creditsBtn.onClick.AddListener(LoadCredits);
 
         ShowData(PlayerPrefs.GetString("Path"));
@@ -57,19 +57,19 @@ public class GameLogController : MonoBehaviour
     {
         foreach (var item in dataInventory.Container)
         {
-            if (item.data.dataType.Equals("Allegiant"))
+            if (item.data.dataType.ToString() == "Allegiant")
             {
                 allegiantDatas.Add((AllegiantData)item.data);
             }
-            else if (item.data.dataType.Equals("Divergent"))
+            else if (item.data.dataType.ToString() == "Divergent")
             {
                 divergentDatas.Add((DivergentData)item.data);
             }
-            else if (item.data.dataType.Equals("Divergent"))
+            else if (item.data.dataType.ToString() == "Insurgent")
             {
                 insurgentDatas.Add((InsurgentData)item.data);
             }
-            else if (item.data.dataType.Equals("Divergent"))
+            else if (item.data.dataType.ToString() == "Other")
             {
                 otherDatas.Add((OtherData)item.data);
             }
@@ -84,6 +84,7 @@ public class GameLogController : MonoBehaviour
         {
             case "Allegiant":
                 headerText.text = allegiantTitle;
+                headerText.color = Color.green;
                 foreach (var item in allegiantDatas)
                 {
                     DisplayData(item);
@@ -91,6 +92,7 @@ public class GameLogController : MonoBehaviour
                 break;
             case "Divergent":
                 headerText.text = divergentTitle;
+                headerText.color = Color.blue;
                 foreach (var item in divergentDatas)
                 {
                     DisplayData(item);
@@ -98,6 +100,7 @@ public class GameLogController : MonoBehaviour
                 break;
             case "Insurgent":
                 headerText.text = insurgentTitle;
+                headerText.color = Color.red;
                 foreach (var item in insurgentDatas)
                 {
                     DisplayData(item);
@@ -105,12 +108,19 @@ public class GameLogController : MonoBehaviour
                 break;
             case "Other":
                 headerText.text = otherTitle;
+                headerText.color = new Color(225, 225, 225, 255);
                 foreach (var item in otherDatas)
                 {
                     DisplayData(item);
                 }
                 break;
             default:
+                headerText.text = allegiantTitle;
+                foreach (var item in allegiantDatas)
+                {
+                    DisplayData(item);
+                }
+
                 break;
         }
     }
@@ -130,7 +140,7 @@ public class GameLogController : MonoBehaviour
     {
         foreach (Transform child in logPanel.transform)
         {
-            Destroy(child);
+            Destroy(child.gameObject);
         }
     }
 
