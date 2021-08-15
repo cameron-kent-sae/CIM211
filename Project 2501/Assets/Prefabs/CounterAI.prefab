@@ -9859,7 +9859,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveRate: 1
-  moveBound: 3
+  zMoveBound: 4
+  minXMoveBound: -4
+  maxXMoveBound: 4
+  minYMoveBound: 1
+  maxYMoveBound: 5
   startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &7640374649319685707
 GameObject:

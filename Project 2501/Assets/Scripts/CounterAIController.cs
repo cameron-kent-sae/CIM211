@@ -8,11 +8,10 @@ public class CounterAIController : MonoBehaviour
     private PlayerEvolutionManager player;
     private GameObject cameraRunner;
     private DataLogger dataLogger;
-
+    private DataInventory dataInventory;
     private ParticleSystem divergentBurst;
     private ParticleSystem insurgentBurst;
-
-    private DataInventory dataInventory;
+    private bool isSlowed = false;
     #endregion
 
     #region Built In Methods
@@ -40,13 +39,37 @@ public class CounterAIController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            player.StartCoroutine("SlowTime");
+            //player.StartCoroutine("SlowTime");
+            if (!isSlowed)
+            {
+                StartCoroutine(SlowPlayer());
+            }
             StealPackets();
         }
     }
     #endregion
 
     #region Custom Methods
+    public IEnumerator SlowPlayer()
+    {
+        Debug.Log("Slow Player Called");
+        isSlowed = true;
+
+        float tempSpeed = 2f;
+        float currentSpeed = cameraRunner.GetComponent<CameraRunner>().speed;
+        //cameraRunner.GetComponent<CameraRunner>().speed = Mathf.Lerp(currentSpeed, tempSpeed, .2f);
+        cameraRunner.GetComponent<CameraRunner>().speed = 2;
+        
+        yield return new WaitForSeconds(2);
+
+        //cameraRunner.GetComponent<CameraRunner>().speed = Mathf.Lerp(tempSpeed, currentSpeed, .2f);
+        cameraRunner.GetComponent<CameraRunner>().speed = currentSpeed;
+
+        yield return new WaitForSeconds(.2f);
+
+        isSlowed = false;
+    }
+
     private void StealPackets()
     {
         if (player.insurgentLevel > player.divergentLevel)
@@ -74,7 +97,7 @@ public class CounterAIController : MonoBehaviour
             StartCoroutine(AnimateBurst("Divergent"));
         }
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     public IEnumerator AnimateBurst(string path)

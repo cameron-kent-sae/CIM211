@@ -1724,6 +1724,26 @@ PrefabInstance:
       objectReference: {fileID: 726069164}
     - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
         type: 3}
+      propertyPath: maxXSpawnBound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
+        type: 3}
+      propertyPath: maxYSpawnBound
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
+        type: 3}
+      propertyPath: minXSpawnBound
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
+        type: 3}
+      propertyPath: minYSpawnBound
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
+        type: 3}
       propertyPath: maxSpawnDistance
       value: 100
       objectReference: {fileID: 0}
