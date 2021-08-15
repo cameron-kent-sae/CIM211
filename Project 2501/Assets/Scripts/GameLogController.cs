@@ -13,10 +13,10 @@ public class GameLogController : MonoBehaviour
     #region Variables
     public DataInventory dataInventory;
 
-    public GameObject logPanel;
-    public TMP_Text textPrefab;
-
     public TMP_Text headerText;
+    public TMP_Text logText;
+    private List<string> eventLog = new List<string>();
+    private string guiText = "";
 
     public Button allegiantBtn;
     public Button divergentBtn;
@@ -87,7 +87,8 @@ public class GameLogController : MonoBehaviour
                 headerText.color = Color.green;
                 foreach (var item in allegiantDatas)
                 {
-                    DisplayData(item);
+                    AddLog(item.url);
+                    AddLog(item.description);
                 }
                 break;
             case "Divergent":
@@ -95,7 +96,8 @@ public class GameLogController : MonoBehaviour
                 headerText.color = Color.blue;
                 foreach (var item in divergentDatas)
                 {
-                    DisplayData(item);
+                    AddLog(item.url);
+                    AddLog(item.description);
                 }
                 break;
             case "Insurgent":
@@ -103,7 +105,8 @@ public class GameLogController : MonoBehaviour
                 headerText.color = Color.red;
                 foreach (var item in insurgentDatas)
                 {
-                    DisplayData(item);
+                    AddLog(item.url);
+                    AddLog(item.description);
                 }
                 break;
             case "Other":
@@ -111,20 +114,39 @@ public class GameLogController : MonoBehaviour
                 headerText.color = new Color(225, 225, 225, 255);
                 foreach (var item in otherDatas)
                 {
-                    DisplayData(item);
+                    AddLog(item.url);
+                    AddLog(item.description);
                 }
                 break;
             default:
                 headerText.text = allegiantTitle;
                 foreach (var item in allegiantDatas)
                 {
-                    DisplayData(item);
+                    AddLog(item.url);
+                    AddLog(item.description);
                 }
 
                 break;
         }
     }
 
+    public void AddLog(string newDataLog)
+    {
+        eventLog.Add(newDataLog);
+
+        guiText = "";
+
+        foreach (string log in eventLog)
+        {
+            guiText += log;
+            guiText += "\n";
+            guiText += "\n";
+        }
+
+        logText.text = guiText;
+    }
+
+    /*
     private void DisplayData(DataPacket item)
     {
         string url = item.url.ToString();
@@ -134,14 +156,12 @@ public class GameLogController : MonoBehaviour
         log.transform.parent = logPanel.transform;
 
         log.text = url + "\n" + description + "\n";
-    }
+    }*/
 
     private void ClearLogs()
     {
-        foreach (Transform child in logPanel.transform)
-        {
-            Destroy(child.gameObject);
-        }
+        logText.text = "";
+        eventLog.Clear();
     }
 
     private void LoadCredits()
