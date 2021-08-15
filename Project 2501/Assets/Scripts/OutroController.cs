@@ -46,7 +46,8 @@ public class OutroController : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         textOne.text = "";
         textTwo.text = "";
@@ -95,6 +96,8 @@ public class OutroController : MonoBehaviour
 
         yield return new WaitForSeconds(delaySeven);
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         creditsBtn.gameObject.SetActive(true);
     }
 

@@ -18,7 +18,8 @@ public class MenuController : MonoBehaviour
     #region Built In Methods
     private void Start()
     {
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         PlayerPrefs.SetString("WinPath", "");
         PlayerPrefs.SetString("Difficulty", "");
@@ -34,11 +35,14 @@ public class MenuController : MonoBehaviour
     #region Custom Methods
     private IEnumerator EnableButtons()
     {
-        yield return new WaitForSeconds(9);
+        yield return new WaitForSeconds(6);
 
         playBtn.interactable = true;
         creditsBtn.interactable = true;
         quitBtn.interactable = true;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void StartGame()

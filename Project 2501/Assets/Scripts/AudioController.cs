@@ -4,6 +4,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class AudioController : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class AudioController : MonoBehaviour
     #region Custom Methods
     public void ButtonHighlighted()
     {
-        sfxSource.PlayOneShot(ButtonHighlightedWAV);
+            sfxSource.PlayOneShot(ButtonHighlightedWAV);
     }
 
     public void ButtonPressed()

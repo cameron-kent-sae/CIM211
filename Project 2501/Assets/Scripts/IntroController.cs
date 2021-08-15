@@ -45,7 +45,8 @@ public class IntroController : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         textOne.text = "";
         textTwo.text = "";
@@ -92,6 +93,8 @@ public class IntroController : MonoBehaviour
 
         yield return new WaitForSeconds(delaySeven);
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         launchBtn.gameObject.SetActive(true);
     }
 

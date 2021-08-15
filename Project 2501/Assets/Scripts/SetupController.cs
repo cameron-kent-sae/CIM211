@@ -20,8 +20,6 @@ public class SetupController : MonoBehaviour
     #region Built In Methods
     public void Start()
     {
-        Cursor.visible = true;
-
         fastBtn.onClick.AddListener(delegate { StartGame("Fast"); });
         averageBtn.onClick.AddListener(delegate { StartGame("Average"); });
         slowBtn.onClick.AddListener(delegate { StartGame("Slow"); });
