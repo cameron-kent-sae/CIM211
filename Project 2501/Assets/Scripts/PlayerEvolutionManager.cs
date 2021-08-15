@@ -94,7 +94,6 @@ public class PlayerEvolutionManager : MonoBehaviour
             dataLogger.AddLog("\n");
 
             dataInventory.AddItem(data.data);
-            //dataInventory.CheckDuplicates(data.data);
             
             Destroy(other.gameObject);
         }

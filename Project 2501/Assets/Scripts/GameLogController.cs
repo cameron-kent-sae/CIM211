@@ -146,18 +146,6 @@ public class GameLogController : MonoBehaviour
         logText.text = guiText;
     }
 
-    /*
-    private void DisplayData(DataPacket item)
-    {
-        string url = item.url.ToString();
-        string description = item.description.ToString();
-
-        TMP_Text log = Instantiate(textPrefab, logPanel.transform.position, Quaternion.identity);
-        log.transform.parent = logPanel.transform;
-
-        log.text = url + "\n" + description + "\n";
-    }*/
-
     private void ClearLogs()
     {
         logText.text = "";

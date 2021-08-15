@@ -13,22 +13,6 @@ public class DataInventory : ScriptableObject
         Container.Add(new DataSlot(_data));
     }
 
-    public void CheckDuplicates(DataPacket data)
-    {
-        Debug.Log(data);
-        //try toString comparisson
-
-        for (int i = 0; i < Container.Count; i++)
-        {
-            if (data.url.ToString().Equals(Container[i].data.url.ToString()))
-            {
-                Debug.Log(Container[i].data);
-
-                Container.Remove(Container[i]);
-            }
-        }
-    }
-
     [System.Serializable]
     public class DataSlot
     {
