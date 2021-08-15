@@ -22,6 +22,8 @@ public class CreditsController : MonoBehaviour
     #region Built In Methods
     private void Start()
     {
+        Cursor.visible = false;
+
         ActivatePlayerObjects();
     }
 

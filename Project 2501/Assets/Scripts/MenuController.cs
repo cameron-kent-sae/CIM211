@@ -18,16 +18,29 @@ public class MenuController : MonoBehaviour
     #region Built In Methods
     private void Start()
     {
+        Cursor.visible = true;
+
         PlayerPrefs.SetString("WinPath", "");
         PlayerPrefs.SetString("Difficulty", "");
 
         playBtn.onClick.AddListener(StartGame);
         creditsBtn.onClick.AddListener(LoadCredits);
         quitBtn.onClick.AddListener(Application.Quit);
+
+        StartCoroutine(EnableButtons());
     }
     #endregion
 
     #region Custom Methods
+    private IEnumerator EnableButtons()
+    {
+        yield return new WaitForSeconds(9);
+
+        playBtn.interactable = true;
+        creditsBtn.interactable = true;
+        quitBtn.interactable = true;
+    }
+
     private void StartGame()
     {
         SceneManager.LoadScene(introScene);

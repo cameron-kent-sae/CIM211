@@ -46,6 +46,8 @@ public class OutroController : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        Cursor.visible = true;
+
         textOne.text = "";
         textTwo.text = "";
         textThree.text = "";

@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 28536870}
   m_OnClick:
     m_PersistentCalls:
@@ -1215,7 +1215,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1032791102}
   m_OnClick:
     m_PersistentCalls:
@@ -1312,7 +1312,7 @@ GameObject:
   - component: {fileID: 1094335595}
   - component: {fileID: 1094335597}
   m_Layer: 5
-  m_Name: Background
+  m_Name: BG Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1680,7 +1680,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1429434433}
   m_OnClick:
     m_PersistentCalls:
