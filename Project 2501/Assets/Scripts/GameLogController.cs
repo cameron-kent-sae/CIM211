@@ -84,8 +84,7 @@ public class GameLogController : MonoBehaviour
         switch (path)
         {
             case "Allegiant":
-                headerText.text = allegiantTitle;
-                headerText.color = Color.green;
+                SetTitle(allegiantTitle, Color.green);
                 foreach (var item in allegiantDatas)
                 {
                     AddLog(item.url);
@@ -93,8 +92,7 @@ public class GameLogController : MonoBehaviour
                 }
                 break;
             case "Divergent":
-                headerText.text = divergentTitle;
-                headerText.color = Color.blue;
+                SetTitle(divergentTitle, Color.blue);
                 foreach (var item in divergentDatas)
                 {
                     AddLog(item.url);
@@ -102,8 +100,7 @@ public class GameLogController : MonoBehaviour
                 }
                 break;
             case "Insurgent":
-                headerText.text = insurgentTitle;
-                headerText.color = Color.red;
+                SetTitle(insurgentTitle, Color.red);
                 foreach (var item in insurgentDatas)
                 {
                     AddLog(item.url);
@@ -111,8 +108,7 @@ public class GameLogController : MonoBehaviour
                 }
                 break;
             case "Other":
-                headerText.text = otherTitle;
-                headerText.color = new Color(225, 225, 225, 255);
+                SetTitle(otherTitle, new Color(225, 225, 225, 255));
                 foreach (var item in otherDatas)
                 {
                     AddLog(item.url);
@@ -129,6 +125,12 @@ public class GameLogController : MonoBehaviour
 
                 break;
         }
+    }
+
+    private void SetTitle(string title, Color color)
+    {
+        headerText.text = title;
+        headerText.color = color;
     }
 
     public void AddLog(string newDataLog)
