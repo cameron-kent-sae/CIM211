@@ -15,6 +15,7 @@ public class PlayerEvolutionManager : MonoBehaviour
     public DataLogger dataLogger;
     public MouseFollow mouseFollow;
     public CounterAISpawner counterAISpawner;
+    public ChromeAbAdjuster chromeAbAdjuster;
 
     public string outroScene;
 
@@ -111,7 +112,7 @@ public class PlayerEvolutionManager : MonoBehaviour
 
     #region Custom Methods
     public IEnumerator SlowTime()
-    {
+    {                                               //      TODO FIX THIS
         //float currentSpeed = cameraRunner.speed;
         //cameraRunner.speed = 5;
         //Time.timeScale = Mathf.Lerp(1, .5f, .2f);
@@ -146,13 +147,13 @@ public class PlayerEvolutionManager : MonoBehaviour
         }
     }
 
-    private void SetRates(float speed, float dataRate, float aiRate)
+    private void SetRates(float speed, float dataRate, float aiRate, float cAb)
     {
         cameraRunner.speed = Mathf.Lerp(cameraRunner.speed, speed, 5);
         mouseFollow.speed = speed;
         dataPacketSpawner.spawnRate = dataRate;
         counterAISpawner.spawnRate = aiRate;
-
+        chromeAbAdjuster.UpdateChromaticAberration(cAb);
     }
 
     private void UpdateGlobals(string path)
@@ -162,32 +163,32 @@ public class PlayerEvolutionManager : MonoBehaviour
         switch (topLevel)
         {
             case 1:
-                SetRates(20, .9f, 30);
+                SetRates(20, .9f, 30, .2f);
                 break;
             case 2:
-                SetRates(30, .8f, 30);
+                SetRates(30, .8f, 30, .3f);
                 break;
             case 3:
-                SetRates(40, .7f, 30);
+                SetRates(40, .7f, 30, .4f);
                 StartCoroutine(counterAISpawner.SpawnCounterAI());
                 break;
             case 4:
-                SetRates(50, .6f, 30);
+                SetRates(50, .6f, 30, .5f);
                 break;
             case 5:
-                SetRates(60, .5f, 26);
+                SetRates(60, .5f, 26, .6f);
                 break;
             case 6:
-                SetRates(70, .4f, 22);
+                SetRates(70, .4f, 22, .7f);
                 break;
             case 7:
-                SetRates(80, .3f, 18);
+                SetRates(80, .3f, 18, .8f);
                 break;
             case 8:
-                SetRates(90, .2f, 14);
+                SetRates(90, .2f, 14, .9f);
                 break;
             case 9:
-                SetRates(100, .1f, 10);
+                SetRates(100, .1f, 10, 1);
                 counterAISpawner.spawnRate = 10f;
                 break;
             case 10:
