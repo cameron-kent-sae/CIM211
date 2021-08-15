@@ -111,21 +111,6 @@ public class PlayerEvolutionManager : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    public IEnumerator SlowTime()
-    {                                               //      TODO FIX THIS
-        //float currentSpeed = cameraRunner.speed;
-        //cameraRunner.speed = 5;
-        //Time.timeScale = Mathf.Lerp(1, .5f, .2f);
-        Time.timeScale = .5f;
-
-        yield return new WaitForSeconds(2);
-
-        Time.timeScale = 1;
-        //Time.timeScale = Mathf.Lerp(.5f, 1f, .2f);
-
-        //cameraRunner.speed = currentSpeed;
-    }
-
     private void SetGameDifficulty()
     {
         string difficulty = PlayerPrefs.GetString("Difficulty");

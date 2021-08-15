@@ -55,7 +55,7 @@ public class CounterAIController : MonoBehaviour
         Debug.Log("Slow Player Called");
         isSlowed = true;
 
-        float tempSpeed = 2f;
+        //float tempSpeed = 2f;
         float currentSpeed = cameraRunner.GetComponent<CameraRunner>().speed;
         //cameraRunner.GetComponent<CameraRunner>().speed = Mathf.Lerp(currentSpeed, tempSpeed, .2f);
         cameraRunner.GetComponent<CameraRunner>().speed = 2;

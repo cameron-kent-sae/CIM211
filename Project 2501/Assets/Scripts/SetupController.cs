@@ -20,9 +20,9 @@ public class SetupController : MonoBehaviour
     #region Built In Methods
     public void Start()
     {
-        fastBtn.onClick.AddListener(delegate { StartGame("Slow"); });
+        fastBtn.onClick.AddListener(delegate { StartGame("Fast"); });
         averageBtn.onClick.AddListener(delegate { StartGame("Average"); });
-        slowBtn.onClick.AddListener(delegate { StartGame("Fast"); });
+        slowBtn.onClick.AddListener(delegate { StartGame("Slow"); });
     }
     #endregion
 
