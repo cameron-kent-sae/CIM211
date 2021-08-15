@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b80404ce5475a643b1e5be4e84e6f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  narrationLogger: {fileID: 0}
   allegiantNarrations: []
   divergentNarrations: []
   insurgentNarrations: []

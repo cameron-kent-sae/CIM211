@@ -33,8 +33,8 @@ public class PauseController : MonoBehaviour
         {
             if (!isPaused)
             {
-                narrationLogger.OpenLog();
-                dataLogger.OpenLog();
+                if (!narrationLogger.isExpanded) narrationLogger.OpenLog();
+                if (!dataLogger.isExpanded) dataLogger.OpenLog();
                 Invoke("PauseGame", .2f);
             }
             else if (isPaused)

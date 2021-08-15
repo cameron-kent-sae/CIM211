@@ -11,8 +11,6 @@ public class ChromeAbAdjuster : MonoBehaviour
     #region Variables
     public PostProcessProfile profile;
     private ChromaticAberration chromeAb;
-
-    public float caValue;
     #endregion
 
     #region Built In Methods
@@ -20,14 +18,12 @@ public class ChromeAbAdjuster : MonoBehaviour
     {
         chromeAb = profile.GetSetting<ChromaticAberration>();
         chromeAb.intensity.Override(.1f);
-        caValue = chromeAb.intensity;
     }
     #endregion
 
     #region Custom Methods
     public void UpdateChromaticAberration(float newValue)
     {
-        Debug.Log("update ca called");
         chromeAb.intensity.Override(Mathf.Lerp(chromeAb.intensity, newValue, 5f));
     }
     #endregion

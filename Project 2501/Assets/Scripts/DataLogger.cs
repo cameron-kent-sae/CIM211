@@ -18,7 +18,7 @@ public class DataLogger : MonoBehaviour
 
     private float closedPos;
     private float openedPos;
-    private bool isExpanded;
+    public bool isExpanded;
     #endregion
 
     #region Built In Methods

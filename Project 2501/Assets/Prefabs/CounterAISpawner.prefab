@@ -46,10 +46,10 @@ MonoBehaviour:
   runningCamera: {fileID: 0}
   counterAIObject:
   - {fileID: 7640374649294383282, guid: 01c27cc2d7600cb48a0305b2921baf85, type: 3}
-  minXSpawnBound: -4
-  maxXSpawnBound: 4
-  minYSpawnBound: 0.5
+  minXSpawnBound: -3
+  maxXSpawnBound: 3
+  minYSpawnBound: 1
   maxYSpawnBound: 5
-  minSpawnDistance: 10
-  maxSpawnDistance: 15
+  minSpawnDistance: 50
+  maxSpawnDistance: 100
   spawnRate: 0

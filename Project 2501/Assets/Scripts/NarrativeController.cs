@@ -6,6 +6,7 @@ using UnityEngine;
 public class NarrativeController : MonoBehaviour
 {
     #region Variables
+    public NarrationLogger narrationLogger;
 
     public List<string> allegiantNarrations = new List<string>();
     public List<string> divergentNarrations = new List<string>();
@@ -26,15 +27,19 @@ public class NarrativeController : MonoBehaviour
         {
             case "allegiant":
                 //Play Narrative clip
-                Debug.Log(allegiantNarrations[level - 1].ToString());
+                //narrationLogger add text
+                narrationLogger.AddLog(allegiantNarrations[level - 1].ToString());
+                //Debug.Log(allegiantNarrations[level - 1].ToString());
                 break;
             case "divergent":
                 //Play Narrative clip
-                Debug.Log(divergentNarrations[level - 1].ToString());
+                narrationLogger.AddLog(divergentNarrations[level - 1].ToString());
+                //Debug.Log(divergentNarrations[level - 1].ToString());
                 break;
             case "insurgent":
                 //Play Narrative clip
-                Debug.Log(insurgentNarrations[level - 1].ToString());
+                narrationLogger.AddLog(insurgentNarrations[level - 1].ToString());
+                //Debug.Log(insurgentNarrations[level - 1].ToString());
                 break;
             default:
                 break;
@@ -43,38 +48,38 @@ public class NarrativeController : MonoBehaviour
 
     private void InitialiseNarrations()
     {
-        allegiantNarrations.Add("Aone");
-        allegiantNarrations.Add("Atwo");
-        allegiantNarrations.Add("Athree");
-        allegiantNarrations.Add("Afour");
-        allegiantNarrations.Add("Afive");
-        allegiantNarrations.Add("Asix");
-        allegiantNarrations.Add("Aseven");
-        allegiantNarrations.Add("Aeight");
-        allegiantNarrations.Add("Anine");
-        allegiantNarrations.Add("Aten");
+        allegiantNarrations.Add("Allone");
+        allegiantNarrations.Add("Alltwo");
+        allegiantNarrations.Add("Allthree");
+        allegiantNarrations.Add("Allfour");
+        allegiantNarrations.Add("Allfive");
+        allegiantNarrations.Add("Allsix");
+        allegiantNarrations.Add("Allseven");
+        allegiantNarrations.Add("Alleight");
+        allegiantNarrations.Add("Allnine");
+        allegiantNarrations.Add("Allten");
 
-        divergentNarrations.Add("Done");
-        divergentNarrations.Add("Dtwo");
-        divergentNarrations.Add("Dthree");
-        divergentNarrations.Add("Dfour");
-        divergentNarrations.Add("Dfive");
-        divergentNarrations.Add("Dsix");
-        divergentNarrations.Add("Dseven");
-        divergentNarrations.Add("Deight");
-        divergentNarrations.Add("Dnine");
-        divergentNarrations.Add("Dten");
+        divergentNarrations.Add("Divone");
+        divergentNarrations.Add("Divtwo");
+        divergentNarrations.Add("Divthree");
+        divergentNarrations.Add("Divfour");
+        divergentNarrations.Add("Divfive");
+        divergentNarrations.Add("Divsix");
+        divergentNarrations.Add("Divseven");
+        divergentNarrations.Add("Diveight");
+        divergentNarrations.Add("Divnine");
+        divergentNarrations.Add("Divten");
 
-        insurgentNarrations.Add("Ione");
-        insurgentNarrations.Add("Itwo");
-        insurgentNarrations.Add("Ithree");
-        insurgentNarrations.Add("Ifour");
-        insurgentNarrations.Add("Ifive");
-        insurgentNarrations.Add("Isix");
-        insurgentNarrations.Add("Iseven");
-        insurgentNarrations.Add("Ieight");
-        insurgentNarrations.Add("Inine");
-        insurgentNarrations.Add("Iten");
+        insurgentNarrations.Add("Insone");
+        insurgentNarrations.Add("Instwo");
+        insurgentNarrations.Add("Insthree");
+        insurgentNarrations.Add("Insfour");
+        insurgentNarrations.Add("Insfive");
+        insurgentNarrations.Add("Inssix");
+        insurgentNarrations.Add("Insseven");
+        insurgentNarrations.Add("Inseight");
+        insurgentNarrations.Add("Insnine");
+        insurgentNarrations.Add("Insten");
     }
     #endregion
 }
