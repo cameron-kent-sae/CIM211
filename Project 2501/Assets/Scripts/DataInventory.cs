@@ -12,6 +12,28 @@ public class DataInventory : ScriptableObject
     {
         Container.Add(new DataSlot(_data));
     }
+
+    public void RemoveItem(DataSlot _data)
+    {
+    }
+
+    public void CheckDuplicates(DataObject data)
+    {
+        foreach (var item in Container)
+        {
+            if (data.data.url == item.data.url)
+            {
+                Container.Remove(item);
+            }
+        }/*
+            for (int i = 0; i < Container.Count; i++)
+            {
+                if (data.data.url != Container[i].data.url)
+                {
+                    AddItem(data.data);
+                }
+            }*/
+    }
 }
 
 [System.Serializable]

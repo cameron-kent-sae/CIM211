@@ -93,15 +93,16 @@ public class PlayerEvolutionManager : MonoBehaviour
             dataLogger.AddLog(data.data.description);
             dataLogger.AddLog("\n");
 
-            for (int i = 0; i < dataInventory.Container.Count; i++)
-            {
-                if (data == dataInventory.Container[i].data)
-                {
-                    //??
-                }
-            }
+            //for (int i = 0; i < dataInventory.Container.Count; i++)
+            //{
+            //   if (data == dataInventory.Container[i].data)
+            //    {
+            //        //??
+            //    }
+            //}
 
             dataInventory.AddItem(data.data);
+            dataInventory.CheckDuplicates(data);
             
             Destroy(other.gameObject);
         }
