@@ -32,10 +32,10 @@ public class GameLogController : MonoBehaviour
     private string insurgentTitle = "Insurgent Data";
     private string otherTitle = "Other Data";
 
-    private List<AllegiantData> allegiantDatas = new List<AllegiantData>();
-    private List<DivergentData> divergentDatas = new List<DivergentData>();
-    private List<InsurgentData> insurgentDatas = new List<InsurgentData>();
-    private List<OtherData> otherDatas = new List<OtherData>();
+    private List<DataPacket> allegiantDatas = new List<DataPacket>();
+    private List<DataPacket> divergentDatas = new List<DataPacket>();
+    private List<DataPacket> insurgentDatas = new List<DataPacket>();
+    private List<DataPacket> otherDatas = new List<DataPacket>();
     #endregion
 
     #region Built In Methods
@@ -85,45 +85,33 @@ public class GameLogController : MonoBehaviour
         {
             case "Allegiant":
                 SetTitle(allegiantTitle, Color.green);
-                foreach (var item in allegiantDatas)
-                {
-                    AddLog(item.url);
-                    AddLog(item.description);
-                }
+                SetLogs(allegiantDatas);
                 break;
             case "Divergent":
                 SetTitle(divergentTitle, Color.blue);
-                foreach (var item in divergentDatas)
-                {
-                    AddLog(item.url);
-                    AddLog(item.description);
-                }
+                SetLogs(divergentDatas);
                 break;
             case "Insurgent":
                 SetTitle(insurgentTitle, Color.red);
-                foreach (var item in insurgentDatas)
-                {
-                    AddLog(item.url);
-                    AddLog(item.description);
-                }
+                SetLogs(insurgentDatas);
                 break;
             case "Other":
                 SetTitle(otherTitle, new Color(225, 225, 225, 255));
-                foreach (var item in otherDatas)
-                {
-                    AddLog(item.url);
-                    AddLog(item.description);
-                }
+                SetLogs(otherDatas);
                 break;
             default:
-                headerText.text = allegiantTitle;
-                foreach (var item in allegiantDatas)
-                {
-                    AddLog(item.url);
-                    AddLog(item.description);
-                }
-
+                SetTitle(otherTitle, new Color(225, 225, 225, 255));
+                SetLogs(otherDatas);
                 break;
+        }
+    }
+
+    private void SetLogs(List<DataPacket> datas)
+    {
+        foreach (var item in datas)
+        {
+            AddLog(item.url);
+            AddLog(item.description);
         }
     }
 
@@ -144,18 +132,15 @@ public class GameLogController : MonoBehaviour
 
         } else
         {
-            Debug.Log(eventLog.Count);
             for (int i = 0; i < eventLog.Count; i++)
             {
                 if (newDataLog.Equals(eventLog[i]))
                 {
-                    Debug.Log("hasDuplicate");
                     hasDuplicate = true;
                     break;
                 }
                 else
                 {
-                    Debug.Log("!hasDuplicate");
                     hasDuplicate = false;
                 }
             }
@@ -166,22 +151,6 @@ public class GameLogController : MonoBehaviour
                 PrintLogs();
             }
         }
-
-
-        //Working chunk with duplicates
-        /*
-        eventLog.Add(newDataLog);
-
-        guiText = "";
-
-        foreach (string log in eventLog)
-        {
-            guiText += log;
-            guiText += "\n";
-            guiText += "\n";
-        }
-
-        logText.text = guiText; */
     }
 
     private void PrintLogs()
