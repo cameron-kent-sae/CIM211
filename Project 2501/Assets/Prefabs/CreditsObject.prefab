@@ -568,6 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc05c9d5a4c9224b8acb651e2231c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitClip: {fileID: 8300000, guid: bc6d1ca278706514cb0a75f752f77a62, type: 3}
 --- !u!1001 &7902827164855618757
 PrefabInstance:
   m_ObjectHideFlags: 0
