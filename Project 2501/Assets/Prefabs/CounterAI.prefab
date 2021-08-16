@@ -9846,6 +9846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3bcd1cc6128cf418dd45de55c5c66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioController: {fileID: 0}
+  counterAIHitClip: {fileID: 8300000, guid: c6cfd5097e3aa5341beaf36c4eaf57df, type: 3}
 --- !u!114 &1028708861
 MonoBehaviour:
   m_ObjectHideFlags: 0
