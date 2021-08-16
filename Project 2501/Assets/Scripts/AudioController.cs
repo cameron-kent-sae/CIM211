@@ -31,5 +31,10 @@ public class AudioController : MonoBehaviour
     {
         sfxSource.PlayOneShot(ButtonPressedWAV);
     }
+
+    public void PlayClip(AudioClip clip)
+    {
+        sfxSource.PlayOneShot(clip);
+    }
     #endregion
 }
