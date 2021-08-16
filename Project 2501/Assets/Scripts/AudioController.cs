@@ -11,6 +11,7 @@ public class AudioController : MonoBehaviour
     #region Variables
     public AudioSource musicSource;
     public AudioSource sfxSource;
+    public AudioSource voiceSource;
 
     public AudioClip ButtonHighlightedWAV;
     public AudioClip ButtonPressedWAV;
