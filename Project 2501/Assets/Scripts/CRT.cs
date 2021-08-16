@@ -30,7 +30,6 @@ public class CRT : MonoBehaviour
         }
     }
     #endregion
-    // Use this for initialization
     void Start()
     {
         if (!SystemInfo.supportsImageEffects)
@@ -54,14 +53,6 @@ public class CRT : MonoBehaviour
         {
             Graphics.Blit(sourceTexture, destTexture);
         }
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void OnDisable()
@@ -72,6 +63,4 @@ public class CRT : MonoBehaviour
         }
 
     }
-
-
 }
