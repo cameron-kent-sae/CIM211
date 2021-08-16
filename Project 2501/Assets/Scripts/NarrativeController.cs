@@ -7,6 +7,7 @@ public class NarrativeController : MonoBehaviour
 {
     #region Variables
     public NarrationLogger narrationLogger;
+    public AudioController audioController;
 
     public List<string> allegiantNarrations = new List<string>();
     public List<string> divergentNarrations = new List<string>();
