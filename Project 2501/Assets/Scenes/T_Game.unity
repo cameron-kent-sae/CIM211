@@ -1716,9 +1716,19 @@ PrefabInstance:
       objectReference: {fileID: 726069163}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
+      propertyPath: otherHitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c8da38ebecc1d3d43989f074e660a2b4, type: 3}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
       propertyPath: audioController
       value: 
       objectReference: {fileID: 900813808}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
+      propertyPath: allegiantHitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7af48238ba6388f4997e88f3785be75d, type: 3}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
       propertyPath: chromeAbAdjuster
@@ -1729,6 +1739,11 @@ PrefabInstance:
       propertyPath: counterAISpawner
       value: 
       objectReference: {fileID: 1274433574}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
+      propertyPath: insurgentHitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 705e6fbcfc655064b8d8003085f6f2ea, type: 3}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
       propertyPath: dataPacketSpawner
