@@ -9,17 +9,22 @@ public class CreditsObject : MonoBehaviour
 {
     #region Variables
     private ParticleSystem effects;
+    private AudioController audioController;
+
+    public AudioClip hitClip;
     #endregion
 
     #region Built In Methods
     private void Start()
     {
+        audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
         effects = GetComponentInChildren<ParticleSystem>();
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            audioController.PlayClip(hitClip);
             StartCoroutine(PlayEffect());
         }
     }
