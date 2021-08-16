@@ -16,7 +16,12 @@ public class PlayerEvolutionManager : MonoBehaviour
     public MouseFollow mouseFollow;
     public CounterAISpawner counterAISpawner;
     public ChromeAbAdjuster chromeAbAdjuster;
+    public AudioController audioController;
 
+    public AudioClip allegiantHitClip;
+    public AudioClip divergentHitClip;
+    public AudioClip insurgentHitClip;
+    public AudioClip otherHitClip;
     public string outroScene;
 
     [Header("Path Levels")]
@@ -69,21 +74,25 @@ public class PlayerEvolutionManager : MonoBehaviour
             switch (data.data.dataType)
             {
                 case DataType.Allegiant:
+                    audioController.PlayClip(allegiantHitClip);
                     allegiantCount += 1;
                     dataLogger.allCount.text = allegiantCount.ToString();
                     CheckAllegiantLevel();
                     break;
                 case DataType.Divergent:
+                    audioController.PlayClip(divergentHitClip);
                     divergentCount += 1;
                     dataLogger.divCount.text = divergentCount.ToString();
                     CheckDivergentLevel();
                     break;
                 case DataType.Insurgent:
+                    audioController.PlayClip(insurgentHitClip);
                     insurgentCount += 1;
                     dataLogger.divCount.text = insurgentCount.ToString();
                     CheckInsurgentLevel();
                     break;
                 case DataType.Other:
+                    audioController.PlayClip(otherHitClip);
                     break;
                 default:
                     break;

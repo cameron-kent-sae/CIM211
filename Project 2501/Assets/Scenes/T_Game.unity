@@ -816,6 +816,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &900813808 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1622278857, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 150279446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72810a1617e591147ba6cf5d450f8c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &964291421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1702,6 +1714,11 @@ PrefabInstance:
       propertyPath: cameraRunner
       value: 
       objectReference: {fileID: 726069163}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
+      propertyPath: audioController
+      value: 
+      objectReference: {fileID: 900813808}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
       propertyPath: chromeAbAdjuster

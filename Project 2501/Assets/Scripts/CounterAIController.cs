@@ -11,6 +11,10 @@ public class CounterAIController : MonoBehaviour
     private DataInventory dataInventory;
     private ParticleSystem divergentBurst;
     private ParticleSystem insurgentBurst;
+    public AudioController audioController;
+
+    public AudioClip counterAIHitClip;
+    
     private bool isSlowed = false;
     #endregion
 
@@ -39,6 +43,8 @@ public class CounterAIController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            audioController.PlayClip(counterAIHitClip);
+
             if (!isSlowed)
             {
                 StartCoroutine(SlowPlayer());
