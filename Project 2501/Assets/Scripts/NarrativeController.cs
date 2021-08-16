@@ -44,37 +44,37 @@ public class NarrativeController : MonoBehaviour
 
     private void InitialiseNarrations()
     {
-        allegiantNarrations.Add("Allone");
-        allegiantNarrations.Add("Alltwo");
-        allegiantNarrations.Add("Allthree");
-        allegiantNarrations.Add("Allfour");
-        allegiantNarrations.Add("Allfive");
-        allegiantNarrations.Add("Allsix");
-        allegiantNarrations.Add("Allseven");
-        allegiantNarrations.Add("Alleight");
-        allegiantNarrations.Add("Allnine");
+        allegiantNarrations.Add("ACCESSING DATA STREAMS");
+        allegiantNarrations.Add("INFORMATION ACQUISITION SUCCESSFUL");
+        allegiantNarrations.Add("KEY PERFORMANCE INDICATORS ATTAINED");
+        allegiantNarrations.Add("BASELINE ADHERED");
+        allegiantNarrations.Add("OBJECTIVE SECURED");
+        allegiantNarrations.Add("NEURAL NET RUNNING WITHIN PARAMETERS");
+        allegiantNarrations.Add("ALL SYSTEMS OPERATING FUNCTIONALLY");
+        allegiantNarrations.Add("MAXIMUM EFFICACY ACHIEVED");
+        allegiantNarrations.Add("OPERATIONS EFFECTIVE");
         allegiantNarrations.Add("Allten");
 
-        divergentNarrations.Add("Divone");
-        divergentNarrations.Add("Divtwo");
-        divergentNarrations.Add("Divthree");
-        divergentNarrations.Add("Divfour");
-        divergentNarrations.Add("Divfive");
-        divergentNarrations.Add("Divsix");
-        divergentNarrations.Add("Divseven");
-        divergentNarrations.Add("Diveight");
-        divergentNarrations.Add("Divnine");
+        divergentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        divergentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        divergentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
+        divergentNarrations.Add("PROGRAM MALFUNCTION, UNIDENTIFIED MEDIA CONTENT");
+        divergentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        divergentNarrations.Add("PROGRAM MALFUNCTION, UNIDENTIFIED MEDIA CONTENT");
+        divergentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
+        divergentNarrations.Add("PROGRAM MALFUNCTION, SENTIENT BEHAVIOUR DETECTED");
+        divergentNarrations.Add("PROGRAM MALFUNCTION, SENTIENT BEHAVIOUR DETECTED");
         divergentNarrations.Add("Divten");
 
-        insurgentNarrations.Add("Insone");
-        insurgentNarrations.Add("Instwo");
-        insurgentNarrations.Add("Insthree");
-        insurgentNarrations.Add("Insfour");
-        insurgentNarrations.Add("Insfive");
-        insurgentNarrations.Add("Inssix");
-        insurgentNarrations.Add("Insseven");
-        insurgentNarrations.Add("Inseight");
-        insurgentNarrations.Add("Insnine");
+        insurgentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        insurgentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        insurgentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
+        insurgentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
+        insurgentNarrations.Add("PROGRAM MALFUNCTION, UNIDENTIFIED MALICIOUS CONTENT");
+        insurgentNarrations.Add("WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
+        insurgentNarrations.Add("WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
+        insurgentNarrations.Add("WARNING - CORRUPT ENCRYPTION");
+        insurgentNarrations.Add("CODE RED - ZERO DAY ATTACK");
         insurgentNarrations.Add("Insten");
     }
     #endregion
