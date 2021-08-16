@@ -359,6 +359,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioController
       objectReference: {fileID: 0}
+    - target: {fileID: 4859047390380830513, guid: c3f69edc5f22a114fa4cbe4c90cc50e4,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 86ac93d5d13a08a47950a47b8023af71, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3f69edc5f22a114fa4cbe4c90cc50e4, type: 3}
 --- !u!1 &180060024
@@ -1718,7 +1723,7 @@ PrefabInstance:
         type: 3}
       propertyPath: otherHitClip
       value: 
-      objectReference: {fileID: 8300000, guid: c8da38ebecc1d3d43989f074e660a2b4, type: 3}
+      objectReference: {fileID: 8300000, guid: 7af48238ba6388f4997e88f3785be75d, type: 3}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
       propertyPath: audioController
@@ -1741,9 +1746,14 @@ PrefabInstance:
       objectReference: {fileID: 1274433574}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
+      propertyPath: divergentHitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7af48238ba6388f4997e88f3785be75d, type: 3}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
       propertyPath: insurgentHitClip
       value: 
-      objectReference: {fileID: 8300000, guid: 705e6fbcfc655064b8d8003085f6f2ea, type: 3}
+      objectReference: {fileID: 8300000, guid: d9ac3a9623e80c74895e280380178612, type: 3}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
       propertyPath: dataPacketSpawner
