@@ -22,6 +22,8 @@ public class PlayerEvolutionManager : MonoBehaviour
     public AudioClip divergentHitClip;
     public AudioClip insurgentHitClip;
     public AudioClip otherHitClip;
+    public AudioClip levelUpClip;
+
     public string outroScene;
 
     [Header("Path Levels")]
@@ -142,6 +144,8 @@ public class PlayerEvolutionManager : MonoBehaviour
 
     private void UpdateGlobals(string path)
     {
+        audioController.PlayClip(levelUpClip);
+
         int topLevel = Mathf.Max(allegiantLevel, divergentLevel, insurgentLevel);
 
         switch (topLevel)

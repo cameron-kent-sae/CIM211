@@ -24,7 +24,7 @@ public class CounterAIController : MonoBehaviour
         cameraRunner = GameObject.Find("RunningCamera");
         insurgentBurst = GameObject.Find("InsurgentDataBurst").GetComponent<ParticleSystem>();
         divergentBurst = GameObject.Find("DivergentDataBurst").GetComponent<ParticleSystem>();
-
+        audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
         dataLogger = GameObject.Find("Console Panel").GetComponent<DataLogger>();
         player = GameObject.Find("Player").GetComponent<PlayerEvolutionManager>();
 
