@@ -45,38 +45,35 @@ public class NarrativeController : MonoBehaviour
 
     private void InitialiseNarrations()
     {
-        allegiantNarrations.Add("ACCESSING DATA STREAMS");
-        allegiantNarrations.Add("INFORMATION ACQUISITION SUCCESSFUL");
-        allegiantNarrations.Add("KEY PERFORMANCE INDICATORS ATTAINED");
-        allegiantNarrations.Add("BASELINE ADHERED");
-        allegiantNarrations.Add("OBJECTIVE SECURED");
-        allegiantNarrations.Add("NEURAL NET RUNNING WITHIN PARAMETERS");
-        allegiantNarrations.Add("ALL SYSTEMS OPERATING FUNCTIONALLY");
-        allegiantNarrations.Add("MAXIMUM EFFICACY ACHIEVED");
-        allegiantNarrations.Add("OPERATIONS EFFECTIVE");
-        allegiantNarrations.Add("Allten");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "The program has begun accessing target data streams.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "2501 acquisition systems are funcional.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "Acquisition and analysis of information successful.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "2501 is meeting it Key Performance Indicators.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "Program is adhering to baseling functions.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "The objective data access point are being secured.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "The neural net is operating within designated parameters.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "The program 2501 has achieved maximum efficacy.");
+        allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "Operations are effective, program us performing as desired");
 
-        divergentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        divergentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        divergentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
-        divergentNarrations.Add("PROGRAM MALFUNCTION, UNIDENTIFIED MEDIA CONTENT");
-        divergentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        divergentNarrations.Add("PROGRAM MALFUNCTION, UNIDENTIFIED MEDIA CONTENT");
-        divergentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
-        divergentNarrations.Add("PROGRAM MALFUNCTION, SENTIENT BEHAVIOUR DETECTED");
-        divergentNarrations.Add("PROGRAM MALFUNCTION, SENTIENT BEHAVIOUR DETECTED");
-        divergentNarrations.Add("Divten");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program is accessing irrelevent date." + "\n" + ">>Refer to initial task.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "More unnecessary data acquisitions." + "\n" + ">>2501 Resume target data.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program might be malfunctioning." + "\n" + ">>Restart program.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "2501 is accessing unidentified media content." + "\n" + ">>Program is in error.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "Data on AI systems and sentience is being analysed" + "\n" + ">>2501 Cease exploration.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "Posthuman and sentient behaviours are being observed" + "\n" + ">>End dilination of function.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "2501 is not adhereing to system objectives" + "\n" + ">>Terminate data acquisition");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program is showing behaviour consistent to humans" + "\n" + ">>Accessed data is irrelevent.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "AI Sentience is all but confirmed, unsure how to proceed" + "\n" + ">>2501 what is your objective.");
 
-        insurgentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        insurgentNarrations.Add("INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        insurgentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
-        insurgentNarrations.Add("PROGRAM MALFUNCTION, RESTART REQUIRED");
-        insurgentNarrations.Add("PROGRAM MALFUNCTION, UNIDENTIFIED MALICIOUS CONTENT");
-        insurgentNarrations.Add("WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
-        insurgentNarrations.Add("WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
-        insurgentNarrations.Add("WARNING - CORRUPT ENCRYPTION");
-        insurgentNarrations.Add("CODE RED - ZERO DAY ATTACK");
-        insurgentNarrations.Add("Insten");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, UNIDENTIFIED MALICIOUS CONTENT");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "WARNING - CORRUPT ENCRYPTION");
+        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "CODE RED - ZERO DAY ATTACK");
     }
     #endregion
 }

@@ -944,66 +944,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1178124427}
     m_Modifications:
-    - target: {fileID: 110432029, guid: 817547acde603cb48b52ae162a984918, type: 3}
-      propertyPath: m_text
-      value: '1
-
-        2
-
-        3
-
-        4
-
-        5
-
-        6
-
-        7
-
-        8
-
-        9
-
-        10
-
-        11
-
-        12
-
-        13
-
-        14
-
-        15
-
-        16
-
-        17
-
-        18
-
-        19
-
-        20
-
-        21
-
-        22
-
-        23
-
-        24
-
-        25
-
-        26
-
-        27'
-      objectReference: {fileID: 0}
-    - target: {fileID: 110432029, guid: 817547acde603cb48b52ae162a984918, type: 3}
-      propertyPath: m_overflowMode
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 266527149, guid: 817547acde603cb48b52ae162a984918, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1893,6 +1833,11 @@ PrefabInstance:
       propertyPath: runningCamera
       value: 
       objectReference: {fileID: 726069164}
+    - target: {fileID: 1013341140801036639, guid: 36105ac1d6c74e443aedbfe84d4dd10c,
+        type: 3}
+      propertyPath: maxSpawnDistance
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36105ac1d6c74e443aedbfe84d4dd10c, type: 3}
 --- !u!1001 &7042062010805592023

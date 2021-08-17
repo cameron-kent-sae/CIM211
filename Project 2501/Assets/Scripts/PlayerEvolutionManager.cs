@@ -182,6 +182,7 @@ public class PlayerEvolutionManager : MonoBehaviour
             case 10:
                 // WIN THE GAME
                 PlayerPrefs.SetString("WinPath", path);
+                // Do something cool then WinGame
                 WinGame();
                 break;
             default:
