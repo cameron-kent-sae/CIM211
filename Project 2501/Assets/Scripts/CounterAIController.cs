@@ -43,18 +43,38 @@ public class CounterAIController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            SlowTime();
+
             audioController.PlayClip(counterAIHitClip);
 
-            if (!isSlowed)
-            {
-                StartCoroutine(SlowPlayer());
-            }
+            //Time.timeScale = 0f;
+            //if (!isSlowed)
+            //{
+            //    StartCoroutine(SlowPlayer());
+            //}
             StealPackets();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Invoke("NormalTime", .2f);
         }
     }
     #endregion
 
     #region Custom Methods
+    private void SlowTime()
+    {
+        Time.timeScale = .1f;
+    }
+     private void NormalTime()
+    {
+        Time.timeScale = Mathf.Lerp(.1f, 1, 2);
+    }
+
     public IEnumerator SlowPlayer()
     {
         isSlowed = true;
