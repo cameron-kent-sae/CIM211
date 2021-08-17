@@ -95,8 +95,6 @@ public class CounterAIController : MonoBehaviour
 
             StartCoroutine(AnimateBurst("Divergent"));
         }
-
-        //Destroy(gameObject);
     }
 
     public IEnumerator AnimateBurst(string path)

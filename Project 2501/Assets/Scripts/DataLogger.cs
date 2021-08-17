@@ -14,7 +14,7 @@ public class DataLogger : MonoBehaviour
 
     private List<string> eventLog = new List<string>();
     private string guiText = "";
-    private int maxLInes = 40;
+    //private int maxLInes = 40;
 
     private float closedPos;
     private float openedPos;
@@ -67,10 +67,10 @@ public class DataLogger : MonoBehaviour
     {
         eventLog.Add(newDataLog);
 
-        if (eventLog.Count >= maxLInes)
-        {
-            eventLog.RemoveAt(0);
-        }
+        //if (eventLog.Count >= maxLInes)
+        //{
+        //    eventLog.RemoveAt(0);
+        //}
 
         guiText = "";
 
