@@ -43,16 +43,10 @@ public class CounterAIController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SlowTime();
-
+            StealPackets();
             audioController.PlayClip(counterAIHitClip);
 
-            //Time.timeScale = 0f;
-            //if (!isSlowed)
-            //{
-            //    StartCoroutine(SlowPlayer());
-            //}
-            StealPackets();
+            SlowTime();
         }
     }
 
@@ -73,25 +67,6 @@ public class CounterAIController : MonoBehaviour
      private void NormalTime()
     {
         Time.timeScale = Mathf.Lerp(.1f, 1, 2);
-    }
-
-    public IEnumerator SlowPlayer()
-    {
-        isSlowed = true;
-
-        //float tempSpeed = 2f;
-        float currentSpeed = cameraRunner.GetComponent<CameraRunner>().speed;
-        //cameraRunner.GetComponent<CameraRunner>().speed = Mathf.Lerp(currentSpeed, tempSpeed, .2f);
-        cameraRunner.GetComponent<CameraRunner>().speed = 2;
-        
-        yield return new WaitForSeconds(2);
-
-        //cameraRunner.GetComponent<CameraRunner>().speed = Mathf.Lerp(tempSpeed, currentSpeed, .2f);
-        cameraRunner.GetComponent<CameraRunner>().speed = currentSpeed;
-
-        yield return new WaitForSeconds(.2f);
-
-        isSlowed = false;
     }
 
     private void StealPackets()
