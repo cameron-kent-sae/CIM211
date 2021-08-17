@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     #region Variables
+    public DataInventory dataInventory;
     public Button playBtn;
     public Button creditsBtn;
     public Button quitBtn;
@@ -16,6 +17,10 @@ public class MenuController : MonoBehaviour
     #endregion
 
     #region Built In Methods
+    private void Awake()
+    {
+        dataInventory.Container.Clear();
+    }
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

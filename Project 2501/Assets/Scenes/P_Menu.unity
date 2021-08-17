@@ -1004,6 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db78d3ef1443e14784bd3c4f6e599de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataInventory: {fileID: 11400000, guid: 8c9668037afc8d34c832da569829618c, type: 2}
   playBtn: {fileID: 1429434432}
   creditsBtn: {fileID: 1032791101}
   quitBtn: {fileID: 28536869}
