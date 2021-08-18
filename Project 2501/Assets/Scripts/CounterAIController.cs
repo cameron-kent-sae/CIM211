@@ -25,7 +25,7 @@ public class CounterAIController : MonoBehaviour
         insurgentBurst = GameObject.Find("InsurgentDataBurst").GetComponent<ParticleSystem>();
         divergentBurst = GameObject.Find("DivergentDataBurst").GetComponent<ParticleSystem>();
         audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
-        dataLogger = GameObject.Find("Console Panel").GetComponent<DataLogger>();
+        dataLogger = GameObject.Find("UIController").GetComponent<DataLogger>();
         player = GameObject.Find("Player").GetComponent<PlayerEvolutionManager>();
 
         dataInventory = player.dataInventory;

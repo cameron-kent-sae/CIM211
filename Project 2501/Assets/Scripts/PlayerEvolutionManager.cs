@@ -90,7 +90,7 @@ public class PlayerEvolutionManager : MonoBehaviour
                 case DataType.Insurgent:
                     audioController.PlayClip(insurgentHitClip);
                     insurgentCount += 1;
-                    dataLogger.divCount.text = insurgentCount.ToString();
+                    dataLogger.insCount.text = insurgentCount.ToString();
                     CheckInsurgentLevel();
                     break;
                 case DataType.Other:
