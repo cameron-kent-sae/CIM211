@@ -43,6 +43,8 @@ public class GameLogController : MonoBehaviour
     #region Built In Methods
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        
         PopulateDataLists();
 
         allegiantBtn.onClick.AddListener(delegate { ShowData("Allegiant"); });

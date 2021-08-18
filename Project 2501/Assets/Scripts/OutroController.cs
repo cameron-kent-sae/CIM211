@@ -44,6 +44,7 @@ public class OutroController : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
