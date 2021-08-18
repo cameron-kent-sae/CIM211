@@ -2024,7 +2024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818bcb1d9104a90418c68a74a3fd72aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataInventory: {fileID: 11400000, guid: 8c9668037afc8d34c832da569829618c, type: 2}
+  dataInventory: {fileID: 11400000, guid: 1a5ad5bd2bbf84a4c94e8ef5377947cb, type: 2}
   headerText: {fileID: 961724702}
   logText: {fileID: 1897449207}
   allegiantBtn: {fileID: 688993420}
@@ -3680,6 +3680,7 @@ GameObject:
   - component: {fileID: 1897449206}
   - component: {fileID: 1897449207}
   - component: {fileID: 1897449208}
+  - component: {fileID: 1897449209}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -3818,6 +3819,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &1897449209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897449204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef79b817e4841e45b35c7f725d76007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1899337033
 GameObject:
   m_ObjectHideFlags: 0
