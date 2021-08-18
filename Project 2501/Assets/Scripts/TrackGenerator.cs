@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class TrackGenerator : MonoBehaviour
 {
     #region Variables
-    private const float MAX_DIST = 200;
+    private const float MAX_DIST = 300;
 
     [Header("Track Section Prefabs")]
     public GameObject[] trackSections;
@@ -21,7 +21,7 @@ public class TrackGenerator : MonoBehaviour
     #endregion
 
     #region Methods
-    private void Awake()
+    private void Start()
     {
         spawnLocation = gameObject.transform;
 
@@ -35,7 +35,7 @@ public class TrackGenerator : MonoBehaviour
             SpawnTrack();
         }
 
-        if (currentSections == maxSections)
+        if (currentSections >= maxSections)
         {
             DestroySection();
         }

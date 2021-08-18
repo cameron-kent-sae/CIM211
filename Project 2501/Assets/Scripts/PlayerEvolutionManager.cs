@@ -52,9 +52,12 @@ public class PlayerEvolutionManager : MonoBehaviour
     #region Built-in Methods
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+
         allegiantCount = 0;
         divergentCount = 0;
         insurgentCount = 0;
+        
         SetGameDifficulty();
     }
 

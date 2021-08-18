@@ -214,10 +214,10 @@ RectTransform:
   m_Father: {fileID: 1614100715}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 672.49994, y: -581.35706}
+  m_SizeDelta: {x: 1244.9999, y: 111.857124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &182059468
 MonoBehaviour:
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Uhh...Uhhh that is very true. I hope she works, I mean...I know she works\u2026!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -453,10 +453,10 @@ RectTransform:
   m_Father: {fileID: 1614100715}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 672.49994, y: -763.0713}
+  m_SizeDelta: {x: 1244.9999, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &322529268
 MonoBehaviour:
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Aye aye Captain! Oh, I mean...Roger!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -588,10 +588,10 @@ RectTransform:
   m_Father: {fileID: 1614100715}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 672.49994, y: -427.4999}
+  m_SizeDelta: {x: 1244.9999, y: 195.85712}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377024262
 MonoBehaviour:
@@ -613,7 +613,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ">>Imbecile! That\u2019s not what I meant! We can\u2019t afford another
+    failure this time. How do you expect us to hack into the enemy\u2019s mainframe
+    unless we know she works and won\u2019t backfire...again!?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -804,10 +806,10 @@ RectTransform:
   m_Father: {fileID: 1614100715}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 672.49994, y: -679.2142}
+  m_SizeDelta: {x: 1244.9999, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873848498
 MonoBehaviour:
@@ -829,7 +831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '>>Boot er up and prepare for simulation!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -1277,10 +1279,10 @@ RectTransform:
   m_Father: {fileID: 1614100715}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 672.49994, y: -175.78568}
+  m_SizeDelta: {x: 1244.9999, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974786842
 MonoBehaviour:
@@ -1302,7 +1304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ">>That\u2019s what you said last time."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -1811,7 +1813,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614100714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
@@ -1826,9 +1828,9 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!1001 &1622278853
 PrefabInstance:
@@ -2011,10 +2013,10 @@ RectTransform:
   m_Father: {fileID: 1614100715}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 672.49994, y: -273.6428}
+  m_SizeDelta: {x: 1244.9999, y: 111.857124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777173240
 MonoBehaviour:
@@ -2036,7 +2038,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Uhh..uhh...I mean Maam, she\u2019s prime for testing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,
@@ -2299,10 +2301,10 @@ RectTransform:
   m_Father: {fileID: 1614100715}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 672.49994, y: -91.92856}
+  m_SizeDelta: {x: 1244.9999, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085809664
 MonoBehaviour:
@@ -2324,7 +2326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Captain, Program 2501 is ready for testing.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c47831b47384a346bbf8b02ead753db, type: 2}
   m_sharedMaterial: {fileID: -4808321332749968587, guid: 7c47831b47384a346bbf8b02ead753db,

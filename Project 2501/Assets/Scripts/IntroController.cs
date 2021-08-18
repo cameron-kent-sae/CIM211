@@ -33,7 +33,7 @@ public class IntroController : MonoBehaviour
     #region Narrative Scripts
     private string scriptOne = "Captain, Program 2501 is ready for testing.";
     private string scriptTwo = ">>That’s what you said last time.";
-    private string scriptThree = "Uhh..uhh...I mean Maam, she’s prime for testing!";
+    private string scriptThree = "Uhh..uhh...I mean Ma'am, she’s prime for testing!";
     private string scriptFour = ">>Imbecile! That’s not what I meant! We can’t afford another failure this time. How do you expect us to hack into the enemy’s mainframe unless we know she works and won’t backfire...again!?";
     private string scriptFive = "Uhh...Uhhh that is very true. I hope she works, I mean...I know she works…!";
     private string scriptSix = ">>Boot er up and prepare for simulation!";
