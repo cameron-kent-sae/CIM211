@@ -57,14 +57,15 @@ public class GameLogController : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    private void ExportLogs(string path, List<string> logs)
+    private void ExportLogs(string logType, List<string> logs)
     {
-        string file = "Desktop/2501 " + path + "Log.txt";
-        if (File.Exists(file))
+        string path = Application.dataPath + logType + "log.txt";
+        StreamWriter writer = new StreamWriter(path);
+
+        if (!File.Exists(path))
         {
-            
+            File.WriteAllText(path, logType + " Log \n\n");
         }
-        StreamWriter writer = new StreamWriter(file, true);
 
         foreach (string item in logs)
         {
@@ -150,7 +151,8 @@ public class GameLogController : MonoBehaviour
             eventLog.Add(newDataLog);
             PrintLogs();
 
-        } else
+        }
+        else
         {
             for (int i = 0; i < eventLog.Count; i++)
             {
