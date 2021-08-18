@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class TrackGenerator : MonoBehaviour
 {
     #region Variables
-    private const float MAX_DIST = 200f;
+    private const float MAX_DIST = 500f;
 
     [Header("Track Section Prefabs")]
     public GameObject[] trackSections;

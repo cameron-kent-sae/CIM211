@@ -55,7 +55,7 @@ public class NarrativeController : MonoBehaviour
         allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "The program 2501 has achieved maximum efficacy.");
         allegiantNarrations.Add(">>ALLEGIENT OPERATION:" + "\n" + "Operations are effective, program us performing as desired");
 
-        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program is accessing irrelevent date." + "\n" + ">>Refer to initial task.");
+        divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program is accessing irrelevent data." + "\n" + ">>Refer to initial task.");
         divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "More unnecessary data acquisitions." + "\n" + ">>2501 Resume target data.");
         divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program might be malfunctioning." + "\n" + ">>Restart program.");
         divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "2501 is accessing unidentified media content." + "\n" + ">>Program is in error.");
@@ -65,15 +65,15 @@ public class NarrativeController : MonoBehaviour
         divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program is showing behaviour consistent to humans" + "\n" + ">>Accessed data is irrelevent.");
         divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "AI Sentience is all but confirmed, unsure how to proceed" + "\n" + ">>2501 what is your objective.");
 
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, UNIDENTIFIED MALICIOUS CONTENT");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "WARNING - CORRUPT ENCRYPTION");
-        insurgentNarrations.Add("**DIVERGENCE DETECTED!" + "\n" + "CODE RED - ZERO DAY ATTACK");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, UNIDENTIFIED MALICIOUS CONTENT");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "WARNING - CORRUPT ENCRYPTION");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "CODE RED - ZERO DAY ATTACK");
     }
     #endregion
 }

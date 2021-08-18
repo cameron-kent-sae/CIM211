@@ -4,6 +4,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,6 +24,7 @@ public class GameLogController : MonoBehaviour
     public Button divergentBtn;
     public Button insurgentBtn;
     public Button otherBtn;
+    public Button exportBtn;
     public Button creditsBtn;
 
     public string creditsScene;
@@ -47,6 +49,7 @@ public class GameLogController : MonoBehaviour
         divergentBtn.onClick.AddListener(delegate { ShowData("Divergent"); });
         insurgentBtn.onClick.AddListener(delegate { ShowData("Insurgent"); });
         otherBtn.onClick.AddListener(delegate { ShowData("Other"); });
+        exportBtn.onClick.AddListener(delegate { ExportLogs(PlayerPrefs.GetString("Path"), eventLog); });
         creditsBtn.onClick.AddListener(LoadCredits);
 
         ShowData(PlayerPrefs.GetString("Path"));
@@ -54,6 +57,23 @@ public class GameLogController : MonoBehaviour
     #endregion
 
     #region Custom Methods
+    private void ExportLogs(string path, List<string> logs)
+    {
+        string file = "Desktop/2501 " + path + "Log.txt";
+        if (File.Exists(file))
+        {
+            
+        }
+        StreamWriter writer = new StreamWriter(file, true);
+
+        foreach (string item in logs)
+        {
+            writer.WriteLine(item);
+        }
+
+        writer.Close();
+    }
+
     private void PopulateDataLists()
     {
         foreach (var item in dataInventory.Container)
