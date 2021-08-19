@@ -133,7 +133,7 @@ public class GameLogController : MonoBehaviour
     {
         foreach (var item in datas)
         {
-            AddLog("<link=" + item.url + ">" + "<u><color=#71EE5F>" + item.url+ "</color></u>" + "</link>");
+            AddLog("<link=" + item + ">" + "<u><color=#71EE5F>" + item.url+ "</color></u>" + "</link>");
             AddLog(item.description);
         }
     }
