@@ -24,7 +24,6 @@ public class GameLogController : MonoBehaviour
     public Button divergentBtn;
     public Button insurgentBtn;
     public Button otherBtn;
-    public Button exportBtn;
     public Button creditsBtn;
 
     public string creditsScene;
@@ -51,7 +50,6 @@ public class GameLogController : MonoBehaviour
         divergentBtn.onClick.AddListener(delegate { ShowData("Divergent"); });
         insurgentBtn.onClick.AddListener(delegate { ShowData("Insurgent"); });
         otherBtn.onClick.AddListener(delegate { ShowData("Other"); });
-        exportBtn.onClick.AddListener(delegate { ExportLogs(PlayerPrefs.GetString("Path"), eventLog); });
         creditsBtn.onClick.AddListener(LoadCredits);
 
         ShowData(PlayerPrefs.GetString("Path"));
@@ -59,43 +57,25 @@ public class GameLogController : MonoBehaviour
     #endregion
 
     #region Custom Methods
-    private void ExportLogs(string logType, List<string> logs)
-    {
-        string path = Application.dataPath + logType + "log.txt";
-        StreamWriter writer = new StreamWriter(path);
-
-        if (!File.Exists(path))
-        {
-            File.WriteAllText(path, logType + " Log \n\n");
-        }
-
-        foreach (string item in logs)
-        {
-            writer.WriteLine(item);
-        }
-
-        writer.Close();
-    }
-
     private void PopulateDataLists()
     {
         foreach (var item in dataInventory.Container)
         {
             if (item.data.dataType.ToString() == "Allegiant")
             {
-                allegiantDatas.Add((DataPacket)item.data);
+                allegiantDatas.Add((AllegiantData)item.data);
             }
             else if (item.data.dataType.ToString() == "Divergent")
             {
-                divergentDatas.Add((DataPacket)item.data);
+                divergentDatas.Add((DivergentData)item.data);
             }
             else if (item.data.dataType.ToString() == "Insurgent")
             {
-                insurgentDatas.Add((DataPacket)item.data);
+                insurgentDatas.Add((InsurgentData)item.data);
             }
             else if (item.data.dataType.ToString() == "Other")
             {
-                otherDatas.Add((DataPacket)item.data);
+                otherDatas.Add((OtherData)item.data);
             }
         }
     }
@@ -135,7 +115,6 @@ public class GameLogController : MonoBehaviour
         {
             string urlLink = "<color=#71ee5f><u><link=" + item.url + ">" + item.url + "</link></u></color>";
             AddLog(urlLink);
-            //AddLog("<link=" + item.url + ">" + "<u><color=#71EE5F>GO TO</color></u>" + "</link>");
             AddLog(item.description);
         }
     }

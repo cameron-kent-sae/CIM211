@@ -8,11 +8,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
-public class OpenHyperlinks : MonoBehaviour, IPointerClickHandler
+public class OpenHyperlinks : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     #region Variables
-    private TMP_Text pTextMeshPro;
-    private Camera pCamera;
+    public Texture2D defaultCursor;
+    public Texture2D hoverCursor;
     #endregion
 
     #region Built In Methods
@@ -25,6 +25,14 @@ public class OpenHyperlinks : MonoBehaviour, IPointerClickHandler
             TMP_LinkInfo linkInfo = pTextMeshPro.textInfo.linkInfo[linkIndex];
             Application.OpenURL(linkInfo.GetLinkID());
         }
+    }
+
+    void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
+    {
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
     }
     #endregion
 

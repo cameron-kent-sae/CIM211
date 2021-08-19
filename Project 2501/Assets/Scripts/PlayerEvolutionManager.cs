@@ -66,11 +66,6 @@ public class PlayerEvolutionManager : MonoBehaviour
         mouseFollow.distanceFromCamera = 10;
     }
 
-    private void OnApplicationQuit()
-    {
-        dataInventory.Container.Clear();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         var data = other.GetComponent<DataObject>();
