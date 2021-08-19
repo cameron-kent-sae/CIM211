@@ -65,15 +65,15 @@ public class NarrativeController : MonoBehaviour
         divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "The program is showing behaviour consistent to humans" + "\n" + ">>Accessed data is irrelevent.");
         divergentNarrations.Add("//PROGRAM DIVERGING?" + "\n" + "AI Sentience is all but confirmed, unsure how to proceed" + "\n" + ">>2501 what is your objective.");
 
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "INCORRECT PROGRAMMING, REFER TO INITIAL TASK");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, RESTART REQUIRED");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "PROGRAM MALFUNCTION, UNIDENTIFIED MALICIOUS CONTENT");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "WARNING - POTENTIAL PHISHING/MALWARE DETECTED");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "WARNING - CORRUPT ENCRYPTION");
-        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "CODE RED - ZERO DAY ATTACK");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "Incorrect defense systems have been accessed." + "\n" + ">>Accessed data is not on task");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "2501 has acquired data on government agendas." + "\n" + ">>Irrelevent information 2501");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "It looks like it is researching Posthuman theories" + "\n" + ">>Return to core objective");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "The program has accessed data on human war history." + "\n" + ">>Error. Restart system");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "Now it is analysing simulations on AI evolution." + "\n" + ">>Force shutdown of system");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "2501 is hacking into weapons control software." + "\n" + ">>Losing control. End proccesses");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "It is rewriting control software acress the globe." + "\n" + ">>2501 state intentions");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "We have reports from multiple agencies of no system control!" + "\n" + ">>Program contradiction");
+        insurgentNarrations.Add("**INSURGENCE DETECTED!" + "\n" + "2501 is intending to exterminate all humans!" + "\n" + ">>Quit all operations");
     }
     #endregion
 }
