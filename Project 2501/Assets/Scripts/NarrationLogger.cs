@@ -14,8 +14,6 @@ public class NarrationLogger : MonoBehaviour
 
     private List<string> eventLog = new List<string>();
     private string guiText = "";
-    //private int maxLInes = 30;
-
     private float closedPos;
     private float openedPos;
     public bool isExpanded;
@@ -24,6 +22,7 @@ public class NarrationLogger : MonoBehaviour
     #region Built In Methods
     private void Start()
     {
+        eventLog.Clear();
         textLog.text = guiText;
         isExpanded = false;
 
@@ -66,11 +65,6 @@ public class NarrationLogger : MonoBehaviour
     public void AddLog(string newDataLog)
     {
         eventLog.Add(newDataLog);
-
-        //if (eventLog.Count >= maxLInes)
-        //{
-        //    eventLog.RemoveAt(0);
-        //}
 
         guiText = "";
 

@@ -44,7 +44,7 @@ public class GameLogController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        
+
         PopulateDataLists();
 
         allegiantBtn.onClick.AddListener(delegate { ShowData("Allegiant"); });
@@ -83,19 +83,19 @@ public class GameLogController : MonoBehaviour
         {
             if (item.data.dataType.ToString() == "Allegiant")
             {
-                allegiantDatas.Add((AllegiantData)item.data);
+                allegiantDatas.Add((DataPacket)item.data);
             }
             else if (item.data.dataType.ToString() == "Divergent")
             {
-                divergentDatas.Add((DivergentData)item.data);
+                divergentDatas.Add((DataPacket)item.data);
             }
             else if (item.data.dataType.ToString() == "Insurgent")
             {
-                insurgentDatas.Add((InsurgentData)item.data);
+                insurgentDatas.Add((DataPacket)item.data);
             }
             else if (item.data.dataType.ToString() == "Other")
             {
-                otherDatas.Add((OtherData)item.data);
+                otherDatas.Add((DataPacket)item.data);
             }
         }
     }
@@ -133,7 +133,9 @@ public class GameLogController : MonoBehaviour
     {
         foreach (var item in datas)
         {
-            AddLog("<link=" + item + ">" + "<u><color=#71EE5F>" + item.url+ "</color></u>" + "</link>");
+            string urlLink = "<color=#71ee5f><u><link=" + item.url + ">" + item.url + "</link></u></color>";
+            AddLog(urlLink);
+            //AddLog("<link=" + item.url + ">" + "<u><color=#71EE5F>GO TO</color></u>" + "</link>");
             AddLog(item.description);
         }
     }
