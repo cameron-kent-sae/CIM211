@@ -102,7 +102,7 @@ public class PlayerEvolutionManager : MonoBehaviour
             dataLogger.AddLog(data.data.description);
             dataLogger.AddLog("\n");
 
-            dataInventory.AddItem(data.data);
+            //dataInventory.AddItem(data.data);
             
             Destroy(other.gameObject);
         }
@@ -159,22 +159,22 @@ public class PlayerEvolutionManager : MonoBehaviour
                 StartCoroutine(counterAISpawner.SpawnCounterAI());
                 break;
             case 4:
-                SetRates(50, .6f, 30, .5f);
+                SetRates(50, .6f, 15, .5f);
                 break;
             case 5:
-                SetRates(60, .5f, 26, .6f);
+                SetRates(60, .5f, 13, .6f);
                 break;
             case 6:
-                SetRates(70, .4f, 22, .7f);
+                SetRates(70, .4f, 11, .7f);
                 break;
             case 7:
-                SetRates(80, .3f, 18, .8f);
+                SetRates(80, .3f, 9, .8f);
                 break;
             case 8:
-                SetRates(90, .2f, 14, .9f);
+                SetRates(90, .2f, 7, .9f);
                 break;
             case 9:
-                SetRates(100, .1f, 10, 1);
+                SetRates(100, .1f, 5, 1);
                 counterAISpawner.spawnRate = 10f;
                 break;
             case 10:

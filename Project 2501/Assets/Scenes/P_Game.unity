@@ -2105,6 +2105,11 @@ PrefabInstance:
       objectReference: {fileID: 180060025}
     - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
         type: 3}
+      propertyPath: levelUpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 10cdf91208fd3704991405623cd51c08, type: 3}
+    - target: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+        type: 3}
       propertyPath: cameraRunner
       value: 
       objectReference: {fileID: 726069163}
@@ -2670,6 +2675,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8224540850199746720, guid: cee03fa01b0b95e43bdb9fa6321e1eee,
+        type: 3}
+      propertyPath: audioController
+      value: 
+      objectReference: {fileID: 900813808}
     - target: {fileID: 8224540850199746720, guid: cee03fa01b0b95e43bdb9fa6321e1eee,
         type: 3}
       propertyPath: narrationLogger

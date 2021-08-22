@@ -30,6 +30,7 @@ public class SetupController : MonoBehaviour
     #region Custom Methods
     private void StartGame(string speed)
     {
+
         switch (speed)
         {
             case "Slow":
