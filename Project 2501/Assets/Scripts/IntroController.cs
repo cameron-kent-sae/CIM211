@@ -28,6 +28,7 @@ public class IntroController : MonoBehaviour
 
     public string setupScene;
     public Button launchBtn;
+    private bool canSkip;
     #endregion
 
     #region Narrative Scripts
@@ -44,11 +45,60 @@ public class IntroController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        canSkip = false;
 
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        ClearText();
+
+        launchBtn.onClick.AddListener(StartGame);
+
+        StartCoroutine("PlayIntroduction", 3);
+        StartCoroutine("SetSkip");
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            SkipCutscene();
+        }
+    }
+    #endregion
+
+    #region Custom Methods
+    private IEnumerator SetSkip()
+    {
+        yield return new WaitForSeconds(3);
+        canSkip = true;
+    }
+
+    private void SkipCutscene()
+    {
+        if (canSkip)
+        {
+            ClearText();
+
+            StopCoroutine("PlayIntroduction");
+
+            textOne.text = scriptOne;
+            textTwo.text = scriptTwo;
+            textThree.text = scriptThree;
+            textFour.text = scriptFour;
+            textFive.text = scriptFive;
+            textSix.text = scriptSix;
+            textSeven.text = scriptSeven;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            launchBtn.gameObject.SetActive(true);
+        }
+    }
+
+    private void ClearText()
+    {
         textOne.text = "";
         textTwo.text = "";
         textThree.text = "";
@@ -56,14 +106,8 @@ public class IntroController : MonoBehaviour
         textFive.text = "";
         textSix.text = "";
         textSeven.text = "";
-
-        launchBtn.onClick.AddListener(StartGame);
-
-        StartCoroutine("PlayIntroduction", 3);
     }
-    #endregion
 
-    #region Custom Methods
     private IEnumerator PlayIntroduction()
     {
         StartCoroutine(TypewriteText(textOne, scriptOne, 0.05f));

@@ -24,6 +24,8 @@ public class NarrativeController : MonoBehaviour
     #region Custom Methods
     public void PlayNarration(string path, int level)
     {
+        if (!narrationLogger.isExpanded) narrationLogger.OpenLog();
+        
         switch (path)
         {
             case "allegiant":

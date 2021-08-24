@@ -66,7 +66,7 @@ public class CounterAIController : MonoBehaviour
     }
      private void NormalTime()
     {
-        Time.timeScale = Mathf.Lerp(.1f, 1, 2);
+        Time.timeScale = Mathf.Lerp(.1f, 1, 1);
     }
 
     private void StealPackets()

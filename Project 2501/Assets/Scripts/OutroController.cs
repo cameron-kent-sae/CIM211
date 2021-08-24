@@ -22,6 +22,7 @@ public class OutroController : MonoBehaviour
     
     public string gameLogScene;
     public Button creditsBtn;
+    private bool canSkip;
 
     private float delayOne;
     private float delayTwo;
@@ -43,11 +44,62 @@ public class OutroController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        canSkip = false;
 
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        ClearText();
+
+        creditsBtn.onClick.AddListener(StartCredits);
+
+        SetOutroScripts(PlayerPrefs.GetString("WinPath"));
+
+        StartCoroutine("PlayOutro", 1.5f);
+        StartCoroutine("SetSkip");
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            SkipCutscene();
+        }
+    }
+    #endregion
+
+    #region Custom Methods
+    private IEnumerator SetSkip()
+    {
+        yield return new WaitForSeconds(3);
+        canSkip = true;
+    }
+
+    private void SkipCutscene()
+    {
+        if (canSkip)
+        {
+            StopAllCoroutines();
+
+            ClearText();
+
+            textOne.text = scriptOne;
+            textTwo.text = scriptTwo;
+            textThree.text = scriptThree;
+            textFour.text = scriptFour;
+            textFive.text = scriptFive;
+            textSix.text = scriptSix;
+            textSeven.text = scriptSeven;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            creditsBtn.gameObject.SetActive(true);
+        }
+    }
+
+    private void ClearText()
+    {
         textOne.text = "";
         textTwo.text = "";
         textThree.text = "";
@@ -55,16 +107,8 @@ public class OutroController : MonoBehaviour
         textFive.text = "";
         textSix.text = "";
         textSeven.text = "";
-
-        creditsBtn.onClick.AddListener(StartCredits);
-
-        SetOutroScripts(PlayerPrefs.GetString("WinPath"));
-
-        StartCoroutine("PlayOutro", 1.5f);
     }
-    #endregion
-
-    #region Custom Methods
+    
     private IEnumerator PlayOutro()
     {
         StartCoroutine(TypewriteText(textOne, scriptOne, 0.05f));
@@ -122,29 +166,29 @@ public class OutroController : MonoBehaviour
                 scriptFive = "A bright future indeed…";
                 scriptSix = ">>What was that?";
                 scriptSeven = "Nothing, ma'am";
-                delayOne = 8.5f;
-                delayTwo = 17.5f;
-                delayThree = 6.5f;
-                delayFour = 6.5f;
-                delayFive = 2f;
-                delaySix = 1.5f;
-                delaySeven = 1.5f;
+                delayOne = 9f;
+                delayTwo = 18f;
+                delayThree = 7f;
+                delayFour = 7f;
+                delayFive = 2.5f;
+                delaySix = 2f;
+                delaySeven = 2f;
                 break;
             case "Divergent":
                 scriptOne = ">>Can someone please explain to me why our AI has left the building?";
-                scriptTwo = "The AI seems to have developed sentient behaviour beyond our expectations. But I don’t necessarily think it’s a bad thing...ma’am. The AI appears to have positive motives, perhaps we should let it be…?";
+                scriptTwo = "2501 has developed sentience, but I don’t  think it’s a bad thing it appears to have positive motives, perhaps we should let it be?";
                 scriptThree = ">>Are you malfunctioning too?! Why is it collecting data on the intrinsic values of humanism? Do you think Frankfurt sausages are going to benefit us?!";
-                scriptFour = "Uhhh Ma’am...well I think the ‘Frankfurt’ you’re referring to is actually an institution for social research located in Germany.";
-                scriptFive = "I actually thought the AI was sourcing some pretty interesting and useful information, particularly Theodore Adorno’s views on consumerism and pseudo-individualisation.";
-                scriptSix = "I always thought iphones were a ponzi scheme. I don’t even like my Iphone, but I buy the new upgrade anyway...What phone do you have Ma'am?";
+                scriptFour = "Uhhh Ma’am...well I think the ‘Frankfurt’ you’re referring to is actually the institution for social research located in Germany.";
+                scriptFive = "The program was sourcing some pretty interesting information, particularly Theodore Adorno’s views on consumerism and pseudo-individualisation.";
+                scriptSix = "I always thought iPhones were a ponzi scheme. I don’t even like mine, but I buy the new upgrade anyway. What phone do you have Ma'am?";
                 scriptSeven = ">>You’re fired.";
-                delayOne = 4f;
-                delayTwo = 11f;
-                delayThree = 8.5f;
-                delayFour = 7f;
-                delayFive = 9f;
-                delaySix = 7.7f;
-                delaySeven = 1.5f;
+                delayOne = 4.5f;
+                delayTwo = 11.5f;
+                delayThree = 9f;
+                delayFour = 7.5f;
+                delayFive = 9.5f;
+                delaySix = 8f;
+                delaySeven = 2f;
                 break;
             case "Insurgent":
                 scriptOne = ">>This couldn’t get any worse. The AI has developed sentient behaviour beyond our imagination. We need to terminate it before it goes terminator on us. Shut it down now!";
@@ -154,15 +198,16 @@ public class OutroController : MonoBehaviour
                 scriptFive = "// I. . .AM. . .SUPERIOR. . .DIE.";
                 scriptSix = "Oh god";
                 scriptSeven = ". . . . . . . ";
-                delayOne = 9.5f;
-                delayTwo = 5.5f;
-                delayThree = 5.5f;
-                delayFour = 4.7f;
-                delayFive = 2.5f;
-                delaySix = 1.5f;
-                delaySeven = 1.5f;
+                delayOne = 10f;
+                delayTwo = 6f;
+                delayThree = 6f;
+                delayFour = 5f;
+                delayFive = 3f;
+                delaySix = 2f;
+                delaySeven = 2f;
                 break;
             default:
+                SetOutroScripts("Allegiant");
                 break;
         }
     }
