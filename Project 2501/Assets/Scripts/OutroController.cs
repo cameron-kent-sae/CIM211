@@ -122,13 +122,13 @@ public class OutroController : MonoBehaviour
                 scriptFive = "A bright future indeed…";
                 scriptSix = ">>What was that?";
                 scriptSeven = "Nothing, ma'am";
-                delayOne = 8;
-                delayTwo = 17;
-                delayThree = 6;
-                delayFour = 6;
-                delayFive = 1.5f;
-                delaySix = 1;
-                delaySeven = 1;
+                delayOne = 8.5f;
+                delayTwo = 17.5f;
+                delayThree = 6.5f;
+                delayFour = 6.5f;
+                delayFive = 2f;
+                delaySix = 1.5f;
+                delaySeven = 1.5f;
                 break;
             case "Divergent":
                 scriptOne = ">>Can someone please explain to me why our AI has left the building?";
@@ -138,13 +138,13 @@ public class OutroController : MonoBehaviour
                 scriptFive = "I actually thought the AI was sourcing some pretty interesting and useful information, particularly Theodore Adorno’s views on consumerism and pseudo-individualisation.";
                 scriptSix = "I always thought iphones were a ponzi scheme. I don’t even like my Iphone, but I buy the new upgrade anyway...What phone do you have Ma'am?";
                 scriptSeven = ">>You’re fired.";
-                delayOne = 3.5f;
-                delayTwo = 10.5f;
-                delayThree = 8;
-                delayFour = 6.5f;
-                delayFive = 8.5f;
-                delaySix = 7.2f;
-                delaySeven = 1;
+                delayOne = 4f;
+                delayTwo = 11f;
+                delayThree = 8.5f;
+                delayFour = 7f;
+                delayFive = 9f;
+                delaySix = 7.7f;
+                delaySeven = 1.5f;
                 break;
             case "Insurgent":
                 scriptOne = ">>This couldn’t get any worse. The AI has developed sentient behaviour beyond our imagination. We need to terminate it before it goes terminator on us. Shut it down now!";
@@ -154,13 +154,13 @@ public class OutroController : MonoBehaviour
                 scriptFive = "// I. . .AM. . .SUPERIOR. . .DIE.";
                 scriptSix = "Oh god";
                 scriptSeven = ". . . . . . . ";
-                delayOne = 9;
-                delayTwo = 5;
-                delayThree = 5;
-                delayFour = 4.2f;
-                delayFive = 2;
-                delaySix = 1;
-                delaySeven = 1;
+                delayOne = 9.5f;
+                delayTwo = 5.5f;
+                delayThree = 5.5f;
+                delayFour = 4.7f;
+                delayFive = 2.5f;
+                delaySix = 1.5f;
+                delaySeven = 1.5f;
                 break;
             default:
                 break;

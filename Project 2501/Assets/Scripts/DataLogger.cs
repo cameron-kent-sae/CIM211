@@ -29,7 +29,15 @@ public class DataLogger : MonoBehaviour
         isExpanded = false;
 
         closedPos = logPanel.transform.position.x;
-        openedPos = closedPos + 450;
+        if (Screen.width.Equals(1920))
+        {
+            openedPos = closedPos + 450;
+
+        }
+        else if  (Screen.width.Equals(1280))
+        {
+            openedPos = closedPos + 300;
+        }
     }
 
     private void Update()

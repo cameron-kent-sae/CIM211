@@ -71,6 +71,8 @@ public class PlayerEvolutionManager : MonoBehaviour
         var data = other.GetComponent<DataObject>();
         if (data)
         {
+            audioController.sfxSource.Stop();
+
             switch (data.data.dataType)
             {
                 case DataType.Allegiant:
@@ -190,6 +192,7 @@ public class PlayerEvolutionManager : MonoBehaviour
 
     private void WinGame()
     {
+        dataInventory.Container.Clear(); //
         SceneManager.LoadScene(outroScene);
     }
 

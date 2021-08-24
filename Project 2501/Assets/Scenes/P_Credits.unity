@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.063708015, g: 0.025772043, b: 0.05861231, a: 1}
+  m_IndirectSpecularColor: {r: 0.0649236, g: 0.026335284, b: 0.059535757, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1917736766}
   cameraRunner: {fileID: 1965443149}
-  endBound: 500
+  endBound: 650
   allegiantObjects:
   - {fileID: 2095597712}
   - {fileID: 741385742}
@@ -2577,7 +2577,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: c61729e3ea3b29c4ba4f936adcec4ad3, type: 3}
+      objectReference: {fileID: 8300000, guid: 10f8bbc7711fdc748a169460e3579f6e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3f69edc5f22a114fa4cbe4c90cc50e4, type: 3}
 --- !u!1 &1492464650
