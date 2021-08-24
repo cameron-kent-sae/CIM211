@@ -78,19 +78,19 @@ public class PlayerEvolutionManager : MonoBehaviour
                 case DataType.Allegiant:
                     audioController.PlayClip(allegiantHitClip);
                     allegiantCount += 1;
-                    dataLogger.allCount.text = allegiantCount.ToString();
+                    //dataLogger.allCount.text = allegiantCount.ToString();
                     CheckAllegiantLevel();
                     break;
                 case DataType.Divergent:
                     audioController.PlayClip(divergentHitClip);
                     divergentCount += 1;
-                    dataLogger.divCount.text = divergentCount.ToString();
+                    //dataLogger.divCount.text = divergentCount.ToString();
                     CheckDivergentLevel();
                     break;
                 case DataType.Insurgent:
                     audioController.PlayClip(insurgentHitClip);
                     insurgentCount += 1;
-                    dataLogger.insCount.text = insurgentCount.ToString();
+                    //dataLogger.insCount.text = insurgentCount.ToString();
                     CheckInsurgentLevel();
                     break;
                 case DataType.Other:

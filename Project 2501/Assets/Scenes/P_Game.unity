@@ -395,6 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de6ec13b14e6674e8ef4dc3ed052aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2022079380}
   textLog: {fileID: 656746367}
   logPanel: {fileID: 969700810761296934}
   allCount: {fileID: 1322313696}
@@ -2602,6 +2603,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d7b31eed0b12b4cb9c712414a4e683, type: 3}
+--- !u!114 &2022079380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2829805421928226214, guid: 55d7b31eed0b12b4cb9c712414a4e683,
+    type: 3}
+  m_PrefabInstance: {fileID: 2022079379}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e591286ae9c130f4f84a2f249e7d285f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2129310588
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ using UnityEngine;
 public class DataLogger : MonoBehaviour
 {
     #region Variables
+    public PlayerEvolutionManager player;
+
     public TMP_Text textLog;
     public GameObject logPanel;
     public TMP_Text allCount;
@@ -42,6 +44,10 @@ public class DataLogger : MonoBehaviour
 
     private void Update()
     {
+        allCount.text = player.allegiantCount.ToString();
+        divCount.text = player.divergentCount.ToString();
+        insCount.text = player.insurgentCount.ToString();
+
         if (isExpanded)
         {
             if (Input.GetButtonDown("Tab"))

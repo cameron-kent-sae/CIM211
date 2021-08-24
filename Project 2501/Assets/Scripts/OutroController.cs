@@ -207,7 +207,6 @@ public class OutroController : MonoBehaviour
                 delaySeven = 2f;
                 break;
             default:
-                SetOutroScripts("Allegiant");
                 break;
         }
     }
